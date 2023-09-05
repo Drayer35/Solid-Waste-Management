@@ -25,7 +25,6 @@
             <Border CornerRadius="20,0,0,20"
                     Background="{StaticResource Color1}"
                     Grid.Column="0">
-                
                 <StackPanel>
                     <StackPanel
                         Orientation="Vertical"
@@ -51,7 +50,7 @@
                                 <TextBlock Text="Registros" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
-                        
+
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource Color2}">
                             <StackPanel Orientation="Horizontal"
@@ -78,12 +77,9 @@
                                            />
                             </StackPanel>
                         </RadioButton>
-
                     </StackPanel>
-
                 </StackPanel>
             </Border>
-
             <Border CornerRadius="0,20,20,0"
                     Background="{StaticResource Color2}"
                     Grid.Column="1">
