@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!--Background Colors-->
+    <Color x:Key="primaryColor1">#FF556BF8</Color>
+    <Color x:Key="primaryColor2">AliceBlue</Color>
+    <Color x:Key="secondaryColor1">red</Color>
+    <Color x:Key="secondaryColor2">red</Color>
+
+    <!-- Color Palette-->
+    <SolidColorBrush x:Key="Color1" Color="#FF556BF8"/>
+    <SolidColorBrush x:Key="Color2" Color="White"/>
+    <SolidColorBrush x:Key="Color3" Color="AliceBlue"/>
+    <SolidColorBrush x:Key="Color4" Color="#4253BF"/>
+    <SolidColorBrush x:Key="Color5" Color="#31373D"/>
+    <SolidColorBrush x:Key="Color6" Color="green"/>
+    <SolidColorBrush x:Key="Color7" Color="green"/>
+    <SolidColorBrush x:Key="Color8" Color="green"/>
+
+
+    <!--Font Colors -->
+    <SolidColorBrush x:Key="titleColor1" Color="green"/>
+    <SolidColorBrush x:Key="titleColor2" Color="green"/>
+    <SolidColorBrush x:Key="titleColor3" Color="green"/> 
+    <SolidColorBrush x:Key="plainTextColor1" Color="green"/>
+    <SolidColorBrush x:Key="plainTextColor2" Color="green"/>
+    <SolidColorBrush x:Key="plainTextColor3" Color="green"/>
+    
+    <!-- Panel Colors -->
+    <SolidColorBrush x:Key="panelColor3" Color="#FF556BF8"/>
+    <SolidColorBrush x:Key="panelOverColor3" Color="#4253BF"/>
+    <SolidColorBrush x:Key="panelActiveColor3" Color="#4253BF"/>
+</ResourceDictionary>
