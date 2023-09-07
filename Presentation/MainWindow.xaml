@@ -3,8 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:fa="http://schemas.fontawesome.io/icons/"
-        xmlns:local="clr-namespace:Presentation"
+        xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:viewmodels="clr-namespace:Presentation.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
@@ -12,6 +11,25 @@
         Background="Transparent"
         AllowsTransparency="True"   
         Title="MainWindow" Height="800" Width="1380">
+
+    <Window.Resources>
+        <DataTemplate x:Name="Dashboard" DataType="{x:Type viewmodels:Dashboard}">
+            <viewmodels:Dashboard DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="Registros" DataType="{x:Type viewmodels:Registros}">
+            <viewmodels:Registros DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="Instructivo" DataType="{x:Type viewmodels:Instructivo}">
+            <viewmodels:Instructivo DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="Operaciones" DataType="{x:Type viewmodels:Operaciones}">
+            <viewmodels:Operaciones DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="Residuos" DataType="{x:Type viewmodels:Residuos}">
+            <viewmodels:Residuos DataContext="{Binding}"/>
+        </DataTemplate>
+
+    </Window.Resources>
     <Border CornerRadius="5"
             Opacity="1"
             BorderThickness="1">
@@ -34,7 +52,8 @@
                                    />
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource Color2}"
-                                     >
+                                     IsChecked="True"
+                                     Checked="btn_Dashboard">
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="Home" Style="{StaticResource menuButtonIcon}"/>
@@ -42,7 +61,8 @@
                             </StackPanel>
                         </RadioButton>
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource Color2}">
+                                     Tag="{StaticResource Color2}" 
+                                     Checked="btn_Registro">
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="Database" Style="{StaticResource menuButtonIcon}"/>
@@ -119,12 +139,17 @@
                             <fa:ImageAwesome Icon="WindowMinimize" Style="{StaticResource controlButtonIcon}" Foreground="{StaticResource Color5}"/>
                         </Button>
                     </StackPanel>
-    
+                    <StackPanel x:Name="Header"
+                                Grid.Row="1"
+                                Background="{StaticResource Color1}">
+                        
+                    </StackPanel>
                     <!--Window Content-->
-                    <ContentControl x:Name="controrlContent"
-                                Grid.Row="22"
-                                Margin="20"
-                                Background="#ECFAF8">
+                    <ContentControl x:Name="controlContent"
+                                    Content="{Binding}"
+                                    Grid.Row="2"
+                                    Margin="20"
+>
                     </ContentControl>
                 </Grid>
             </Border>

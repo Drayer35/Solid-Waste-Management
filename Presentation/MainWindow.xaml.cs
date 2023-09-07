@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using System.Runtime;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
-
+using Presentation.View;
 namespace Presentation
 {
     /// <summary>
@@ -62,6 +62,16 @@ namespace Presentation
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btn_Dashboard(object sender, RoutedEventArgs e)
+        {
+          DataContext = new Dashboard();
+        }
+
+        private void btn_Registro(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Registros();
         }
     }
 }

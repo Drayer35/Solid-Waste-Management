@@ -29,12 +29,10 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.c
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\ButtonStyle.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\TitleStyle.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\UIStyle.baml
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\MainWindow.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\App.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation_MarkupCompile.cache
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation_MarkupCompile.lref
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\App.baml
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\MainWindow.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.g.resources
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.Properties.Resources.resources
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
@@ -52,3 +50,6 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Operacion
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Residuos.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Dashboard.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Dashboard.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\MainWindow.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\MainWindow.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\GeneratedInternalTypeHelper.g.cs
