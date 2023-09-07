@@ -58,6 +58,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Instructivo.xaml.cs">
+      <DependentUpon>Instructivo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Operaciones.xaml.cs">
+      <DependentUpon>Operaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Registros.xaml.cs">
+      <DependentUpon>Registros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Residuos.xaml.cs">
+      <DependentUpon>Residuos.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,6 +94,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\UIStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Instructivo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Operaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Registros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Residuos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

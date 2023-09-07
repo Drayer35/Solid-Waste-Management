@@ -15,7 +15,6 @@
     <Border CornerRadius="5"
             Opacity="1"
             BorderThickness="1">
-
         <Grid>
             <!-- Navigation Menu-->
             <Grid.ColumnDefinitions>
@@ -46,7 +45,7 @@
                                      Tag="{StaticResource Color2}">
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
-                                <fa:ImageAwesome Icon="Inbox" Style="{StaticResource menuButtonIcon}"/>
+                                <fa:ImageAwesome Icon="Database" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Registros" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
@@ -56,7 +55,7 @@
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="List" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Lista Residuos" Style="{StaticResource menuButtonText}"/>
+                                <TextBlock Text="Residuos" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
                         <RadioButton Style="{StaticResource menuButton}"
@@ -68,7 +67,7 @@
                             </StackPanel>
                         </RadioButton>
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource Color2}">
+                                     Tag="{StaticResource Color2}" Checked="RadioButton_Checked">
 
                             <StackPanel Orientation="Horizontal" 
                                         HorizontalAlignment="Center">
@@ -89,8 +88,8 @@
                         <!-- Window Menu-->
                         <RowDefinition Height="35"/>
                         <!-- Window Header-->
-                        <RowDefinition Height="70"/>
-                        <!-- Window Menu-->
+                        <RowDefinition Height="55"/>
+                        <!-- Window Content-->
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     
@@ -120,6 +119,13 @@
                             <fa:ImageAwesome Icon="WindowMinimize" Style="{StaticResource controlButtonIcon}" Foreground="{StaticResource Color5}"/>
                         </Button>
                     </StackPanel>
+    
+                    <!--Window Content-->
+                    <ContentControl x:Name="controrlContent"
+                                Grid.Row="22"
+                                Margin="20"
+                                Background="#ECFAF8">
+                    </ContentControl>
                 </Grid>
             </Border>
 

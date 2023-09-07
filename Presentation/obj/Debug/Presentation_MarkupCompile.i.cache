@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Franco\Desktop\empresa\GestionRs\Presentation\obj\Debug\
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\
 Presentation
 none
 false
 DEBUG;TRACE
-C:\Users\Franco\Desktop\empresa\GestionRs\Presentation\App.xaml
-4-268952622
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\App.xaml
+9-1146962743
 
-6-502434485
-14743717857
-MainWindow.xaml;Styles\ButtonStyle.xaml;Styles\TitleStyle.xaml;Styles\UIStyle.xaml;
+112056399280
+14-1496435133
+MainWindow.xaml;Styles\ButtonStyle.xaml;Styles\TitleStyle.xaml;Styles\UIStyle.xaml;View\Dashboard.xaml;View\Instructivo.xaml;View\Operaciones.xaml;View\Registros.xaml;View\Residuos.xaml;
 
 True
 

@@ -14,9 +14,9 @@
     <SolidColorBrush x:Key="Color3" Color="AliceBlue"/>
     <SolidColorBrush x:Key="Color4" Color="#4253BF"/>
     <SolidColorBrush x:Key="Color5" Color="#31373D"/>
-    <SolidColorBrush x:Key="Color6" Color="green"/>
-    <SolidColorBrush x:Key="Color7" Color="green"/>
-    <SolidColorBrush x:Key="Color8" Color="green"/>
+    <SolidColorBrush x:Key="Color6" Color="#5589F9"/>
+    <SolidColorBrush x:Key="Color7" Color="#2E70FF"/>
+    <SolidColorBrush x:Key="Color8" Color="#E4FDFF"/>
 
 
     <!--Font Colors -->

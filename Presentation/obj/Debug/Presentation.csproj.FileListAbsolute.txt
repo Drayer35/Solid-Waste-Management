@@ -42,3 +42,13 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.c
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.exe
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Registros.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Registros.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Instructivo.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Operaciones.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Residuos.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Instructivo.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Operaciones.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Residuos.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Dashboard.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Dashboard.baml

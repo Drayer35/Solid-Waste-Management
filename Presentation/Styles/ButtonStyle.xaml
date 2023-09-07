@@ -87,7 +87,62 @@
         <Setter Property="Foreground" Value="{Binding Path=Tag,RelativeSource={RelativeSource AncestorType=Button}}"/>
         <Setter Property="Width" Value="15"/>
         <Setter Property="Height" Value="15"/>
+    </Style>
+    
+    
+    
+    <!--BUTTON CONTENT-->
+    <Style x:Key="contentButton" TargetType="Button">
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource Color2}"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderThickness="0,0,0,0"
+                    CornerRadius="10"
+                    BorderBrush="{TemplateBinding BorderBrush}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
 
+        <Style.Triggers>
+            <!-- MOUSE OVER COLOR-->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource Color6}"/>
+                <Setter Property="Foreground" Value="{StaticResource Color3}"/>
+                <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+            </Trigger>
+            <!-- MOUSE Press COLOR-->
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource Color7}"/>
+                <Setter Property="Foreground" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+                <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--ICON BUTTON-->
+    <Style x:Key="contentButtonIcon" TargetType="fa:ImageAwesome">
+        <Setter Property="Foreground" Value="{Binding Path=Tag,RelativeSource={RelativeSource AncestorType=Button}}"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!--TEXT BUTTON-->
+    <Style x:Key="contentButtonText" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{Binding Path=Foreground,RelativeSource={RelativeSource AncestorType=Button}}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Monserrat"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
 </ResourceDictionary>
