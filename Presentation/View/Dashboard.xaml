@@ -13,11 +13,12 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Background="{StaticResource Color8}" CornerRadius="12">
+        <Border Background="{StaticResource Color9}" CornerRadius="12">
             <StackPanel >
+                <!-- Botones de adicion-->
                 <StackPanel Height="60"
                             Orientation="Horizontal">
-                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Background="{StaticResource Color6}">
+                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}">
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     >
@@ -25,7 +26,7 @@
                             <TextBlock Text="Residuos" Style="{StaticResource contentButtonText}"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}"  Background="{StaticResource Color6}">
+                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}">
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center">
                             <fa:ImageAwesome Icon="PlusSquare"  Style="{StaticResource contentButtonIcon}"/>
@@ -33,7 +34,12 @@
                         </StackPanel>
                     </Button>
                 </StackPanel>
-
+                
+                <!--Tabla establecimientos-->
+                <StackPanel Height="160"
+                            Margin="0,12,0,0"
+                            >
+                </StackPanel>
             </StackPanel>
         </Border>
         
