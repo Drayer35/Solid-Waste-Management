@@ -9,11 +9,11 @@
              d:DesignHeight="690" d:DesignWidth="1110">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="360"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Background="{StaticResource Color9}" CornerRadius="12">
+        <Border Background="{StaticResource Color9}" CornerRadius="12" Grid.Column="0">
             <StackPanel >
                 <!-- Botones de adicion-->
                 <StackPanel Height="60"
@@ -34,7 +34,7 @@
                         </StackPanel>
                     </Button>
                 </StackPanel>
-                
+
                 <!--Tabla establecimientos-->
                 <StackPanel Height="160"
                             Margin="0,12,0,0"
@@ -42,6 +42,34 @@
                 </StackPanel>
             </StackPanel>
         </Border>
-        
+        <Border Grid.Column="1" CornerRadius="12" Margin="12,0,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <!--PANEL 1-->
+                    <RowDefinition Height="100"/>
+                    <!--PANEL 2 295-->
+                    <RowDefinition Height="*"/>
+                    <!--PANEL 3 295-->
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Border Background="{StaticResource Color9}" Grid.Row="0" CornerRadius="12">
+                    <StackPanel>
+                        
+                    </StackPanel>
+                </Border>
+                <Border Background="{StaticResource Color9}" Grid.Row="1" CornerRadius="12" Margin="0,12,0,0">
+                    <StackPanel >
+
+                    </StackPanel>
+                </Border>
+                <Border Background="{StaticResource Color9}" Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">
+                    <StackPanel >
+
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>
