@@ -28,7 +28,6 @@
         <DataTemplate x:Name="Residuos" DataType="{x:Type viewmodels:Residuos}">
             <viewmodels:Residuos DataContext="{Binding}"/>
         </DataTemplate>
-
     </Window.Resources>
     <Border CornerRadius="5"
             Opacity="1"
@@ -71,7 +70,9 @@
                         </RadioButton>
 
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource Color2}">
+                                     Tag="{StaticResource Color2}" 
+                                     Checked="btn_Residuos"
+                                     >
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="List" Style="{StaticResource menuButtonIcon}"/>
@@ -79,7 +80,8 @@
                             </StackPanel>
                         </RadioButton>
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource Color2}">
+                                     Tag="{StaticResource Color2}"
+                                     Checked="btn_Operaciones">
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="Gears"  Style="{StaticResource menuButtonIcon}"/>
@@ -87,8 +89,8 @@
                             </StackPanel>
                         </RadioButton>
                         <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource Color2}" Checked="RadioButton_Checked">
-
+                                     Tag="{StaticResource Color2}" 
+                                     Checked="btn_Instructivo">
                             <StackPanel Orientation="Horizontal" 
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="Wrench" Style="{StaticResource menuButtonIcon}"/>

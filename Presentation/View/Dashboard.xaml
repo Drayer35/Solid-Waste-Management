@@ -54,20 +54,34 @@
                 </Grid.RowDefinitions>
 
 
-                <Border Background="{StaticResource Color9}" Grid.Row="0" CornerRadius="12">
-                    <StackPanel>
-                        
-                    </StackPanel>
-                </Border>
-                <Border Background="{StaticResource Color9}" Grid.Row="1" CornerRadius="12" Margin="0,12,0,0">
-                    <StackPanel >
+                <StackPanel Grid.Row="0" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Height="100" Background="{StaticResource Color9}" CornerRadius="12" Margin="0,0,10,0">
+                            <StackPanel Orientation="Vertical">
+                                <Border CornerRadius="12,12,0,0" Height="25" Background="{StaticResource Color8}">
+                                    <TextBlock Text="Residuos No Peligrosos" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" VerticalAlignment="Center">
 
-                    </StackPanel>
+                                    </TextBlock>
+                                </Border>
+                                <StackPanel Orientation="Vertical">
+
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                </StackPanel>
+                
+                <Border Background="{StaticResource Color9}" Grid.Row="1" CornerRadius="12" Margin="0,12,0,0">
                 </Border>
                 <Border Background="{StaticResource Color9}" Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">
-                    <StackPanel >
-
-                    </StackPanel>
                 </Border>
             </Grid>
         </Border>

@@ -16,6 +16,8 @@ using System.Runtime;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using Presentation.View;
+using System.Linq.Expressions;
+
 namespace Presentation
 {
     /// <summary>
@@ -58,12 +60,6 @@ namespace Presentation
         {
             Application.Current.Shutdown();
         }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btn_Dashboard(object sender, RoutedEventArgs e)
         {
           DataContext = new Dashboard();
@@ -72,6 +68,21 @@ namespace Presentation
         private void btn_Registro(object sender, RoutedEventArgs e)
         {
             DataContext = new Registros();
+        }
+
+        private void btn_Residuos(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Residuos();
+        }
+
+        private void btn_Operaciones(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Operaciones();
+        }
+
+        private void btn_Instructivo(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Instructivo();
         }
     }
 }
