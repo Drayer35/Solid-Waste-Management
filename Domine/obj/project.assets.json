@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Franco\\Documents\\GitHub\\GestionRS\\Domine\\Domine.csproj",
-      "projectName": "Domine",
-      "projectPath": "C:\\Users\\Franco\\Documents\\GitHub\\GestionRS\\Domine\\Domine.csproj",
+      "projectUniqueName": "C:\\Users\\Franco\\Documents\\GitHub\\GestionRS\\Domine\\Bussines.csproj",
+      "projectName": "Bussines",
+      "projectPath": "C:\\Users\\Franco\\Documents\\GitHub\\GestionRS\\Domine\\Bussines.csproj",
       "packagesPath": "C:\\Users\\Franco\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Franco\\Documents\\GitHub\\GestionRS\\Domine\\obj\\",
       "projectStyle": "PackageReference",

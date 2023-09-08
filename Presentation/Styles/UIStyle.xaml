@@ -10,7 +10,7 @@
 
     <!-- Color Palette-->
     <SolidColorBrush x:Key="Color1" Color="#FF556BF8"/>
-    <SolidColorBrush x:Key="Color2" Color="White"/>
+    <SolidColorBrush x:Key="Color2" Color="#F4F9EA"/>
     <SolidColorBrush x:Key="Color3" Color="AliceBlue"/>
     <SolidColorBrush x:Key="Color4" Color="#4253BF"/>
     <SolidColorBrush x:Key="Color5" Color="#31373D"/>
