@@ -50,6 +50,8 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Operacion
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Residuos.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Dashboard.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Dashboard.baml
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\MainWindow.g.cs
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\MainWindow.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\LoginUser.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\LoginUser.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\MainWindow.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\MainWindow.baml
