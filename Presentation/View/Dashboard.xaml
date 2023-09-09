@@ -127,6 +127,18 @@
                 </StackPanel>
                 
                 <Border Background="{StaticResource Color9}" Grid.Row="1" CornerRadius="12" Margin="0,12,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <!--SUBTITLES-->
+                        
+                        
+                    </Grid>
+                    
+                    
+                    
                 </Border>
                 <Border Background="{StaticResource Color9}" Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">
                 </Border>
