@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection\ConnectDB.cs" />
     <Compile Include="Entities\Certificado.cs" />
     <Compile Include="Entities\Establecimiento.cs" />
     <Compile Include="Entities\EstadorMateria.cs" />
@@ -54,19 +55,45 @@
     <Compile Include="Entities\Residuo.cs" />
     <Compile Include="Entities\TipoGestion.cs" />
     <Compile Include="Entities\TipoResiduo.cs" />
+    <Compile Include="GestionRSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionRSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="CreateDB.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Connection\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{371e1ec9-e5ec-468e-839d-a0653877a210}</Project>
       <Name>Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="GestionRSDataSet.xsc">
+      <DependentUpon>GestionRSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionRSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionRSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionRSDataSet.xss">
+      <DependentUpon>GestionRSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
