@@ -4,3 +4,7 @@ C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Common\obj\Debug\Common.cs
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Common\obj\Debug\Common.dll
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Common\obj\Debug\Common.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\obj\Debug\Common.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\obj\Debug\Common.pdb

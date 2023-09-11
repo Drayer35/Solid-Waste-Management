@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Common.Atributtes
 {
-    internal class TipoGestion
+    internal class GradoPeligrosidad
     {
-    }
+        private int Id; private string Descripcion;
+    };
+
 }

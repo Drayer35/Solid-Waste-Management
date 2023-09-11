@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Procedures;
 
-namespace Common.Atributtes
+namespace Domine.Crud
 {
-    internal class Presentacion
+    internal class CRegistro
     {
     }
 }

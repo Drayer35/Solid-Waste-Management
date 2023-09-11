@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Atributtes
+namespace DataAccess.Procedures
 {
-    internal class MecanismoEntrega
+    internal class d
     {
     }
 }

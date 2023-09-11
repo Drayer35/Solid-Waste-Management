@@ -41,10 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Certificado.cs" />
+    <Compile Include="Entities\Establecimiento.cs" />
+    <Compile Include="Entities\EstadoMateria.cs" />
+    <Compile Include="Entities\Gestion.cs" />
+    <Compile Include="Entities\Gestor.cs" />
+    <Compile Include="Entities\GradoPeligrosidad.cs" />
+    <Compile Include="Entities\MecanismoEntrega.cs" />
+    <Compile Include="Entities\Presentacion.cs" />
+    <Compile Include="Entities\ProcesoGenerador.cs" />
+    <Compile Include="Entities\Registro.cs" />
+    <Compile Include="Entities\Residuo.cs" />
+    <Compile Include="Entities\TipoGestion.cs" />
+    <Compile Include="Entities\TipoResiduo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Atributtes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

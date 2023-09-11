@@ -15,7 +15,6 @@ namespace DataAccess.Connection
         {
             if (conn.State == ConnectionState.Closed) conn.Open();
             return conn;
-
         }
 
         public SqlConnection CloseConn()
