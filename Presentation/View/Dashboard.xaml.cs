@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Common.Entities;
+using Domain.Crud;
+
 
 namespace Presentation.View
 {
@@ -23,6 +27,36 @@ namespace Presentation.View
         public Dashboard()
         {
             InitializeComponent();
+           
         }
+
+
+        //VARIABLES
+        CRegistro establecimiento = new CRegistro();
+        Registro attEstablecimiento = new Registro();
+        bool edit = false;
+
+        public void getDataEstablecimiento()
+        {
+            CRegistro cEstablecimiento = new CRegistro();
+            DataTable dataTable = cEstablecimiento.Mostrar();
+
+            // Convierte el DataTable a una lista de Registro
+            List<Registro> establecimientos = new List<Registro>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Registro establecimiento = new Registro
+                {
+                    // Asigna los valores de las columnas a las propiedades de Registro
+                    // Por ejemplo: Propiedad1 = (tipo) row["NombreColumna"];
+                };
+                establecimientos.Add(establecimiento);
+            }
+
+            // Asigna la lista de registros como ItemsSource del DataGrid
+            EstablecimientoData.ItemsSource = establecimientos;
+
+        }
+
     }
 }

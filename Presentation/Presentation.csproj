@@ -180,8 +180,12 @@
     <Resource Include="Img\truck-moving-solid.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domine\Domain.csproj">
-      <Project>{bac204e2-e60d-4405-a6e9-5044ec512c63}</Project>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{371e1ec9-e5ec-468e-839d-a0653877a210}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{9f34cc59-e49f-4839-83f6-2d362fe6de6d}</Project>
       <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>

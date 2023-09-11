@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Atributtes
+namespace Common.Entities
 {
-    internal class TipoResiduo
+    public class TipoResiduo
     {
         private int Id;
         private string Decripcion;

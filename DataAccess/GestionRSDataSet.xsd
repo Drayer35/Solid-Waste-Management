@@ -836,14 +836,14 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="GestionRSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="GestionRSDataSet" msprop:Generator_DataSetName="GestionRSDataSet">
+  <xs:element name="GestionRSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="GestionRSDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GestionRSDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CERTIFICADO" msprop:Generator_RowEvHandlerName="CERTIFICADORowChangeEventHandler" msprop:Generator_RowDeletedName="CERTIFICADORowDeleted" msprop:Generator_RowDeletingName="CERTIFICADORowDeleting" msprop:Generator_RowEvArgName="CERTIFICADORowChangeEvent" msprop:Generator_TablePropName="CERTIFICADO" msprop:Generator_RowChangedName="CERTIFICADORowChanged" msprop:Generator_RowChangingName="CERTIFICADORowChanging" msprop:Generator_TableClassName="CERTIFICADODataTable" msprop:Generator_RowClassName="CERTIFICADORow" msprop:Generator_TableVarName="tableCERTIFICADO" msprop:Generator_UserTableName="CERTIFICADO">
+        <xs:element name="CERTIFICADO" msprop:Generator_RowClassName="CERTIFICADORow" msprop:Generator_RowEvHandlerName="CERTIFICADORowChangeEventHandler" msprop:Generator_RowDeletedName="CERTIFICADORowDeleted" msprop:Generator_RowDeletingName="CERTIFICADORowDeleting" msprop:Generator_RowEvArgName="CERTIFICADORowChangeEvent" msprop:Generator_TablePropName="CERTIFICADO" msprop:Generator_RowChangedName="CERTIFICADORowChanged" msprop:Generator_UserTableName="CERTIFICADO" msprop:Generator_RowChangingName="CERTIFICADORowChanging" msprop:Generator_TableClassName="CERTIFICADODataTable" msprop:Generator_TableVarName="tableCERTIFICADO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="80" />
@@ -853,11 +853,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ESTABLECIMIENTO" msprop:Generator_RowEvHandlerName="ESTABLECIMIENTORowChangeEventHandler" msprop:Generator_RowDeletedName="ESTABLECIMIENTORowDeleted" msprop:Generator_RowDeletingName="ESTABLECIMIENTORowDeleting" msprop:Generator_RowEvArgName="ESTABLECIMIENTORowChangeEvent" msprop:Generator_TablePropName="ESTABLECIMIENTO" msprop:Generator_RowChangedName="ESTABLECIMIENTORowChanged" msprop:Generator_RowChangingName="ESTABLECIMIENTORowChanging" msprop:Generator_TableClassName="ESTABLECIMIENTODataTable" msprop:Generator_RowClassName="ESTABLECIMIENTORow" msprop:Generator_TableVarName="tableESTABLECIMIENTO" msprop:Generator_UserTableName="ESTABLECIMIENTO">
+        <xs:element name="ESTABLECIMIENTO" msprop:Generator_RowClassName="ESTABLECIMIENTORow" msprop:Generator_RowEvHandlerName="ESTABLECIMIENTORowChangeEventHandler" msprop:Generator_RowDeletedName="ESTABLECIMIENTORowDeleted" msprop:Generator_RowDeletingName="ESTABLECIMIENTORowDeleting" msprop:Generator_RowEvArgName="ESTABLECIMIENTORowChangeEvent" msprop:Generator_TablePropName="ESTABLECIMIENTO" msprop:Generator_RowChangedName="ESTABLECIMIENTORowChanged" msprop:Generator_UserTableName="ESTABLECIMIENTO" msprop:Generator_RowChangingName="ESTABLECIMIENTORowChanging" msprop:Generator_TableClassName="ESTABLECIMIENTODataTable" msprop:Generator_TableVarName="tableESTABLECIMIENTO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_UserColumnName="NOMBRE">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
@@ -867,11 +867,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ESTADO_MATERIA" msprop:Generator_RowEvHandlerName="ESTADO_MATERIARowChangeEventHandler" msprop:Generator_RowDeletedName="ESTADO_MATERIARowDeleted" msprop:Generator_RowDeletingName="ESTADO_MATERIARowDeleting" msprop:Generator_RowEvArgName="ESTADO_MATERIARowChangeEvent" msprop:Generator_TablePropName="ESTADO_MATERIA" msprop:Generator_RowChangedName="ESTADO_MATERIARowChanged" msprop:Generator_RowChangingName="ESTADO_MATERIARowChanging" msprop:Generator_TableClassName="ESTADO_MATERIADataTable" msprop:Generator_RowClassName="ESTADO_MATERIARow" msprop:Generator_TableVarName="tableESTADO_MATERIA" msprop:Generator_UserTableName="ESTADO_MATERIA">
+        <xs:element name="ESTADO_MATERIA" msprop:Generator_RowClassName="ESTADO_MATERIARow" msprop:Generator_RowEvHandlerName="ESTADO_MATERIARowChangeEventHandler" msprop:Generator_RowDeletedName="ESTADO_MATERIARowDeleted" msprop:Generator_RowDeletingName="ESTADO_MATERIARowDeleting" msprop:Generator_RowEvArgName="ESTADO_MATERIARowChangeEvent" msprop:Generator_TablePropName="ESTADO_MATERIA" msprop:Generator_RowChangedName="ESTADO_MATERIARowChanged" msprop:Generator_UserTableName="ESTADO_MATERIA" msprop:Generator_RowChangingName="ESTADO_MATERIARowChanging" msprop:Generator_TableClassName="ESTADO_MATERIADataTable" msprop:Generator_TableVarName="tableESTADO_MATERIA">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
@@ -881,11 +881,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GESTION" msprop:Generator_RowEvHandlerName="GESTIONRowChangeEventHandler" msprop:Generator_RowDeletedName="GESTIONRowDeleted" msprop:Generator_RowDeletingName="GESTIONRowDeleting" msprop:Generator_RowEvArgName="GESTIONRowChangeEvent" msprop:Generator_TablePropName="GESTION" msprop:Generator_RowChangedName="GESTIONRowChanged" msprop:Generator_RowChangingName="GESTIONRowChanging" msprop:Generator_TableClassName="GESTIONDataTable" msprop:Generator_RowClassName="GESTIONRow" msprop:Generator_TableVarName="tableGESTION" msprop:Generator_UserTableName="GESTION">
+        <xs:element name="GESTION" msprop:Generator_RowClassName="GESTIONRow" msprop:Generator_RowEvHandlerName="GESTIONRowChangeEventHandler" msprop:Generator_RowDeletedName="GESTIONRowDeleted" msprop:Generator_RowDeletingName="GESTIONRowDeleting" msprop:Generator_RowEvArgName="GESTIONRowChangeEvent" msprop:Generator_TablePropName="GESTION" msprop:Generator_RowChangedName="GESTIONRowChanged" msprop:Generator_UserTableName="GESTION" msprop:Generator_RowChangingName="GESTIONRowChanging" msprop:Generator_TableClassName="GESTIONDataTable" msprop:Generator_TableVarName="tableGESTION">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_UserColumnName="NOMBRE">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
@@ -895,20 +895,20 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GESTION_x_TIPO" msprop:Generator_RowEvHandlerName="GESTION_x_TIPORowChangeEventHandler" msprop:Generator_RowDeletedName="GESTION_x_TIPORowDeleted" msprop:Generator_RowDeletingName="GESTION_x_TIPORowDeleting" msprop:Generator_RowEvArgName="GESTION_x_TIPORowChangeEvent" msprop:Generator_TablePropName="GESTION_x_TIPO" msprop:Generator_RowChangedName="GESTION_x_TIPORowChanged" msprop:Generator_RowChangingName="GESTION_x_TIPORowChanging" msprop:Generator_TableClassName="GESTION_x_TIPODataTable" msprop:Generator_RowClassName="GESTION_x_TIPORow" msprop:Generator_TableVarName="tableGESTION_x_TIPO" msprop:Generator_UserTableName="GESTION_x_TIPO">
+        <xs:element name="GESTION_x_TIPO" msprop:Generator_RowClassName="GESTION_x_TIPORow" msprop:Generator_RowEvHandlerName="GESTION_x_TIPORowChangeEventHandler" msprop:Generator_RowDeletedName="GESTION_x_TIPORowDeleted" msprop:Generator_RowDeletingName="GESTION_x_TIPORowDeleting" msprop:Generator_RowEvArgName="GESTION_x_TIPORowChangeEvent" msprop:Generator_TablePropName="GESTION_x_TIPO" msprop:Generator_RowChangedName="GESTION_x_TIPORowChanged" msprop:Generator_UserTableName="GESTION_x_TIPO" msprop:Generator_RowChangingName="GESTION_x_TIPORowChanging" msprop:Generator_TableClassName="GESTION_x_TIPODataTable" msprop:Generator_TableVarName="tableGESTION_x_TIPO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="GESTION_ID" msprop:Generator_ColumnPropNameInRow="GESTION_ID" msprop:Generator_ColumnPropNameInTable="GESTION_IDColumn" msprop:Generator_ColumnVarNameInTable="columnGESTION_ID" msprop:Generator_UserColumnName="GESTION_ID" type="xs:int" />
-              <xs:element name="TIPO_ID" msprop:Generator_ColumnPropNameInRow="TIPO_ID" msprop:Generator_ColumnPropNameInTable="TIPO_IDColumn" msprop:Generator_ColumnVarNameInTable="columnTIPO_ID" msprop:Generator_UserColumnName="TIPO_ID" type="xs:int" />
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="GESTION_ID" msprop:Generator_UserColumnName="GESTION_ID" msprop:Generator_ColumnPropNameInTable="GESTION_IDColumn" msprop:Generator_ColumnPropNameInRow="GESTION_ID" msprop:Generator_ColumnVarNameInTable="columnGESTION_ID" type="xs:int" />
+              <xs:element name="TIPO_ID" msprop:Generator_UserColumnName="TIPO_ID" msprop:Generator_ColumnPropNameInTable="TIPO_IDColumn" msprop:Generator_ColumnPropNameInRow="TIPO_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_ID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GESTOR" msprop:Generator_RowEvHandlerName="GESTORRowChangeEventHandler" msprop:Generator_RowDeletedName="GESTORRowDeleted" msprop:Generator_RowDeletingName="GESTORRowDeleting" msprop:Generator_RowEvArgName="GESTORRowChangeEvent" msprop:Generator_TablePropName="GESTOR" msprop:Generator_RowChangedName="GESTORRowChanged" msprop:Generator_RowChangingName="GESTORRowChanging" msprop:Generator_TableClassName="GESTORDataTable" msprop:Generator_RowClassName="GESTORRow" msprop:Generator_TableVarName="tableGESTOR" msprop:Generator_UserTableName="GESTOR">
+        <xs:element name="GESTOR" msprop:Generator_RowClassName="GESTORRow" msprop:Generator_RowEvHandlerName="GESTORRowChangeEventHandler" msprop:Generator_RowDeletedName="GESTORRowDeleted" msprop:Generator_RowDeletingName="GESTORRowDeleting" msprop:Generator_RowEvArgName="GESTORRowChangeEvent" msprop:Generator_TablePropName="GESTOR" msprop:Generator_RowChangedName="GESTORRowChanged" msprop:Generator_UserTableName="GESTOR" msprop:Generator_RowChangingName="GESTORRowChanging" msprop:Generator_TableClassName="GESTORDataTable" msprop:Generator_TableVarName="tableGESTOR">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
@@ -918,11 +918,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GRADO_PELIGROSIDAD" msprop:Generator_RowEvHandlerName="GRADO_PELIGROSIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="GRADO_PELIGROSIDADRowDeleted" msprop:Generator_RowDeletingName="GRADO_PELIGROSIDADRowDeleting" msprop:Generator_RowEvArgName="GRADO_PELIGROSIDADRowChangeEvent" msprop:Generator_TablePropName="GRADO_PELIGROSIDAD" msprop:Generator_RowChangedName="GRADO_PELIGROSIDADRowChanged" msprop:Generator_RowChangingName="GRADO_PELIGROSIDADRowChanging" msprop:Generator_TableClassName="GRADO_PELIGROSIDADDataTable" msprop:Generator_RowClassName="GRADO_PELIGROSIDADRow" msprop:Generator_TableVarName="tableGRADO_PELIGROSIDAD" msprop:Generator_UserTableName="GRADO_PELIGROSIDAD">
+        <xs:element name="GRADO_PELIGROSIDAD" msprop:Generator_RowClassName="GRADO_PELIGROSIDADRow" msprop:Generator_RowEvHandlerName="GRADO_PELIGROSIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="GRADO_PELIGROSIDADRowDeleted" msprop:Generator_RowDeletingName="GRADO_PELIGROSIDADRowDeleting" msprop:Generator_RowEvArgName="GRADO_PELIGROSIDADRowChangeEvent" msprop:Generator_TablePropName="GRADO_PELIGROSIDAD" msprop:Generator_RowChangedName="GRADO_PELIGROSIDADRowChanged" msprop:Generator_UserTableName="GRADO_PELIGROSIDAD" msprop:Generator_RowChangingName="GRADO_PELIGROSIDADRowChanging" msprop:Generator_TableClassName="GRADO_PELIGROSIDADDataTable" msprop:Generator_TableVarName="tableGRADO_PELIGROSIDAD">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -932,11 +932,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MECANISMO_ENTREGA" msprop:Generator_RowEvHandlerName="MECANISMO_ENTREGARowChangeEventHandler" msprop:Generator_RowDeletedName="MECANISMO_ENTREGARowDeleted" msprop:Generator_RowDeletingName="MECANISMO_ENTREGARowDeleting" msprop:Generator_RowEvArgName="MECANISMO_ENTREGARowChangeEvent" msprop:Generator_TablePropName="MECANISMO_ENTREGA" msprop:Generator_RowChangedName="MECANISMO_ENTREGARowChanged" msprop:Generator_RowChangingName="MECANISMO_ENTREGARowChanging" msprop:Generator_TableClassName="MECANISMO_ENTREGADataTable" msprop:Generator_RowClassName="MECANISMO_ENTREGARow" msprop:Generator_TableVarName="tableMECANISMO_ENTREGA" msprop:Generator_UserTableName="MECANISMO_ENTREGA">
+        <xs:element name="MECANISMO_ENTREGA" msprop:Generator_RowClassName="MECANISMO_ENTREGARow" msprop:Generator_RowEvHandlerName="MECANISMO_ENTREGARowChangeEventHandler" msprop:Generator_RowDeletedName="MECANISMO_ENTREGARowDeleted" msprop:Generator_RowDeletingName="MECANISMO_ENTREGARowDeleting" msprop:Generator_RowEvArgName="MECANISMO_ENTREGARowChangeEvent" msprop:Generator_TablePropName="MECANISMO_ENTREGA" msprop:Generator_RowChangedName="MECANISMO_ENTREGARowChanged" msprop:Generator_UserTableName="MECANISMO_ENTREGA" msprop:Generator_RowChangingName="MECANISMO_ENTREGARowChanging" msprop:Generator_TableClassName="MECANISMO_ENTREGADataTable" msprop:Generator_TableVarName="tableMECANISMO_ENTREGA">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
@@ -946,11 +946,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRESENTACION" msprop:Generator_RowEvHandlerName="PRESENTACIONRowChangeEventHandler" msprop:Generator_RowDeletedName="PRESENTACIONRowDeleted" msprop:Generator_RowDeletingName="PRESENTACIONRowDeleting" msprop:Generator_RowEvArgName="PRESENTACIONRowChangeEvent" msprop:Generator_TablePropName="PRESENTACION" msprop:Generator_RowChangedName="PRESENTACIONRowChanged" msprop:Generator_RowChangingName="PRESENTACIONRowChanging" msprop:Generator_TableClassName="PRESENTACIONDataTable" msprop:Generator_RowClassName="PRESENTACIONRow" msprop:Generator_TableVarName="tablePRESENTACION" msprop:Generator_UserTableName="PRESENTACION">
+        <xs:element name="PRESENTACION" msprop:Generator_RowClassName="PRESENTACIONRow" msprop:Generator_RowEvHandlerName="PRESENTACIONRowChangeEventHandler" msprop:Generator_RowDeletedName="PRESENTACIONRowDeleted" msprop:Generator_RowDeletingName="PRESENTACIONRowDeleting" msprop:Generator_RowEvArgName="PRESENTACIONRowChangeEvent" msprop:Generator_TablePropName="PRESENTACION" msprop:Generator_RowChangedName="PRESENTACIONRowChanged" msprop:Generator_UserTableName="PRESENTACION" msprop:Generator_RowChangingName="PRESENTACIONRowChanging" msprop:Generator_TableClassName="PRESENTACIONDataTable" msprop:Generator_TableVarName="tablePRESENTACION">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
@@ -960,11 +960,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PROCESO_GENERADOR" msprop:Generator_RowEvHandlerName="PROCESO_GENERADORRowChangeEventHandler" msprop:Generator_RowDeletedName="PROCESO_GENERADORRowDeleted" msprop:Generator_RowDeletingName="PROCESO_GENERADORRowDeleting" msprop:Generator_RowEvArgName="PROCESO_GENERADORRowChangeEvent" msprop:Generator_TablePropName="PROCESO_GENERADOR" msprop:Generator_RowChangedName="PROCESO_GENERADORRowChanged" msprop:Generator_RowChangingName="PROCESO_GENERADORRowChanging" msprop:Generator_TableClassName="PROCESO_GENERADORDataTable" msprop:Generator_RowClassName="PROCESO_GENERADORRow" msprop:Generator_TableVarName="tablePROCESO_GENERADOR" msprop:Generator_UserTableName="PROCESO_GENERADOR">
+        <xs:element name="PROCESO_GENERADOR" msprop:Generator_RowClassName="PROCESO_GENERADORRow" msprop:Generator_RowEvHandlerName="PROCESO_GENERADORRowChangeEventHandler" msprop:Generator_RowDeletedName="PROCESO_GENERADORRowDeleted" msprop:Generator_RowDeletingName="PROCESO_GENERADORRowDeleting" msprop:Generator_RowEvArgName="PROCESO_GENERADORRowChangeEvent" msprop:Generator_TablePropName="PROCESO_GENERADOR" msprop:Generator_RowChangedName="PROCESO_GENERADORRowChanged" msprop:Generator_UserTableName="PROCESO_GENERADOR" msprop:Generator_RowChangingName="PROCESO_GENERADORRowChanging" msprop:Generator_TableClassName="PROCESO_GENERADORDataTable" msprop:Generator_TableVarName="tablePROCESO_GENERADOR">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_UserColumnName="NOMBRE">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="180" />
@@ -974,97 +974,97 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="REGISTRO" msprop:Generator_RowEvHandlerName="REGISTRORowChangeEventHandler" msprop:Generator_RowDeletedName="REGISTRORowDeleted" msprop:Generator_RowDeletingName="REGISTRORowDeleting" msprop:Generator_RowEvArgName="REGISTRORowChangeEvent" msprop:Generator_TablePropName="REGISTRO" msprop:Generator_RowChangedName="REGISTRORowChanged" msprop:Generator_RowChangingName="REGISTRORowChanging" msprop:Generator_TableClassName="REGISTRODataTable" msprop:Generator_RowClassName="REGISTRORow" msprop:Generator_TableVarName="tableREGISTRO" msprop:Generator_UserTableName="REGISTRO">
+        <xs:element name="REGISTRO" msprop:Generator_RowClassName="REGISTRORow" msprop:Generator_RowEvHandlerName="REGISTRORowChangeEventHandler" msprop:Generator_RowDeletedName="REGISTRORowDeleted" msprop:Generator_RowDeletingName="REGISTRORowDeleting" msprop:Generator_RowEvArgName="REGISTRORowChangeEvent" msprop:Generator_TablePropName="REGISTRO" msprop:Generator_RowChangedName="REGISTRORowChanged" msprop:Generator_UserTableName="REGISTRO" msprop:Generator_RowChangingName="REGISTRORowChanging" msprop:Generator_TableClassName="REGISTRODataTable" msprop:Generator_TableVarName="tableREGISTRO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="RESIDUO" msprop:Generator_ColumnPropNameInRow="RESIDUO" msprop:Generator_ColumnPropNameInTable="RESIDUOColumn" msprop:Generator_ColumnVarNameInTable="columnRESIDUO" msprop:Generator_UserColumnName="RESIDUO">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="RESIDUO" msprop:Generator_UserColumnName="RESIDUO" msprop:Generator_ColumnPropNameInTable="RESIDUOColumn" msprop:Generator_ColumnPropNameInRow="RESIDUO" msprop:Generator_ColumnVarNameInTable="columnRESIDUO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="FECHA" msprop:Generator_UserColumnName="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" type="xs:dateTime" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TIPO_RESIDUO" msprop:Generator_ColumnPropNameInRow="TIPO_RESIDUO" msprop:Generator_ColumnPropNameInTable="TIPO_RESIDUOColumn" msprop:Generator_ColumnVarNameInTable="columnTIPO_RESIDUO" msprop:Generator_UserColumnName="TIPO_RESIDUO">
+              <xs:element name="TIPO_RESIDUO" msprop:Generator_UserColumnName="TIPO_RESIDUO" msprop:Generator_ColumnPropNameInTable="TIPO_RESIDUOColumn" msprop:Generator_ColumnPropNameInRow="TIPO_RESIDUO" msprop:Generator_ColumnVarNameInTable="columnTIPO_RESIDUO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ESTABLECIMIENTO" msprop:Generator_ColumnPropNameInRow="ESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="ESTABLECIMIENTOColumn" msprop:Generator_ColumnVarNameInTable="columnESTABLECIMIENTO" msprop:Generator_UserColumnName="ESTABLECIMIENTO">
+              <xs:element name="ESTABLECIMIENTO" msprop:Generator_UserColumnName="ESTABLECIMIENTO" msprop:Generator_ColumnPropNameInTable="ESTABLECIMIENTOColumn" msprop:Generator_ColumnPropNameInRow="ESTABLECIMIENTO" msprop:Generator_ColumnVarNameInTable="columnESTABLECIMIENTO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="160" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PROCESO_GENERADOR" msprop:Generator_ColumnPropNameInRow="PROCESO_GENERADOR" msprop:Generator_ColumnPropNameInTable="PROCESO_GENERADORColumn" msprop:Generator_ColumnVarNameInTable="columnPROCESO_GENERADOR" msprop:Generator_UserColumnName="PROCESO_GENERADOR">
+              <xs:element name="PROCESO_GENERADOR" msprop:Generator_UserColumnName="PROCESO_GENERADOR" msprop:Generator_ColumnPropNameInTable="PROCESO_GENERADORColumn" msprop:Generator_ColumnPropNameInRow="PROCESO_GENERADOR" msprop:Generator_ColumnVarNameInTable="columnPROCESO_GENERADOR">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="180" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="GRADO_PELIGROSIDAD" msprop:Generator_ColumnPropNameInRow="GRADO_PELIGROSIDAD" msprop:Generator_ColumnPropNameInTable="GRADO_PELIGROSIDADColumn" msprop:Generator_ColumnVarNameInTable="columnGRADO_PELIGROSIDAD" msprop:Generator_UserColumnName="GRADO_PELIGROSIDAD">
+              <xs:element name="GRADO_PELIGROSIDAD" msprop:Generator_UserColumnName="GRADO_PELIGROSIDAD" msprop:Generator_ColumnPropNameInTable="GRADO_PELIGROSIDADColumn" msprop:Generator_ColumnPropNameInRow="GRADO_PELIGROSIDAD" msprop:Generator_ColumnVarNameInTable="columnGRADO_PELIGROSIDAD">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="180" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ESTADO" msprop:Generator_ColumnPropNameInRow="ESTADO" msprop:Generator_ColumnPropNameInTable="ESTADOColumn" msprop:Generator_ColumnVarNameInTable="columnESTADO" msprop:Generator_UserColumnName="ESTADO">
+              <xs:element name="ESTADO" msprop:Generator_UserColumnName="ESTADO" msprop:Generator_ColumnPropNameInTable="ESTADOColumn" msprop:Generator_ColumnPropNameInRow="ESTADO" msprop:Generator_ColumnVarNameInTable="columnESTADO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="160" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CANTIDAD" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" type="xs:int" />
-              <xs:element name="GESTION" msprop:Generator_ColumnPropNameInRow="GESTION" msprop:Generator_ColumnPropNameInTable="GESTIONColumn" msprop:Generator_ColumnVarNameInTable="columnGESTION" msprop:Generator_UserColumnName="GESTION">
+              <xs:element name="CANTIDAD" msprop:Generator_UserColumnName="CANTIDAD" msprop:Generator_ColumnPropNameInTable="CANTIDADColumn" msprop:Generator_ColumnPropNameInRow="CANTIDAD" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD" type="xs:int" />
+              <xs:element name="GESTION" msprop:Generator_UserColumnName="GESTION" msprop:Generator_ColumnPropNameInTable="GESTIONColumn" msprop:Generator_ColumnPropNameInRow="GESTION" msprop:Generator_ColumnVarNameInTable="columnGESTION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TIPO_GESTION" msprop:Generator_ColumnPropNameInRow="TIPO_GESTION" msprop:Generator_ColumnPropNameInTable="TIPO_GESTIONColumn" msprop:Generator_ColumnVarNameInTable="columnTIPO_GESTION" msprop:Generator_UserColumnName="TIPO_GESTION">
+              <xs:element name="TIPO_GESTION" msprop:Generator_UserColumnName="TIPO_GESTION" msprop:Generator_ColumnPropNameInTable="TIPO_GESTIONColumn" msprop:Generator_ColumnPropNameInRow="TIPO_GESTION" msprop:Generator_ColumnVarNameInTable="columnTIPO_GESTION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="MECANISMO_ENTREGA" msprop:Generator_ColumnPropNameInRow="MECANISMO_ENTREGA" msprop:Generator_ColumnPropNameInTable="MECANISMO_ENTREGAColumn" msprop:Generator_ColumnVarNameInTable="columnMECANISMO_ENTREGA" msprop:Generator_UserColumnName="MECANISMO_ENTREGA">
+              <xs:element name="MECANISMO_ENTREGA" msprop:Generator_UserColumnName="MECANISMO_ENTREGA" msprop:Generator_ColumnPropNameInTable="MECANISMO_ENTREGAColumn" msprop:Generator_ColumnPropNameInRow="MECANISMO_ENTREGA" msprop:Generator_ColumnVarNameInTable="columnMECANISMO_ENTREGA">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="180" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PRESENTACION" msprop:Generator_ColumnPropNameInRow="PRESENTACION" msprop:Generator_ColumnPropNameInTable="PRESENTACIONColumn" msprop:Generator_ColumnVarNameInTable="columnPRESENTACION" msprop:Generator_UserColumnName="PRESENTACION">
+              <xs:element name="PRESENTACION" msprop:Generator_UserColumnName="PRESENTACION" msprop:Generator_ColumnPropNameInTable="PRESENTACIONColumn" msprop:Generator_ColumnPropNameInRow="PRESENTACION" msprop:Generator_ColumnVarNameInTable="columnPRESENTACION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="GESTOR" msprop:Generator_ColumnPropNameInRow="GESTOR" msprop:Generator_ColumnPropNameInTable="GESTORColumn" msprop:Generator_ColumnVarNameInTable="columnGESTOR" msprop:Generator_UserColumnName="GESTOR">
+              <xs:element name="GESTOR" msprop:Generator_UserColumnName="GESTOR" msprop:Generator_ColumnPropNameInTable="GESTORColumn" msprop:Generator_ColumnPropNameInRow="GESTOR" msprop:Generator_ColumnVarNameInTable="columnGESTOR">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CERTIFICADO" msprop:Generator_ColumnPropNameInRow="CERTIFICADO" msprop:Generator_ColumnPropNameInTable="CERTIFICADOColumn" msprop:Generator_ColumnVarNameInTable="columnCERTIFICADO" msprop:Generator_UserColumnName="CERTIFICADO">
+              <xs:element name="CERTIFICADO" msprop:Generator_UserColumnName="CERTIFICADO" msprop:Generator_ColumnPropNameInTable="CERTIFICADOColumn" msprop:Generator_ColumnPropNameInRow="CERTIFICADO" msprop:Generator_ColumnVarNameInTable="columnCERTIFICADO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="80" />
@@ -1074,39 +1074,39 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RESIDUO" msprop:Generator_RowEvHandlerName="RESIDUORowChangeEventHandler" msprop:Generator_RowDeletedName="RESIDUORowDeleted" msprop:Generator_RowDeletingName="RESIDUORowDeleting" msprop:Generator_RowEvArgName="RESIDUORowChangeEvent" msprop:Generator_TablePropName="RESIDUO" msprop:Generator_RowChangedName="RESIDUORowChanged" msprop:Generator_RowChangingName="RESIDUORowChanging" msprop:Generator_TableClassName="RESIDUODataTable" msprop:Generator_RowClassName="RESIDUORow" msprop:Generator_TableVarName="tableRESIDUO" msprop:Generator_UserTableName="RESIDUO">
+        <xs:element name="RESIDUO" msprop:Generator_RowClassName="RESIDUORow" msprop:Generator_RowEvHandlerName="RESIDUORowChangeEventHandler" msprop:Generator_RowDeletedName="RESIDUORowDeleted" msprop:Generator_RowDeletingName="RESIDUORowDeleting" msprop:Generator_RowEvArgName="RESIDUORowChangeEvent" msprop:Generator_TablePropName="RESIDUO" msprop:Generator_RowChangedName="RESIDUORowChanged" msprop:Generator_UserTableName="RESIDUO" msprop:Generator_RowChangingName="RESIDUORowChanging" msprop:Generator_TableClassName="RESIDUODataTable" msprop:Generator_TableVarName="tableRESIDUO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="NOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_UserColumnName="NOMBRE">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="NOMBRE" msprop:Generator_UserColumnName="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TIPO_RESIDUO" msprop:Generator_ColumnPropNameInRow="TIPO_RESIDUO" msprop:Generator_ColumnPropNameInTable="TIPO_RESIDUOColumn" msprop:Generator_ColumnVarNameInTable="columnTIPO_RESIDUO" msprop:Generator_UserColumnName="TIPO_RESIDUO">
+              <xs:element name="TIPO_RESIDUO" msprop:Generator_UserColumnName="TIPO_RESIDUO" msprop:Generator_ColumnPropNameInTable="TIPO_RESIDUOColumn" msprop:Generator_ColumnPropNameInRow="TIPO_RESIDUO" msprop:Generator_ColumnVarNameInTable="columnTIPO_RESIDUO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="GRADO_PELIGROSIDAD" msprop:Generator_ColumnPropNameInRow="GRADO_PELIGROSIDAD" msprop:Generator_ColumnPropNameInTable="GRADO_PELIGROSIDADColumn" msprop:Generator_ColumnVarNameInTable="columnGRADO_PELIGROSIDAD" msprop:Generator_UserColumnName="GRADO_PELIGROSIDAD">
+              <xs:element name="GRADO_PELIGROSIDAD" msprop:Generator_UserColumnName="GRADO_PELIGROSIDAD" msprop:Generator_ColumnPropNameInTable="GRADO_PELIGROSIDADColumn" msprop:Generator_ColumnPropNameInRow="GRADO_PELIGROSIDAD" msprop:Generator_ColumnVarNameInTable="columnGRADO_PELIGROSIDAD">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ESTADO_MATERIA" msprop:Generator_ColumnPropNameInRow="ESTADO_MATERIA" msprop:Generator_ColumnPropNameInTable="ESTADO_MATERIAColumn" msprop:Generator_ColumnVarNameInTable="columnESTADO_MATERIA" msprop:Generator_UserColumnName="ESTADO_MATERIA">
+              <xs:element name="ESTADO_MATERIA" msprop:Generator_UserColumnName="ESTADO_MATERIA" msprop:Generator_ColumnPropNameInTable="ESTADO_MATERIAColumn" msprop:Generator_ColumnPropNameInRow="ESTADO_MATERIA" msprop:Generator_ColumnVarNameInTable="columnESTADO_MATERIA">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
@@ -1116,11 +1116,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TIPO_GESTION" msprop:Generator_RowEvHandlerName="TIPO_GESTIONRowChangeEventHandler" msprop:Generator_RowDeletedName="TIPO_GESTIONRowDeleted" msprop:Generator_RowDeletingName="TIPO_GESTIONRowDeleting" msprop:Generator_RowEvArgName="TIPO_GESTIONRowChangeEvent" msprop:Generator_TablePropName="TIPO_GESTION" msprop:Generator_RowChangedName="TIPO_GESTIONRowChanged" msprop:Generator_RowChangingName="TIPO_GESTIONRowChanging" msprop:Generator_TableClassName="TIPO_GESTIONDataTable" msprop:Generator_RowClassName="TIPO_GESTIONRow" msprop:Generator_TableVarName="tableTIPO_GESTION" msprop:Generator_UserTableName="TIPO_GESTION">
+        <xs:element name="TIPO_GESTION" msprop:Generator_RowClassName="TIPO_GESTIONRow" msprop:Generator_RowEvHandlerName="TIPO_GESTIONRowChangeEventHandler" msprop:Generator_RowDeletedName="TIPO_GESTIONRowDeleted" msprop:Generator_RowDeletingName="TIPO_GESTIONRowDeleting" msprop:Generator_RowEvArgName="TIPO_GESTIONRowChangeEvent" msprop:Generator_TablePropName="TIPO_GESTION" msprop:Generator_RowChangedName="TIPO_GESTIONRowChanged" msprop:Generator_UserTableName="TIPO_GESTION" msprop:Generator_RowChangingName="TIPO_GESTIONRowChanging" msprop:Generator_TableClassName="TIPO_GESTIONDataTable" msprop:Generator_TableVarName="tableTIPO_GESTION">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="120" />
@@ -1130,11 +1130,11 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TIPO_RESIDUO" msprop:Generator_RowEvHandlerName="TIPO_RESIDUORowChangeEventHandler" msprop:Generator_RowDeletedName="TIPO_RESIDUORowDeleted" msprop:Generator_RowDeletingName="TIPO_RESIDUORowDeleting" msprop:Generator_RowEvArgName="TIPO_RESIDUORowChangeEvent" msprop:Generator_TablePropName="TIPO_RESIDUO" msprop:Generator_RowChangedName="TIPO_RESIDUORowChanged" msprop:Generator_RowChangingName="TIPO_RESIDUORowChanging" msprop:Generator_TableClassName="TIPO_RESIDUODataTable" msprop:Generator_RowClassName="TIPO_RESIDUORow" msprop:Generator_TableVarName="tableTIPO_RESIDUO" msprop:Generator_UserTableName="TIPO_RESIDUO">
+        <xs:element name="TIPO_RESIDUO" msprop:Generator_RowClassName="TIPO_RESIDUORow" msprop:Generator_RowEvHandlerName="TIPO_RESIDUORowChangeEventHandler" msprop:Generator_RowDeletedName="TIPO_RESIDUORowDeleted" msprop:Generator_RowDeletingName="TIPO_RESIDUORowDeleting" msprop:Generator_RowEvArgName="TIPO_RESIDUORowChangeEvent" msprop:Generator_TablePropName="TIPO_RESIDUO" msprop:Generator_RowChangedName="TIPO_RESIDUORowChanged" msprop:Generator_UserTableName="TIPO_RESIDUO" msprop:Generator_RowChangingName="TIPO_RESIDUORowChanging" msprop:Generator_TableClassName="TIPO_RESIDUODataTable" msprop:Generator_TableVarName="tableTIPO_RESIDUO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="DESCRIPCION" msprop:Generator_UserColumnName="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="180" />
@@ -1144,12 +1144,12 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TIPO_RESIDUO_X_GRADO" msprop:Generator_RowEvHandlerName="TIPO_RESIDUO_X_GRADORowChangeEventHandler" msprop:Generator_RowDeletedName="TIPO_RESIDUO_X_GRADORowDeleted" msprop:Generator_RowDeletingName="TIPO_RESIDUO_X_GRADORowDeleting" msprop:Generator_RowEvArgName="TIPO_RESIDUO_X_GRADORowChangeEvent" msprop:Generator_TablePropName="TIPO_RESIDUO_X_GRADO" msprop:Generator_RowChangedName="TIPO_RESIDUO_X_GRADORowChanged" msprop:Generator_RowChangingName="TIPO_RESIDUO_X_GRADORowChanging" msprop:Generator_TableClassName="TIPO_RESIDUO_X_GRADODataTable" msprop:Generator_RowClassName="TIPO_RESIDUO_X_GRADORow" msprop:Generator_TableVarName="tableTIPO_RESIDUO_X_GRADO" msprop:Generator_UserTableName="TIPO_RESIDUO_X_GRADO">
+        <xs:element name="TIPO_RESIDUO_X_GRADO" msprop:Generator_RowClassName="TIPO_RESIDUO_X_GRADORow" msprop:Generator_RowEvHandlerName="TIPO_RESIDUO_X_GRADORowChangeEventHandler" msprop:Generator_RowDeletedName="TIPO_RESIDUO_X_GRADORowDeleted" msprop:Generator_RowDeletingName="TIPO_RESIDUO_X_GRADORowDeleting" msprop:Generator_RowEvArgName="TIPO_RESIDUO_X_GRADORowChangeEvent" msprop:Generator_TablePropName="TIPO_RESIDUO_X_GRADO" msprop:Generator_RowChangedName="TIPO_RESIDUO_X_GRADORowChanged" msprop:Generator_UserTableName="TIPO_RESIDUO_X_GRADO" msprop:Generator_RowChangingName="TIPO_RESIDUO_X_GRADORowChanging" msprop:Generator_TableClassName="TIPO_RESIDUO_X_GRADODataTable" msprop:Generator_TableVarName="tableTIPO_RESIDUO_X_GRADO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="TIPO_RESIDUO_ID" msprop:Generator_ColumnPropNameInRow="TIPO_RESIDUO_ID" msprop:Generator_ColumnPropNameInTable="TIPO_RESIDUO_IDColumn" msprop:Generator_ColumnVarNameInTable="columnTIPO_RESIDUO_ID" msprop:Generator_UserColumnName="TIPO_RESIDUO_ID" type="xs:int" minOccurs="0" />
-              <xs:element name="GRADO_ID" msprop:Generator_ColumnPropNameInRow="GRADO_ID" msprop:Generator_ColumnPropNameInTable="GRADO_IDColumn" msprop:Generator_ColumnVarNameInTable="columnGRADO_ID" msprop:Generator_UserColumnName="GRADO_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="TIPO_RESIDUO_ID" msprop:Generator_UserColumnName="TIPO_RESIDUO_ID" msprop:Generator_ColumnPropNameInTable="TIPO_RESIDUO_IDColumn" msprop:Generator_ColumnPropNameInRow="TIPO_RESIDUO_ID" msprop:Generator_ColumnVarNameInTable="columnTIPO_RESIDUO_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="GRADO_ID" msprop:Generator_UserColumnName="GRADO_ID" msprop:Generator_ColumnPropNameInTable="GRADO_IDColumn" msprop:Generator_ColumnPropNameInRow="GRADO_ID" msprop:Generator_ColumnVarNameInTable="columnGRADO_ID" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1218,10 +1218,10 @@ SELECT ID, TIPO_RESIDUO_ID, GRADO_ID FROM TIPO_RESIDUO_X_GRADO WHERE (ID = @ID)<
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Gestion_Id_x_Gestion" msdata:parent="GESTION" msdata:child="GESTION_x_TIPO" msdata:parentkey="ID" msdata:childkey="GESTION_ID" msprop:Generator_UserParentTable="GESTION" msprop:Generator_UserChildTable="GESTION_x_TIPO" msprop:Generator_RelationVarName="relationFK_Gestion_Id_x_Gestion" msprop:Generator_ChildPropName="GetGESTION_x_TIPORows" msprop:Generator_ParentPropName="GESTIONRow" msprop:Generator_UserRelationName="FK_Gestion_Id_x_Gestion" />
-      <msdata:Relationship name="FK_Tipo_Id_x_Tipo_Gestion" msdata:parent="TIPO_GESTION" msdata:child="GESTION_x_TIPO" msdata:parentkey="ID" msdata:childkey="TIPO_ID" msprop:Generator_UserParentTable="TIPO_GESTION" msprop:Generator_UserChildTable="GESTION_x_TIPO" msprop:Generator_RelationVarName="relationFK_Tipo_Id_x_Tipo_Gestion" msprop:Generator_UserRelationName="FK_Tipo_Id_x_Tipo_Gestion" msprop:Generator_ChildPropName="GetGESTION_x_TIPORows" msprop:Generator_ParentPropName="TIPO_GESTIONRow" />
-      <msdata:Relationship name="FK_Grado_Id_Grado_GradoPligrosidad" msdata:parent="GRADO_PELIGROSIDAD" msdata:child="TIPO_RESIDUO_X_GRADO" msdata:parentkey="ID" msdata:childkey="GRADO_ID" msprop:Generator_UserParentTable="GRADO_PELIGROSIDAD" msprop:Generator_UserChildTable="TIPO_RESIDUO_X_GRADO" msprop:Generator_RelationVarName="relationFK_Grado_Id_Grado_GradoPligrosidad" msprop:Generator_ChildPropName="GetTIPO_RESIDUO_X_GRADORows" msprop:Generator_ParentPropName="GRADO_PELIGROSIDADRow" msprop:Generator_UserRelationName="FK_Grado_Id_Grado_GradoPligrosidad" />
-      <msdata:Relationship name="FK_TipoResiduo_Id_Tipo_Residuo" msdata:parent="TIPO_RESIDUO" msdata:child="TIPO_RESIDUO_X_GRADO" msdata:parentkey="ID" msdata:childkey="TIPO_RESIDUO_ID" msprop:Generator_UserParentTable="TIPO_RESIDUO" msprop:Generator_UserChildTable="TIPO_RESIDUO_X_GRADO" msprop:Generator_RelationVarName="relationFK_TipoResiduo_Id_Tipo_Residuo" msprop:Generator_ChildPropName="GetTIPO_RESIDUO_X_GRADORows" msprop:Generator_ParentPropName="TIPO_RESIDUORow" msprop:Generator_UserRelationName="FK_TipoResiduo_Id_Tipo_Residuo" />
+      <msdata:Relationship name="FK_Gestion_Id_x_Gestion" msdata:parent="GESTION" msdata:child="GESTION_x_TIPO" msdata:parentkey="ID" msdata:childkey="GESTION_ID" msprop:Generator_UserParentTable="GESTION" msprop:Generator_UserChildTable="GESTION_x_TIPO" msprop:Generator_RelationVarName="relationFK_Gestion_Id_x_Gestion" msprop:Generator_ChildPropName="GetGESTION_x_TIPORows" msprop:Generator_UserRelationName="FK_Gestion_Id_x_Gestion" msprop:Generator_ParentPropName="GESTIONRow" />
+      <msdata:Relationship name="FK_Tipo_Id_x_Tipo_Gestion" msdata:parent="TIPO_GESTION" msdata:child="GESTION_x_TIPO" msdata:parentkey="ID" msdata:childkey="TIPO_ID" msprop:Generator_UserParentTable="TIPO_GESTION" msprop:Generator_UserChildTable="GESTION_x_TIPO" msprop:Generator_RelationVarName="relationFK_Tipo_Id_x_Tipo_Gestion" msprop:Generator_ChildPropName="GetGESTION_x_TIPORows" msprop:Generator_ParentPropName="TIPO_GESTIONRow" msprop:Generator_UserRelationName="FK_Tipo_Id_x_Tipo_Gestion" />
+      <msdata:Relationship name="FK_Grado_Id_Grado_GradoPligrosidad" msdata:parent="GRADO_PELIGROSIDAD" msdata:child="TIPO_RESIDUO_X_GRADO" msdata:parentkey="ID" msdata:childkey="GRADO_ID" msprop:Generator_UserParentTable="GRADO_PELIGROSIDAD" msprop:Generator_UserChildTable="TIPO_RESIDUO_X_GRADO" msprop:Generator_RelationVarName="relationFK_Grado_Id_Grado_GradoPligrosidad" msprop:Generator_ChildPropName="GetTIPO_RESIDUO_X_GRADORows" msprop:Generator_UserRelationName="FK_Grado_Id_Grado_GradoPligrosidad" msprop:Generator_ParentPropName="GRADO_PELIGROSIDADRow" />
+      <msdata:Relationship name="FK_TipoResiduo_Id_Tipo_Residuo" msdata:parent="TIPO_RESIDUO" msdata:child="TIPO_RESIDUO_X_GRADO" msdata:parentkey="ID" msdata:childkey="TIPO_RESIDUO_ID" msprop:Generator_UserParentTable="TIPO_RESIDUO" msprop:Generator_UserChildTable="TIPO_RESIDUO_X_GRADO" msprop:Generator_RelationVarName="relationFK_TipoResiduo_Id_Tipo_Residuo" msprop:Generator_ChildPropName="GetTIPO_RESIDUO_X_GRADORows" msprop:Generator_UserRelationName="FK_TipoResiduo_Id_Tipo_Residuo" msprop:Generator_ParentPropName="TIPO_RESIDUORow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

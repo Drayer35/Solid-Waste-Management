@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Atributtes
+namespace Common.Entities
 {
-    internal class GradoPeligrosidad
+    public class GradoPeligrosidad
     {
         private int Id; private string Descripcion;
-    };
 
+        public int Id1 { get => Id; set => Id = value; }
+        public string Descripcion1 { get => Descripcion; set => Descripcion = value; }
+    }
 }

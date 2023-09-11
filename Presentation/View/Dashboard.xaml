@@ -38,10 +38,13 @@
                 <StackPanel Height="160"
                             Margin="0,12,0,0"
                             >
-                    <DataGrid Margin="12,0,12,0">
-                        
-                    </DataGrid>
-                    
+                    <DataGrid Margin="12,0,12,0" Name="EstablecimientoData" ScrollViewer.CanContentScroll="False"/>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <DataGrid/>
+
                 </StackPanel>
             </StackPanel>
         </Border>
@@ -55,7 +58,7 @@
                     <!--PANEL 3 295-->
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                
+
                 <!--WIDGETTS-->
                 <StackPanel Grid.Row="0" >
                     <Grid>
@@ -107,7 +110,7 @@
                                 </StackPanel>
                                 <StackPanel>
                                     <TextBlock Name="CertPendientes" Text="Certificados Pendientes" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" VerticalAlignment="Center">
-                                    </TextBlock> 
+                                    </TextBlock>
                                 </StackPanel>
                             </StackPanel>
                         </Border>
@@ -129,20 +132,57 @@
 
                     </Grid>
                 </StackPanel>
-                
+
                 <Border Background="{StaticResource Color9}" Grid.Row="1" CornerRadius="12" Margin="0,12,0,0">
+
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <!--SUBTITLES-->
-                        
-                        
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                       
+                            <Viewbox HorizontalAlignment="Left" Grid.Row="0" Margin="5">
+                                <Border Height="80" Background="#385723" CornerRadius="12" Margin="0,0,0,0" Width="250">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Left" Margin="15,0,0,0">
+                                            <TextBlock Margin="0,8,0,0" Text="Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
+                                            <fa:ImageAwesome Margin="0,5,0,0" Icon="TrashOutline"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Height="53" HorizontalAlignment="Center">
+                                            <TextBlock Name="ResEspTocn" Text="14 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="25" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy" Margin="0 ,0,40,0"/>
+                                            <TextBlock Name="ResEspPocrcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </Viewbox>
+                        </Grid>
+
+                        <Viewbox Grid.Column="1">
+                            <Viewbox Height="312" Width="234">
+                                <Ellipse Width="109" Height="104" Stroke="Black" StrokeThickness="2">
+                                    <Ellipse.Fill>
+                                        <RadialGradientBrush>
+                                            <GradientStop Color="Transparent" Offset="0" />
+                                            <GradientStop Color="Green" Offset="0" x:Name="fillGradientStop" />
+                                        </RadialGradientBrush>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+
+                            </Viewbox>
+                        </Viewbox>
+
+
+
                     </Grid>
-                    
-                    
-                    
                 </Border>
                 <Border Background="{StaticResource Color9}" Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">
                 </Border>

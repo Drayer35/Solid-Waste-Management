@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Atributtes
+namespace Common.Entities
 {
-    internal class MecanismoEntrega
+    public class MecanismoEntrega
     {
         private int Id; private string  Descripcion;
 

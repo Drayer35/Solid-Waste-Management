@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Atributtes
+namespace Common.Entities
 {
-    internal class Presentacion {
+    public class Presentacion {
         private int Id;
         private string Descripcion;
 

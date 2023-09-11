@@ -127,5 +127,10 @@ C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Presentation\obj\Debug\Pre
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Presentation\obj\Debug\Presentation.exe
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Presentation\obj\Debug\Presentation.pdb
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Domine.dll
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Domine.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Common.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\DataAccess.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Common.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\DataAccess.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\DataAccess.dll.config
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Domain.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Domain.pdb
