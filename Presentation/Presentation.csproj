@@ -179,6 +179,11 @@
     <Resource Include="Img\trash-can-solid.png" />
     <Resource Include="Img\truck-moving-solid.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Domine\Domain.csproj">
+      <Project>{bac204e2-e60d-4405-a6e9-5044ec512c63}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
