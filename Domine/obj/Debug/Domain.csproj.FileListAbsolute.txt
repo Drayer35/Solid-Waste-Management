@@ -1,0 +1,9 @@
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\bin\Debug\Domine.dll
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\bin\Debug\Domine.pdb
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\bin\Debug\DataAccess.dll
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\bin\Debug\DataAccess.pdb
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\obj\Debug\Domain.csproj.AssemblyReference.cache
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\obj\Debug\Domine.dll
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Domine\obj\Debug\Domine.pdb
