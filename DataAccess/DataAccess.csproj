@@ -44,7 +44,7 @@
     <Compile Include="Connection\ConnectDB.cs" />
     <Compile Include="Entities\Certificado.cs" />
     <Compile Include="Entities\Establecimiento.cs" />
-    <Compile Include="Entities\EstadorMateria.cs" />
+    <Compile Include="Entities\EstadoMateria.cs" />
     <Compile Include="Entities\Gestion.cs" />
     <Compile Include="Entities\Gestor.cs" />
     <Compile Include="Entities\GradoPeligrosidad.cs" />

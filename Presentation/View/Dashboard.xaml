@@ -23,14 +23,14 @@
                                     HorizontalAlignment="Center"
                                     >
                             <fa:ImageAwesome Icon="FolderOpen"  Style="{StaticResource contentButtonIcon}"/>
-                            <TextBlock Text="Residuos" Style="{StaticResource contentButtonText}"/>
+                            <TextBlock Text="Nuevo Residuo" Style="{StaticResource contentButtonText}"/>
                         </StackPanel>
                     </Button>
                     <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="160">
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center">
                             <fa:ImageAwesome Icon="PlusSquare"  Style="{StaticResource contentButtonIcon}"/>
-                            <TextBlock Text="Registrar" Style="{StaticResource contentButtonText}"/>
+                            <TextBlock Text="Nuevo Registro" Style="{StaticResource contentButtonText}"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
@@ -38,6 +38,10 @@
                 <StackPanel Height="160"
                             Margin="0,12,0,0"
                             >
+                    <DataGrid Margin="12,0,12,0">
+                        
+                    </DataGrid>
+                    
                 </StackPanel>
             </StackPanel>
         </Border>

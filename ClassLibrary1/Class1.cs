@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Atributtes
+namespace ClassLibrary1
 {
-    internal class EstadorMateria
+    public class Class1
     {
     }
 }
