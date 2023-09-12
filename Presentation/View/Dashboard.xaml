@@ -131,17 +131,16 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="280"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <!--CLASIFICACION-->
-                        <Grid>
+                        <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
-
-
                             <Viewbox HorizontalAlignment="Left" Grid.Row="0" Margin="5">
                                 <Border Height="80" Background="#5741E0" CornerRadius="12" Margin="0,0,0,0" Width="250">
                                     <StackPanel Orientation="Vertical">
@@ -186,26 +185,44 @@
                                 </Border>
                             </Viewbox>
                         </Grid>
-                        <Viewbox Grid.Column="1">
-                            <Viewbox Height="312" Width="234"/>
 
+                        <Viewbox Grid.Column="1">
+                            <Wpf:PieChart Name="Doughnut"
+                                          LegendLocation="Top" 
+                                          InnerRadius="55" Margin="10,10,5,10" RenderTransformOrigin="0.5,0.5" Height="193" Width="201" >
+                                <Wpf:PieChart.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="0.017"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Wpf:PieChart.RenderTransform>
+                                <Wpf:PieChart.Series >
+                                    <Wpf:PieSeries Title="Disposición de Aprovechables" Values="100">
+                                        <!-- Configuración adicional del PieSeries si es necesario -->
+                                    </Wpf:PieSeries>
+                                </Wpf:PieChart.Series>
+                                <Wpf:PieChart.ChartLegend>
+                                    <Wpf:DefaultLegend BulletSize="20">
+                                        <!-- Configuración de la leyenda si es necesario -->
+                                    </Wpf:DefaultLegend>
+                                </Wpf:PieChart.ChartLegend>
+                            </Wpf:PieChart>
                         </Viewbox>
+                        <Wpf:CartesianChart Grid.Column="2" Margin="0,62,17,57" RenderTransformOrigin="0.5,0.5">
+                            <Wpf:CartesianChart.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.403"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Wpf:CartesianChart.RenderTransform>
+                        </Wpf:CartesianChart>
                     </Grid>
                 </Border>
-
-                <Border Background="{StaticResource Color6}" Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">
-                    <Wpf:PieChart>
-                        <Wpf:PieChart.Series>
-                            <Wpf:PieSeries Title="Ejemplo de PieSeries" Values="40,12">
-                                <!-- Configuración adicional del PieSeries si es necesario -->
-                            </Wpf:PieSeries>
-                        </Wpf:PieChart.Series>
-                        <Wpf:PieChart.ChartLegend>
-                            <Wpf:DefaultLegend BulletSize="20">
-                                <!-- Configuración de la leyenda si es necesario -->
-                            </Wpf:DefaultLegend>
-                        </Wpf:PieChart.ChartLegend>
-                    </Wpf:PieChart>
+                <Border Background="{StaticResource Color9}" Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">
                 </Border>
             </Grid>
         </Border>
