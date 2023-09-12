@@ -134,8 +134,8 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\DataAccess.pdb
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\DataAccess.dll.config
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Domain.dll
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Domain.pdb
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.dll
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.dll
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.pdb
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.xml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.Wpf.pdb

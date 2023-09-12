@@ -15,7 +15,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Common.Entities;
 using Domain.Crud;
-
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace Presentation.View
 {
@@ -27,7 +28,7 @@ namespace Presentation.View
         public Dashboard()
         {
             InitializeComponent();
-           
+            PointLabel = charPoint => string.Format("{0}({1:P})", charPoint.Y, charPoint.Participation);
         }
 
 
@@ -56,6 +57,10 @@ namespace Presentation.View
             // Asigna la lista de registros como ItemsSource del DataGrid
             EstablecimientoData.ItemsSource = establecimientos;
 
+        }
+        public Func<ChartPoint, string> PointLabel { get; set; }
+        private void PieChart_DataClick(object sender, LiveCharts.ChartPoint chartPoint) { 
+        
         }
 
     }

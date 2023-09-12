@@ -8,3 +8,8 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Domain\obj\Debug\Domain.csproj.CoreCo
 C:\Users\Franco\Documents\GitHub\GestionRS\Domain\obj\Debug\Domain.csproj.CopyComplete
 C:\Users\Franco\Documents\GitHub\GestionRS\Domain\obj\Debug\Domain.dll
 C:\Users\Franco\Documents\GitHub\GestionRS\Domain\obj\Debug\Domain.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.xml
+C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.Wpf.xml
