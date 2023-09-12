@@ -30,6 +30,7 @@ namespace Presentation.View
             InitializeComponent();
             PointLabel = charPoint => string.Format("{0}({1:P})", charPoint.Y, charPoint.Participation);
             DataContext = this;
+            getDataEstablecimiento();
         }
 
 
@@ -54,11 +55,11 @@ namespace Presentation.View
                 };
                 establecimientos.Add(establecimiento);
             }
-
             // Asigna la lista de registros como ItemsSource del DataGrid
             EstablecimientoData.ItemsSource = establecimientos;
-
         }
+
+
         public Func<ChartPoint, string> PointLabel { get; set; }
         private void PieChart_DataClick(object sender, LiveCharts.ChartPoint chartPoint) { 
         

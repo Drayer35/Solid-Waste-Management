@@ -47,6 +47,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionRSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Procedures\ProEstablecimiento.cs" />
     <Compile Include="Procedures\ProRegistro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
