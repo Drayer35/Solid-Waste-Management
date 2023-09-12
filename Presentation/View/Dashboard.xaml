@@ -69,14 +69,14 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Border Grid.Column="0" Height="100" Background="Black" CornerRadius="12" Margin="0,0,10,0">
+                        <Border Grid.Column="0" Height="100" Background="#9249FC" CornerRadius="12" Margin="0,0,10,0">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Height="25">
                                     <TextBlock Margin="0,8,0,0" Text="Residuos No Peligrosos" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Height="51" HorizontalAlignment="Center">
-                                    <TextBlock Name="Tone" Text="14 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="25" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy" Margin="0 ,0,20,0"/>
-                                    <TextBlock Name="Pocrcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy"/>
+                                    <TextBlock Name="Tone" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round" Margin="0 ,0,20,0"/>
+                                    <TextBlock Name="Pocrcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round"/>
                                 </StackPanel>
                                 <StackPanel>
                                     <TextBlock Name="CertNoPeligrosos" Text="Certificados Pendientes" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" VerticalAlignment="Center">
@@ -84,14 +84,14 @@
                                 </StackPanel>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="1" Height="100" Background="#F09D0B" CornerRadius="12" Margin="0,0,10,0">
+                        <Border Grid.Column="1" Height="100" Background="#5741E0" CornerRadius="12" Margin="0,0,10,0">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Height="25">
                                     <TextBlock Margin="0,8,0,0" Text="Residuos Especiales" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Height="51" HorizontalAlignment="Center">
-                                    <TextBlock Name="ResEspTon" Text="14 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="25" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy" Margin="0 ,0,20,0"/>
-                                    <TextBlock Name="ResEspPorcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy"/>
+                                    <TextBlock Name="ResEspTon" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round" Margin="0 ,0,20,0"/>
+                                    <TextBlock Name="ResEspPorcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
                                 </StackPanel>
                                 <StackPanel>
                                     <TextBlock Name="CertEspeciales" Text="Certificados Pendientes" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" VerticalAlignment="Center">
@@ -99,14 +99,14 @@
                                 </StackPanel>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="2" Height="100" Background="#E73515" CornerRadius="12" Margin="0,0,10,0">
+                        <Border Grid.Column="2" Height="100" Background="#556BF8" CornerRadius="12" Margin="0,0,10,0">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Height="25">
                                     <TextBlock Margin="0,8,0,0" Text="Residuos Especiales" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Height="51" HorizontalAlignment="Center">
-                                    <TextBlock Name="ResPeligrososTon" Text="14 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="25" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy" Margin="0 ,0,20,0"/>
-                                    <TextBlock Name="ResPeligrososPorcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy"/>
+                                    <TextBlock Name="ResPeligrososTon" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"  Margin="0 ,0,20,0"/>
+                                    <TextBlock Name="ResPeligrososPorcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round"/>
                                 </StackPanel>
                                 <StackPanel>
                                     <TextBlock Name="CertPendientes" Text="Certificados Pendientes" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" VerticalAlignment="Center">
@@ -114,13 +114,13 @@
                                 </StackPanel>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="3" Height="100" Background="#5D995A" CornerRadius="12" Margin="0,0,0,0">
+                        <Border Grid.Column="3" Height="100" Background="#4180E0" CornerRadius="12" Margin="0,0,0,0">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Height="25">
-                                    <TextBlock Margin="0,8,0,0" Text="Residuos Especiales" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
+                                    <TextBlock Margin="0,8,0,0" Text="Cantidad Total Generada" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Height="51" HorizontalAlignment="Center">
-                                    <TextBlock Name="TotalTon" Text="14 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="25" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy"  Margin="0 ,0,10,0"/>
+                                    <TextBlock Name="TotalTon" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy"  Margin="0 ,0,10,0"/>
                                     <fa:ImageAwesome Icon="Trash"  Style="{StaticResource contentButtonIcon}"/>
                                 </StackPanel>
                             </StackPanel>
@@ -151,15 +151,43 @@
 
                        
                             <Viewbox HorizontalAlignment="Left" Grid.Row="0" Margin="5">
-                                <Border Height="80" Background="#385723" CornerRadius="12" Margin="0,0,0,0" Width="250">
+                                <Border Height="80" Background="#5741E0" CornerRadius="12" Margin="0,0,0,0" Width="250">
                                     <StackPanel Orientation="Vertical">
-                                        <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Left" Margin="15,0,0,0">
+                                        <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                                            <TextBlock Margin="0,8,0,0" Text="Organico Degradable" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
+                                            <fa:ImageAwesome Margin="0,5,0,0" Icon="Recycle" Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
+                                            <TextBlock Name="ResEspTocn" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
+                                            <TextBlock Name="ResEspPocrcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </Viewbox>
+                            <Viewbox HorizontalAlignment="Left" Grid.Row="1" Margin="5">
+                                <Border Height="80" Background="#5741E0" CornerRadius="12" Margin="0,0,0,0" Width="250">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                                            <TextBlock Margin="0,8,0,0" Text="No Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
+                                            <fa:ImageAwesome Margin="0,5,0,0" Icon="Trash"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
+                                            <TextBlock Name="ResEspTo12cn" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
+                                            <TextBlock Name="ResEs1pPocrcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </Viewbox>
+                            <Viewbox HorizontalAlignment="Left" Grid.Row="2" Margin="5">
+                                <Border Height="80" Background="#5741E0" CornerRadius="12" Margin="0,0,0,0" Width="250">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
                                             <TextBlock Margin="0,8,0,0" Text="Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
                                             <fa:ImageAwesome Margin="0,5,0,0" Icon="TrashOutline"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
                                         </StackPanel>
-                                        <StackPanel Orientation="Horizontal" Height="53" HorizontalAlignment="Center">
-                                            <TextBlock Name="ResEspTocn" Text="14 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="25" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy" Margin="0 ,0,40,0"/>
-                                            <TextBlock Name="ResEspPocrcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy"/>
+                                        <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
+                                            <TextBlock Name="ResE21spTocn" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
+                                            <TextBlock Name="Re12sEspPocrcent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
                                         </StackPanel>
                                     </StackPanel>
                                 </Border>
