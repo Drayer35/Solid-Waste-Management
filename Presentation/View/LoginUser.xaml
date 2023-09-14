@@ -3,10 +3,62 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Presentation.View"
+        xmlns:local="clr-namespace:Presentation.View" xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="LoginUser" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        MouseDown="Window_MouseDown"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"   
+        Title="MainWindow" Height="600" Width="900">
+    <Border  CornerRadius="10">
+        <Border.Background>
+            <ImageBrush ImageSource="/Img/tech.jpg"/>
+        </Border.Background>
+        <Border CornerRadius="10"  Background="#010000" Opacity="0.50">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Inicio de Sesión" Grid.Column="0" Style="{StaticResource menuButtonText}" Margin="15,0,0,0" Foreground="{StaticResource  Color2}"/>
+                    <Button x:Name="btnMin" Grid.Column="1"
+                            Style="{StaticResource controlButton}"
+                            Click="btn_CloseWindow">
+                        <fa:ImageAwesome Icon="WindowMinimize" Style="{StaticResource controlButtonIcon}" Foreground="{StaticResource Color2}"/>
+                    </Button>
+                    <Button x:Name="btnClose" Grid.Column="2"
+                            Style="{StaticResource controlButton}"
+                            Click="btn_CloseWindow">
+                        <fa:ImageAwesome Icon="Close" Style="{StaticResource controlButtonIcon}" Foreground="{StaticResource Color2}"/>
+                    </Button>
+
+                </Grid>
+                <StackPanel Grid.Row="1" Orientation="Vertical"  Margin="0,30,0,0"
+                            Width="358">
+                    <Image Source="/Img/logo2.png" Width="240" Height="228"/>
+                    <TextBlock Text="GESTION RS" Foreground="White" Style="{StaticResource TitleText}" RenderTransformOrigin="0.476,-0.623"/>
+                    <TextBlock Text="¡Gestiona tus residuos con nosotros! Juntos, podemos hacer del mundo un lugar más limpio y sostenible.
+                               Únete al movimiento por un futuro más verde. 🌍♻️" 
+                               Foreground="White" TextWrapping="Wrap" FontSize="15" TextAlignment="Justify"/>
+
+                    <TextBlock Foreground="White" HorizontalAlignment="Center" Style="{StaticResource SubTitle}" FontSize="14">
+                        <TextBlock Text="Created by"/>
+                         <Hyperlink NavigateUri="https://www.google.com"  TextDecorations="None" Foreground="White">
+                                Franco Monrroy 🐺
+                        </Hyperlink>
+                    </TextBlock>
+
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Border>
 </Window>

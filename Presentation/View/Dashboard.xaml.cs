@@ -30,7 +30,7 @@ namespace Presentation.View
             InitializeComponent();
             PointLabel = charPoint => string.Format("{0}({1:P})", charPoint.Y, charPoint.Participation);
             DataContext = this;
-            getDataEstablecimiento();
+            Console.Write("sdasd");
         }
 
 
