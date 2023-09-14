@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -39,6 +40,17 @@ namespace Presentation.View
         private void btn_CloseWindow(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            Hyperlink link = (Hyperlink)sender;
+            string navigateUri = link.NavigateUri.AbsoluteUri;
+
+            // Abre el enlace en el navegador web predeterminado
+            Process.Start(new ProcessStartInfo(navigateUri));
+            e.Handled = true; // Evita que el evento siga propagándose
+
         }
 
     }
