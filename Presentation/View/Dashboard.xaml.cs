@@ -31,6 +31,7 @@ namespace Presentation.View
             PointLabel = charPoint => string.Format("{0}({1:P})", charPoint.Y, charPoint.Participation);
             DataContext = this;
             Console.Write("sdasd");
+            getDataEstablecimiento();
         }
 
 
