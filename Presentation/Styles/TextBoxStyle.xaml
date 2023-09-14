@@ -1,0 +1,59 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- TEXTBOXBT-->
+    <Style x:Key="PassBox" TargetType="PasswordBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="CaretBrush" Value="#00F1FF"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="20,5,20,0"/>
+        <Setter Property="Padding" Value="25,0,0,0"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Style.Triggers>
+            <!-- MOUSE CHECKED COLOR-->
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <ImageBrush
+                        ImageSource="/Img/lock2.png"
+                        Stretch="None"
+                        AlignmentX="Left"
+                    />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="nameBox" TargetType="TextBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="CaretBrush" Value="#00F1FF"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="20,5,20,0"/>
+        <Setter Property="Padding" Value="25,0,0,0"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Style.Triggers>
+            <!-- MOUSE CHECKED COLOR-->
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <ImageBrush
+                    ImageSource="/Img/user.png"
+                    Stretch="None"
+                    AlignmentX="Left"/>
+                    </Setter.Value>
+
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+
+
+</ResourceDictionary>

@@ -103,6 +103,10 @@
     <Compile Include="View\Residuos.xaml.cs">
       <DependentUpon>Residuos.xaml</DependentUpon>
     </Compile>
+    <Page Include="Styles\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -232,7 +236,11 @@
     <Resource Include="Img\tech.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Img\user2.png" />
+    <Resource Include="Img\lock2.png" />
+    <Resource Include="Img\lock.png" />
     <Content Include="Img\logo.png" />
+    <Resource Include="Img\user.png" />
     <Resource Include="Img\logo2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

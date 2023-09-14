@@ -141,3 +141,4 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.xml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation_Content.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\TextBoxStyle.baml
