@@ -239,6 +239,8 @@
     <Resource Include="Img\user2.png" />
     <Resource Include="Img\lock2.png" />
     <Resource Include="Img\lock.png" />
+    <Resource Include="Img\eyeOpen.png" />
+    <Resource Include="Img\eyeClose.png" />
     <Content Include="Img\logo.png" />
     <Resource Include="Img\user.png" />
     <Resource Include="Img\logo2.png" />

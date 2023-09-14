@@ -13,10 +13,10 @@
         AllowsTransparency="True"   
         Title="MainWindow" Height="600" Width="900">
     <Border  CornerRadius="10">
-        <Border.Background>
+        <!--<Border.Background>
             <ImageBrush ImageSource="/Img/tech.jpg"/>
-        </Border.Background>
-        <Border CornerRadius="10" Opacity="0.95">
+        </Border.Background>-->
+        <Border CornerRadius="10" Opacity="1">
             <Border.Background>
                 <!--<ImageBrush ImageSource="/Img/tech.jpg"/>-->
                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
@@ -55,7 +55,7 @@
                             Orientation="Vertical"  
                             Margin="0,5,0,0"
                             Width="360">
-                    <Image Source="/Img/logo2.png" Width="119" Height="104"/>
+                    <Image Source="/Img/logo2.png" Width="114" Height="98"/>
                     <TextBlock Text="GESTION RS" Foreground="White" Style="{StaticResource TitleText}" Margin="0"/>
                     <TextBlock Text="¡Gestiona tus residuos con nosotros! Haz del mundo un lugar más limpio y sostenible.&#x0a;Únete al movimiento por un futuro más verde." 
                                Margin="0,10,0,0"
@@ -69,7 +69,7 @@
                         <TextBlock Text="🌍" Foreground="Brown"/>-->
                     </TextBlock>
                     <TextBlock Text="Username"
-                               Margin="20,25,20,0"
+                               Margin="35,25,35,0"
                                FontSize="14"
                                Style="{StaticResource TitleText}"
                                Foreground="White"
@@ -77,8 +77,7 @@
                                />
                     <TextBox 
                              Name="txtUser"
-                             Style="{StaticResource nameBox}"
-                            
+                             Style="{StaticResource nameBox}"                         
                              >
                         <TextBox.Background>
                             <ImageBrush
@@ -91,7 +90,7 @@
                     </TextBox>
 
                     <TextBlock Text="Password"
-                               Margin="20,25,20,0"
+                               Margin="35,25,35,0"
                                FontSize="14"
                                Style="{StaticResource TitleText}"
                                Foreground="White"
@@ -108,14 +107,14 @@
                                 />
                         </PasswordBox.Background>
                     </PasswordBox>
-                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="170" Margin="0,40">
+                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="170" Margin="0,55">
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     >
                             <TextBlock Text="Login" Style="{StaticResource contentButtonText}"/>
                         </StackPanel>
                     </Button>
-                    <TextBlock Foreground="White" Style="{StaticResource SubTitle}" FontSize="10" Margin="0,60">
+                    <TextBlock Foreground="White" Style="{StaticResource SubTitle}" FontSize="10" Margin="0,45">
                         <TextBlock Text="Adapted by" />
                         <Hyperlink NavigateUri="https://drayer.surge.sh/" FontWeight="Bold" TextDecorations="None" Foreground="#0275FE" Click="Hyperlink_Click">Franco Monrroy 🐺</Hyperlink>
                     </TextBlock>

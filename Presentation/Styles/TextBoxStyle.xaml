@@ -9,7 +9,7 @@
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderThickness" Value="0,0,0,1"/>
         <Setter Property="Height" Value="30"/>
-        <Setter Property="Margin" Value="20,5,20,0"/>
+        <Setter Property="Margin" Value="35,5,35,0"/>
         <Setter Property="Padding" Value="25,0,0,0"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Style.Triggers>
@@ -34,7 +34,7 @@
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderThickness" Value="0,0,0,1"/>
         <Setter Property="Height" Value="30"/>
-        <Setter Property="Margin" Value="20,5,20,0"/>
+        <Setter Property="Margin" Value="35,5,35,0"/>
         <Setter Property="Padding" Value="25,0,0,0"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Style.Triggers>
