@@ -41,7 +41,6 @@ namespace Presentation.View
         {
             Application.Current.Shutdown();
         }
-
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             Hyperlink link = (Hyperlink)sender;
@@ -49,9 +48,28 @@ namespace Presentation.View
 
             // Abre el enlace en el navegador web predeterminado
             Process.Start(new ProcessStartInfo(navigateUri));
-            e.Handled = true; // Evita que el evento siga propagándose
-
+            e.Handled = true; // Evita que el evento siga propagándo
         }
+        private void txtUserName_Enter(object sender,EventArgs e) {
+            if (txtUser.Text == "UserName") {
+                txtUser.Text = "";
+                txtUser.Foreground = Brushes.White;
+            }
+        }
+        private void txtUserName_Leave(object sender, EventArgs e)
+        {
+            string userInput = txtUser.Text.Trim(); // Elimina espacios en blanco al principio y al final
+            if (string.IsNullOrEmpty(userInput))
+            {
+                txtUser.Text = "UserName";
+
+                txtUser.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A7"));
+            }
+        }
+
+
+
+
 
     }
 }

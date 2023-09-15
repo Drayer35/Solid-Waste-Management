@@ -28,7 +28,7 @@ namespace Presentation
         public MainWindow()
         {
             InitializeComponent();
-
+           
         }
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int wMswg, int wParam, int lParam);

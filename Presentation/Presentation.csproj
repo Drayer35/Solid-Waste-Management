@@ -64,6 +64,7 @@
     </Reference>
     <Reference Include="ReachFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Xml" />
@@ -85,6 +86,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GestionResiduosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionResiduosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
@@ -103,6 +109,10 @@
     <Compile Include="View\Residuos.xaml.cs">
       <DependentUpon>Residuos.xaml</DependentUpon>
     </Compile>
+    <Page Include="Styles\ListBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\TextBoxStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,6 +185,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\VarelaRound-Regular.ttf" />
+    <None Include="GestionResiduosDataSet.xsc">
+      <DependentUpon>GestionResiduosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionResiduosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionResiduosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionResiduosDataSet.xss">
+      <DependentUpon>GestionResiduosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -211,6 +232,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{371e1ec9-e5ec-468e-839d-a0653877a210}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{9EDEB4C3-7246-4FB9-9712-B1FFFC21FC2F}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{9f34cc59-e49f-4839-83f6-2d362fe6de6d}</Project>

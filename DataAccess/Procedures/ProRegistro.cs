@@ -12,32 +12,32 @@ using DataAccess.Connection;
 namespace DataAccess.Procedures {
     public class ProRegistro
     {
-        ConnectDB Conn = new ConnectDB();
-        SqlCommand Cmd = new SqlCommand();
-        SqlDataReader dr;
-        DataTable dt = new DataTable();
+        //ConnectDB Conn = new ConnectDB();
+        //SqlCommand Cmd = new SqlCommand();
+        //SqlDataReader dr;
+        //DataTable dt = new DataTable();
 
 
-        public DataTable Mostrar()
-        {
-            try
-            {
-                Cmd.Connection = Conn.OpenConn();
-                Cmd.CommandText = "SP_Mostrar";
-                dr = Cmd.ExecuteReader();
-                dt.Load(dr);
-            }
-            catch (Exception ex)
-            {
-                string message = ex.ToString();
+        //public DataTable Mostrar()
+        //{
+        //    try
+        //    {
+        //        Cmd.Connection = Conn.OpenConn();
+        //        Cmd.CommandText = "SP_Mostrar";
+        //        dr = Cmd.ExecuteReader();
+        //        dt.Load(dr);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string message = ex.ToString();
 
-            }
-            finally
-            {
-                Cmd.Connection = Conn.CloseConn();
-            }
-            return dt;
-        }
+        //    }
+        //    finally
+        //    {
+        //        Cmd.Connection = Conn.CloseConn();
+        //    }
+        //    return dt;
+        //}
     }
 }
 

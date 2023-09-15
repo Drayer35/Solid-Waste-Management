@@ -13,62 +13,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Common.Entities;
-using Domain.Crud;
+using System.Configuration;
 using LiveCharts;
 using LiveCharts.Wpf;
+using System.Data.SqlClient;
 
 namespace Presentation.View
 {
-    /// <summary>
-    /// Lógica de interacción para Dashboard.xaml
-    /// </summary>
     public partial class Dashboard : UserControl
     {
+        SqlConnection miConexionSql;
         public Dashboard()
         {
             InitializeComponent();
-            PointLabel = charPoint => string.Format("{0}({1:P})", charPoint.Y, charPoint.Participation);
-            DataContext = this;
-            Console.Write("sdasd");
-            getDataEstablecimiento();
+            string miconexion = ConfigurationManager.ConnectionStrings["Presentation.Properties.Settings.GestionResiduosConnectionString"].ConnectionString;
+            miConexionSql = new SqlConnection(miconexion);
+            MuestraTodosPedidos();                                    
         }
 
-
-        //VARIABLES
-        CRegistro establecimiento = new CRegistro();
-        Registro attEstablecimiento = new Registro();
-        bool edit = false;
-
-        public void getDataEstablecimiento()
-        {
-            CRegistro cEstablecimiento = new CRegistro();
-            DataTable dataTable = cEstablecimiento.Mostrar();
-
-            // Convierte el DataTable a una lista de Registro
-            List<Registro> establecimientos = new List<Registro>();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                Registro establecimiento = new Registro
-                {
-                    // Asigna los valores de las columnas a las propiedades de Registro
-                    // Por ejemplo: Propiedad1 = (tipo) row["NombreColumna"];
-                };
-                establecimientos.Add(establecimiento);
+        private void MuestraTodosPedidos() {
+            string consulta = "SELECT * FROM ESTABLECIMIENTO";
+            SqlDataAdapter adapter = new SqlDataAdapter(consulta,miConexionSql);
+            using (adapter) { 
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                todosPedidos.DisplayMemberPath= "NOMBRE";
+                todosPedidos.SelectedValuePath = "ID";
+                todosPedidos.ItemsSource = dataTable.DefaultView;
             }
-            // Asigna la lista de registros como ItemsSource del DataGrid
-            EstablecimientoData.ItemsSource = establecimientos;
         }
-
-
-        public Func<ChartPoint, string> PointLabel { get; set; }
-        private void PieChart_DataClick(object sender, LiveCharts.ChartPoint chartPoint) { 
         
-        }
-
-        private void PieSeries_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

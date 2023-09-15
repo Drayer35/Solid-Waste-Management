@@ -10,13 +10,16 @@ namespace Domain.Crud
 {
     public class CEstablecimiento
     {
-        ProEstablecimiento Establecimiento = new ProEstablecimiento();
+        //    ProEstablecimiento establecimiento = new ProEstablecimiento();
 
-        public DataTable Mostrar()
-        {
-            DataTable dt = new DataTable();
-            dt = Establecimiento.Mostrar();
-            return dt;
-        }
+        //    public DataTable Mostrar()
+        //    {
+        //        DataTable dt = new DataTable();
+        //        dt = establecimiento.Mostrar();
+        //        return dt;
+        //    }        
+        //
+
+
     }
 }

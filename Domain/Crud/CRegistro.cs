@@ -10,12 +10,12 @@ namespace Domain.Crud
 {
     public class CRegistro
     {
-        ProRegistro Registro= new ProRegistro();
+        //ProRegistro Registro= new ProRegistro();
 
-        public DataTable Mostrar() { 
-            DataTable dt = new DataTable();
-            dt = Registro.Mostrar();
-            return dt;
-        }
+        //public DataTable Mostrar() { 
+        //    DataTable dt = new DataTable();
+        //    dt = Registro.Mostrar();
+        //    return dt;
+        //}
     }
 }

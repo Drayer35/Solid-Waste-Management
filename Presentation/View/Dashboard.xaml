@@ -40,11 +40,18 @@
                         </Button>
                     </StackPanel>
                     <!--Tabla establecimientos-->
-                    <StackPanel Height="160"
-                    Margin="0,12,0,0"
-                    >
-                        <DataGrid Margin="12,0,12,0" Name="EstablecimientoData" ScrollViewer.CanContentScroll="False"/>
+                    <StackPanel Height="255"
+                                Margin="0,42,0,0">
+                     
+                            <GroupBox Header="Establecimientos">
 
+                            <ListBox Name="todosPedidos"  Height="150" Style="{StaticResource ListBoxStyle}" Background="Transparent" BorderBrush="Transparent">
+                            </ListBox>
+                        </GroupBox>
+                   
+                        
+                        
+                       
                     </StackPanel>
                 </StackPanel>
             </Border>

@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,11 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection\ConnectDB.cs" />
-    <Compile Include="GestionRSDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GestionRSDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Procedures\ProEstablecimiento.cs" />
     <Compile Include="Procedures\ProRegistro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,17 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="GestionRSDataSet.xsc">
-      <DependentUpon>GestionRSDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GestionRSDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GestionRSDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GestionRSDataSet.xss">
-      <DependentUpon>GestionRSDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

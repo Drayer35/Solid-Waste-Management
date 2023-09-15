@@ -6,10 +6,10 @@
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="CaretBrush" Value="#00F1FF"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="#A6A6A7 "/>
         <Setter Property="BorderThickness" Value="0,0,0,1"/>
         <Setter Property="Height" Value="30"/>
-        <Setter Property="Margin" Value="35,5,35,0"/>
+        <Setter Property="Margin" Value="35,40,35,0"/>
         <Setter Property="Padding" Value="25,0,0,0"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Style.Triggers>
@@ -31,10 +31,10 @@
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="CaretBrush" Value="#00F1FF"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="#A6A6A7 "/>
         <Setter Property="BorderThickness" Value="0,0,0,1"/>
         <Setter Property="Height" Value="30"/>
-        <Setter Property="Margin" Value="35,5,35,0"/>
+        <Setter Property="Margin" Value="35,40,35,0"/>
         <Setter Property="Padding" Value="25,0,0,0"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Style.Triggers>
@@ -47,7 +47,6 @@
                     Stretch="None"
                     AlignmentX="Left"/>
                     </Setter.Value>
-
                 </Setter>
             </Trigger>
         </Style.Triggers>

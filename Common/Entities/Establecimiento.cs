@@ -8,10 +8,11 @@ namespace Common.Entities
 {
     public class Establecimiento
     {
-        private int Id;
-        private string Nombre;
+        private int id;
+        private string nombre;
+ 
+        public int Id { get => id; set => id = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
 
-        public int Id1 { get => Id; set => Id = value; }
-        public string Nombre1 { get => Nombre; set => Nombre = value; }
     }
 }
