@@ -91,6 +91,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GestionResiduosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LoginDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
@@ -195,6 +200,17 @@
     </None>
     <None Include="GestionResiduosDataSet.xss">
       <DependentUpon>GestionResiduosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LoginDBDataSet.xsc">
+      <DependentUpon>LoginDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LoginDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoginDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LoginDBDataSet.xss">
+      <DependentUpon>LoginDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

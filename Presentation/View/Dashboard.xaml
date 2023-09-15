@@ -19,7 +19,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Border Background="{StaticResource Color9}" CornerRadius="12" Grid.Row="0">
-                <StackPanel >
+                <StackPanel>
                     <!-- Botones de adicion-->
                     <StackPanel Height="60"
                     Orientation="Horizontal" HorizontalAlignment="Center">
@@ -40,18 +40,14 @@
                         </Button>
                     </StackPanel>
                     <!--Tabla establecimientos-->
-                    <StackPanel Height="255"
-                                Margin="0,42,0,0">
-                     
-                            <GroupBox Header="Establecimientos">
+                    <StackPanel>
+                        <GroupBox Header="Establecimientos">
+                            <Grid>
+                                <ListBox Name="todosPedidos" Height="200" ScrollViewer.PanningMode="Both" Background="Transparent" BorderBrush="Transparent" FontSize="14">
+                                </ListBox>
+                            </Grid>
 
-                            <ListBox Name="todosPedidos"  Height="150" Style="{StaticResource ListBoxStyle}" Background="Transparent" BorderBrush="Transparent">
-                            </ListBox>
                         </GroupBox>
-                   
-                        
-                        
-                       
                     </StackPanel>
                 </StackPanel>
             </Border>
@@ -63,15 +59,15 @@
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="0">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <TextBlock Text="Registros Por Fecha" Style="{StaticResource SubTitle}" Foreground="White"  Margin="0,10,0,0"/>
-                            <fa:ImageAwesome Icon="Calendar"  Style="{StaticResource contentButtonIcon}"/>
-                            
+                            <TextBlock Text="Registros Por Fecha" Style="{StaticResource SubTitle}" Foreground="White" FontSize="18" Margin="0,10,0,0"/>
+                            <fa:ImageAwesome Icon="Calendar"  Style="{StaticResource contentButtonIcon}" Width="18"/>
+
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Row="1">
                         <DataGrid Margin="12,0,12,0" Name="MesesData" ScrollViewer.CanContentScroll="False"/>
                     </StackPanel>
-                </Grid>  
+                </Grid>
             </Border>
 
         </Grid>
@@ -166,6 +162,7 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
+                            
                             <Viewbox HorizontalAlignment="Left" Grid.Row="0" Margin="5">
                                 <Border Height="80" Background="#5741E0" CornerRadius="12" Margin="0,0,0,0" Width="250">
                                     <StackPanel Orientation="Vertical">
@@ -235,16 +232,20 @@
                                 </Wpf:PieChart.ChartLegend>
                             </Wpf:PieChart>
                         </Viewbox>
-                        <Wpf:CartesianChart Grid.Column="2" Margin="0,62,17,57" RenderTransformOrigin="0.5,0.5">
-                            <Wpf:CartesianChart.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform Angle="0"/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Wpf:CartesianChart.RenderTransform>
-                        </Wpf:CartesianChart>
+
+                        <Viewbox Grid.Column="2">
+                            <Wpf:CartesianChart RenderTransformOrigin="0.5,0.5" Height="255" Width="320">
+                                <Wpf:CartesianChart.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="0"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Wpf:CartesianChart.RenderTransform>
+                            </Wpf:CartesianChart>
+                        </Viewbox>
+
                     </Grid>
                 </Border>
                 <Border Background="{StaticResource Color9}" Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">

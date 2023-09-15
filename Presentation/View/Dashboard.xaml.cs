@@ -28,18 +28,18 @@ namespace Presentation.View
             InitializeComponent();
             string miconexion = ConfigurationManager.ConnectionStrings["Presentation.Properties.Settings.GestionResiduosConnectionString"].ConnectionString;
             miConexionSql = new SqlConnection(miconexion);
-            MuestraTodosPedidos();                                    
+            ListarEstablecimientos();                                    
         }
 
-        private void MuestraTodosPedidos() {
+        private void ListarEstablecimientos() {
             string consulta = "SELECT * FROM ESTABLECIMIENTO";
             SqlDataAdapter adapter = new SqlDataAdapter(consulta,miConexionSql);
             using (adapter) { 
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
+                DataTable DataEstablecimientos = new DataTable();
+                adapter.Fill(DataEstablecimientos);
                 todosPedidos.DisplayMemberPath= "NOMBRE";
                 todosPedidos.SelectedValuePath = "ID";
-                todosPedidos.ItemsSource = dataTable.DefaultView;
+                todosPedidos.ItemsSource = DataEstablecimientos.DefaultView;
             }
         }
         

@@ -21,7 +21,7 @@
                 <!--<ImageBrush ImageSource="/Img/tech.jpg"/>-->
                 <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
                     <GradientStop Color="#000320" Offset="0.10"/>
-                    <GradientStop Color="#01176B" Offset="1"/>
+                    <GradientStop Color="#16113A" Offset="1"/>
 
                 </LinearGradientBrush>
             </Border.Background>
@@ -104,7 +104,7 @@
                          <Hyperlink NavigateUri="https://drayer.surge.sh/"  TextDecorations="None" Foreground="#0275FE" Click="Hyperlink_Click">¿Olvidaste la Contraseña?</Hyperlink>
                     </TextBlock>
 
-                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="210" Margin="0,30,0,0" Name="btnLogin" Height="55">
+                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color10}" Width="210" Margin="0,30,0,0" Name="btnLogin" Height="55">
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     >

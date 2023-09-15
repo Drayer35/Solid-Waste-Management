@@ -23,18 +23,6 @@ namespace Presentation.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string sdfdsa {
-            get {
-                return ((string)(this["sdfdsa"]));
-            }
-            set {
-                this["sdfdsa"] = value;
-            }
-        }
-        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
@@ -42,6 +30,16 @@ namespace Presentation.Properties {
         public string GestionResiduosConnectionString {
             get {
                 return ((string)(this["GestionResiduosConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=LoginDB;Integrated Security=True")]
+        public string LoginDBConnectionString {
+            get {
+                return ((string)(this["LoginDBConnectionString"]));
             }
         }
     }
