@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\App.xaml
-12336212216
+12-1781525228
 1130090575
 1422703536
 23-1697186892
-Styles\ListBoxStyle.xaml;Styles\TextBoxStyle.xaml;View\MainWindow.xaml;Styles\ButtonStyle.xaml;Styles\TitleStyle.xaml;Styles\UIStyle.xaml;View\Dashboard.xaml;View\Instructivo.xaml;View\LoginUser.xaml;View\Operaciones.xaml;View\Registros.xaml;View\Residuos.xaml;
+Styles\ScrollStyle.xaml;Styles\TextBoxStyle.xaml;View\MainWindow.xaml;Styles\ButtonStyle.xaml;Styles\TitleStyle.xaml;Styles\UIStyle.xaml;View\Dashboard.xaml;View\Instructivo.xaml;View\LoginUser.xaml;View\Operaciones.xaml;View\Registros.xaml;View\Residuos.xaml;
 
 True
 

@@ -114,7 +114,7 @@
     <Compile Include="View\Residuos.xaml.cs">
       <DependentUpon>Residuos.xaml</DependentUpon>
     </Compile>
-    <Page Include="Styles\ListBoxStyle.xaml">
+    <Page Include="Styles\ScrollStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

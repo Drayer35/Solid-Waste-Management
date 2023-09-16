@@ -42,6 +42,10 @@ namespace Presentation.View
                 todosPedidos.ItemsSource = DataEstablecimientos.DefaultView;
             }
         }
-        
+
+        private void todosPedidos_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
     }
 }

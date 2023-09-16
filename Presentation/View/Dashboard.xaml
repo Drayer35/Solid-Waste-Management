@@ -13,51 +13,57 @@
             <ColumnDefinition Width="360"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid>
+
+        <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Border Background="{StaticResource Color9}" CornerRadius="12" Grid.Row="0">
-                <StackPanel>
-                    <!-- Botones de adicion-->
-                    <StackPanel Height="60"
-                    Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="170">
-                            <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center"
-                            >
-                                <fa:ImageAwesome Icon="FolderOpen"  Style="{StaticResource contentButtonIcon}"/>
-                                <TextBlock Text="Nuevo Residuo" Style="{StaticResource contentButtonText}"/>
-                            </StackPanel>
-                        </Button>
-                        <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="170">
-                            <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center">
-                                <fa:ImageAwesome Icon="PlusSquare"  Style="{StaticResource contentButtonIcon}"/>
-                                <TextBlock Text="Nuevo Registro" Style="{StaticResource contentButtonText}"/>
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-                    <!--Tabla establecimientos-->
-                    <StackPanel>
-                        <GroupBox>
-                            <GroupBox.Header>
-                                <StackPanel Orientation="Horizontal"
-                                            HorizontalAlignment="Center">
-                                    <TextBlock Text="Establecimientos" Style="{StaticResource contentButtonText}"/>
-                                    <Image Source="/Img/company.png" Height="25"/>
-                                </StackPanel>
-                            </GroupBox.Header>
-                            <Grid>
-                                <ListBox Name="todosPedidos" Height="200" ScrollViewer.PanningMode="Both" Background="Transparent" BorderBrush="Transparent" FontSize="14">
-                                </ListBox>
-                            </Grid>
 
-                        </GroupBox>
-                    </StackPanel>
+            <Grid   Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Height="60" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="170">
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+                            <fa:ImageAwesome Icon="FolderOpen"  Style="{StaticResource contentButtonIcon}"/>
+                            <TextBlock Text="Nuevo Residuo" Style="{StaticResource contentButtonText}"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="170">
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+                            <fa:ImageAwesome Icon="PlusSquare"  Style="{StaticResource contentButtonIcon}"/>
+                            <TextBlock Text="Nuevo Registro" Style="{StaticResource contentButtonText}"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
-            </Border>
+                <!--Tabla establecimientos-->
+                <GroupBox Grid.Row="1">
+                    <GroupBox.Header>
+                        <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                            <TextBlock Text="Establecimientos" Style="{StaticResource contentButtonText}"/>
+
+                            <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="28" Height="25">
+                                <StackPanel Orientation="Horizontal"
+                                                    HorizontalAlignment="Center">
+                                    <fa:ImageAwesome Icon="Plus"  Style="{StaticResource contentButtonIcon}" Height="14" Width="15"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </GroupBox.Header>
+                    <Grid>
+                        <ListBox Name="todosPedidos"  Background="Transparent" FontSize="14" BorderBrush="Transparent" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
+                        </ListBox>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+
             <Border Background="#5741E0" CornerRadius="12" Grid.Row="1" Margin="0,12,0,0">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -166,7 +172,7 @@
                             </Grid.RowDefinitions>
                             <Border Background="#5741E0"  CornerRadius="12" Margin="0,0,10,5">
                                 <StackPanel Orientation="Vertical"  VerticalAlignment="Stretch">
-                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10,0,0,3">
                                         <TextBlock Margin="0,8,0,0" Text="Organico Degradable" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
                                         <fa:ImageAwesome Margin="0,5,0,0" Icon="Recycle" Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
                                     </StackPanel>
@@ -178,7 +184,7 @@
                             </Border>
                             <Border  Background="#5741E0"  CornerRadius="12" Margin="0,0,10,0"  Grid.Row="1">
                                 <StackPanel Orientation="Vertical">
-                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10,0,0,3">
                                         <TextBlock Margin="0,8,0,0" Text="No Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
                                         <fa:ImageAwesome Margin="0,5,0,0" Icon="Trash"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
                                     </StackPanel>
@@ -191,7 +197,7 @@
                             <Border  Background="#5741E0"  CornerRadius="12" Margin="0,5,10,0" Grid.Row="2">
 
                                 <StackPanel Orientation="Vertical">
-                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10,0,0,3">
                                         <TextBlock Margin="0,8,0,0" Text="Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
                                         <fa:ImageAwesome Margin="0,5,0,0" Icon="TrashOutline"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
                                     </StackPanel>
@@ -238,7 +244,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Border Background="Red" CornerRadius="20" Grid.Column="0" Margin="0,0,5,0">
+                        <Border Background="{StaticResource Color9}" CornerRadius="20" Grid.Column="0" Margin="0,0,5,0">
                             <Viewbox  >
                                 <Wpf:CartesianChart RenderTransformOrigin="0.5,0.5" Height="255" Width="504">
                                     <Wpf:CartesianChart.RenderTransform>
@@ -252,7 +258,7 @@
                                 </Wpf:CartesianChart>
                             </Viewbox>
                         </Border>
-                        <Border Background="Red" CornerRadius="20" Grid.Column="1" Margin="5,0,0,0">
+                        <Border  Background="{StaticResource Color9}" CornerRadius="20" Grid.Column="1" Margin="5,0,0,0">
                             <Viewbox  >
                                 <Wpf:CartesianChart RenderTransformOrigin="0.5,0.5" Height="255" Width="504" >
                                     <Wpf:CartesianChart.RenderTransform>

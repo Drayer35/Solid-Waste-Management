@@ -33,7 +33,7 @@
             <Trigger Property="IsChecked" Value="True">
                 <Setter Property="Margin" Value="0,0,0,5"/>
                 <Setter Property="Background" Value="{StaticResource panelActiveColor3}"/>
-                <Setter Property="Foreground" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+                <Setter Property="Foreground" Value="{StaticResource Color2}"/>
                 <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
             </Trigger>
         </Style.Triggers>
