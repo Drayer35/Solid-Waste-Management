@@ -28,7 +28,8 @@ namespace Presentation.View
             InitializeComponent();
             string miconexion = ConfigurationManager.ConnectionStrings["Presentation.Properties.Settings.GestionResiduosConnectionString"].ConnectionString;
             miConexionSql = new SqlConnection(miconexion);
-            ListarEstablecimientos();                                    
+            ListarEstablecimientos();
+            ListarFechas();
         }
 
         private void ListarEstablecimientos() {
@@ -43,6 +44,17 @@ namespace Presentation.View
             }
         }
 
+        private void ListarFechas() {
+            string consulta = "SELECT * FROM FECHA";
+            SqlDataAdapter adapter = new SqlDataAdapter(consulta, miConexionSql);
+            using (adapter)
+            {
+                DataTable DataFecha= new DataTable();
+                adapter.Fill(DataFecha);
+                FechaData.DisplayMemberPath = "MES";
+                FechaData.ItemsSource = DataFecha.DefaultView;
+            }
+        }
         private void todosPedidos_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
 

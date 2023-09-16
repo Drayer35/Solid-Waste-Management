@@ -14,5 +14,3 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.xml
 C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\LiveCharts.Wpf.dll
-C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\Common.dll
-C:\Users\Franco\Documents\GitHub\GestionRS\Domain\bin\Debug\Common.pdb
