@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
+        AllowsTransparency="True" 
         MouseDown="Window_MouseDown"
         Background="Transparent"
-        AllowsTransparency="True"   
+        ResizeMode="CanResize"
         Title="MainWindow" Height="800" Width="1380">
-
     <Window.Resources>
         <DataTemplate x:Name="Dashboard" DataType="{x:Type viewmodels:Dashboard}">
             <viewmodels:Dashboard DataContext="{Binding}"/>

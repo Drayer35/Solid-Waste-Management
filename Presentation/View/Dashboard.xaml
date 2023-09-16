@@ -41,7 +41,14 @@
                     </StackPanel>
                     <!--Tabla establecimientos-->
                     <StackPanel>
-                        <GroupBox Header="Establecimientos">
+                        <GroupBox>
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <TextBlock Text="Establecimientos" Style="{StaticResource contentButtonText}"/>
+                                    <Image Source="/Img/company.png" Height="25"/>
+                                </StackPanel>
+                            </GroupBox.Header>
                             <Grid>
                                 <ListBox Name="todosPedidos" Height="200" ScrollViewer.PanningMode="Both" Background="Transparent" BorderBrush="Transparent" FontSize="14">
                                 </ListBox>
@@ -61,7 +68,6 @@
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock Text="Registros Por Fecha" Style="{StaticResource SubTitle}" Foreground="White" FontSize="18" Margin="0,10,0,0"/>
                             <fa:ImageAwesome Icon="Calendar"  Style="{StaticResource contentButtonIcon}" Width="18"/>
-
                         </StackPanel>
                     </StackPanel>
                     <StackPanel Grid.Row="1">
@@ -69,7 +75,6 @@
                     </StackPanel>
                 </Grid>
             </Border>
-
         </Grid>
 
         <Border Grid.Column="1" CornerRadius="12" Margin="12,0,0,0">
@@ -82,7 +87,6 @@
                     <!--PANEL 3 295-->
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
                 <!--WIDGETTS-->
                 <StackPanel Grid.Row="0" >
                     <Grid>
@@ -98,8 +102,8 @@
                                 <StackPanel Height="25">
                                     <TextBlock Margin="0,8,0,0" Text="Residuos No Peligrosos" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
                                 </StackPanel>
-                                <StackPanel Orientation="Horizontal" Height="51" HorizontalAlignment="Center">
-                                    <TextBlock x:Name="NoPeligroCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round" Margin="0 ,0,20,0"/>
+                                <StackPanel Orientation="Vertical" Height="51" HorizontalAlignment="Center">
+                                    <TextBlock x:Name="NoPeligroCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
                                     <TextBlock x:Name="NoPeligroPercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round"/>
                                 </StackPanel>
                                 <StackPanel>
@@ -112,8 +116,8 @@
                                 <StackPanel Height="25">
                                     <TextBlock Margin="0,8,0,0" Text="Residuos Peligrosos" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
                                 </StackPanel>
-                                <StackPanel Orientation="Horizontal" Height="51" HorizontalAlignment="Center">
-                                    <TextBlock x:Name="PeligrosoCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round" Margin="0 ,0,20,0"/>
+                                <StackPanel Orientation="Vertical" Height="51" HorizontalAlignment="Center">
+                                    <TextBlock x:Name="PeligrosoCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
                                     <TextBlock x:Name="PeligrosoPercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
                                 </StackPanel>
                                 <StackPanel>
@@ -126,8 +130,8 @@
                                 <StackPanel Height="25">
                                     <TextBlock Margin="0,8,0,0" Text="Residuos Especiales" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
                                 </StackPanel>
-                                <StackPanel Orientation="Horizontal" Height="51" HorizontalAlignment="Center">
-                                    <TextBlock x:Name="EspecialCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"  Margin="0 ,0,20,0"/>
+                                <StackPanel Orientation="Vertical" Height="50" HorizontalAlignment="Center">
+                                    <TextBlock x:Name="EspecialCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round" />
                                     <TextBlock x:Name="EspecialPercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round"/>
                                 </StackPanel>
                                 <StackPanel>
@@ -135,14 +139,14 @@
                                 </StackPanel>
                             </StackPanel>
                         </Border>
-                        <Border Grid.Column="3" Height="100" Background="#4180E0" CornerRadius="12" Margin="0,0,0,0">
+                        <Border Grid.Column="3" Height="100" Background="#4180E0" CornerRadius="12">
                             <StackPanel Orientation="Vertical">
-                                <StackPanel Height="25">
+                                <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center">
                                     <TextBlock Margin="0,8,0,0" Text="Cantidad Total Generada" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="14"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Height="51" HorizontalAlignment="Center">
                                     <TextBlock x:Name="TotalTon" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round" FontWeight="Heavy"  Margin="0 ,0,10,0"/>
-                                    <fa:ImageAwesome Icon="Trash"  Style="{StaticResource contentButtonIcon}"/>
+
                                 </StackPanel>
                             </StackPanel>
                         </Border>
@@ -153,105 +157,119 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <!--CLASIFICACION-->
                         <Grid Grid.Column="0">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
                             </Grid.RowDefinitions>
-                            
-                            <Viewbox HorizontalAlignment="Left" Grid.Row="0" Margin="5">
-                                <Border Height="80" Background="#5741E0" CornerRadius="12" Margin="0,0,0,0" Width="250">
-                                    <StackPanel Orientation="Vertical">
-                                        <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
-                                            <TextBlock Margin="0,8,0,0" Text="Organico Degradable" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
-                                            <fa:ImageAwesome Margin="0,5,0,0" Icon="Recycle" Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
-                                            <TextBlock x:Name="DegradableCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
-                                            <TextBlock x:Name="DegradablePercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
-                                        </StackPanel>
+                            <Border Background="#5741E0"  CornerRadius="12" Margin="0,0,10,5">
+                                <StackPanel Orientation="Vertical"  VerticalAlignment="Stretch">
+                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                                        <TextBlock Margin="0,8,0,0" Text="Organico Degradable" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
+                                        <fa:ImageAwesome Margin="0,5,0,0" Icon="Recycle" Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
                                     </StackPanel>
-                                </Border>
-                            </Viewbox>
-                            <Viewbox HorizontalAlignment="Left" Grid.Row="1" Margin="5">
-                                <Border Height="80" Background="#5741E0" CornerRadius="12" Margin="0,0,0,0" Width="250">
-                                    <StackPanel Orientation="Vertical">
-                                        <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
-                                            <TextBlock Margin="0,8,0,0" Text="No Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
-                                            <fa:ImageAwesome Margin="0,5,0,0" Icon="Trash"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
-                                            <TextBlock x:Name="NoAprovechableCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
-                                            <TextBlock x:Name="NoAprovechablePercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
-                                        </StackPanel>
-                                        <DocumentViewer Height="100"/>
+                                    <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
+                                        <TextBlock x:Name="DegradableCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
+                                        <TextBlock x:Name="DegradablePercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
                                     </StackPanel>
-                                </Border>
-                            </Viewbox>
-                            <Viewbox HorizontalAlignment="Left" Grid.Row="2" Margin="5">
-                                <Border Height="80" Background="#5741E0" CornerRadius="12" Margin="0,0,0,0" Width="250">
-                                    <StackPanel Orientation="Vertical">
-                                        <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
-                                            <TextBlock Margin="0,8,0,0" Text="Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
-                                            <fa:ImageAwesome Margin="0,5,0,0" Icon="TrashOutline"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
-                                            <TextBlock x:Name="AprovechableCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
-                                            <TextBlock x:Name="AprovechablePercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
-                                        </StackPanel>
+                                </StackPanel>
+                            </Border>
+                            <Border  Background="#5741E0"  CornerRadius="12" Margin="0,0,10,0"  Grid.Row="1">
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                                        <TextBlock Margin="0,8,0,0" Text="No Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
+                                        <fa:ImageAwesome Margin="0,5,0,0" Icon="Trash"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
                                     </StackPanel>
-                                </Border>
-                            </Viewbox>
+                                    <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
+                                        <TextBlock x:Name="NoAprovechableCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
+                                        <TextBlock x:Name="NoAprovechablePercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                            <Border  Background="#5741E0"  CornerRadius="12" Margin="0,5,10,0" Grid.Row="2">
+
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Height="25" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                                        <TextBlock Margin="0,8,0,0" Text="Aprovechables" Style="{StaticResource contentButtonText}" HorizontalAlignment="Center"  Foreground="White" FontSize="15"/>
+                                        <fa:ImageAwesome Margin="0,5,0,0" Icon="TrashOutline"  Style="{StaticResource contentButtonIcon}" Height="15" Width="25"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Height="53" HorizontalAlignment="Center">
+                                        <TextBlock x:Name="AprovechableCant" Text="0.00 TON" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="20" TextElement.FontFamily="/Fonts/#Varela Round"/>
+                                        <TextBlock x:Name="AprovechablePercent" Text="23%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="15" TextElement.FontFamily="/Fonts/#Varela Round" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
                         </Grid>
+                        <Grid Grid.Column="1">
 
-                        <Viewbox Grid.Column="1">
-                            <Wpf:PieChart Name="Doughnut"
-                                          LegendLocation="Top" 
-                                          InnerRadius="55" Margin="10,10,5,10" RenderTransformOrigin="0.5,0.5" Height="193" Width="201" >
-                                <Wpf:PieChart.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="0.017"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </Wpf:PieChart.RenderTransform>
-                                <Wpf:PieChart.Series >
-                                    <Wpf:PieSeries Title="Disposición de Aprovechables" Values="100">
-                                        <!-- Configuración adicional del PieSeries si es necesario -->
-                                    </Wpf:PieSeries>
-                                </Wpf:PieChart.Series>
-                                <Wpf:PieChart.ChartLegend>
-                                    <Wpf:DefaultLegend BulletSize="20">
-                                        <!-- Configuración de la leyenda si es necesario -->
-                                    </Wpf:DefaultLegend>
-                                </Wpf:PieChart.ChartLegend>
-                            </Wpf:PieChart>
-                        </Viewbox>
+                            <Viewbox>
+                                <Wpf:PieChart Name="Doughnut"
+                                              LegendLocation="Top" 
+                                              InnerRadius="95" RenderTransformOrigin="0.5,0.5" Height="270" Width="315" >
+                                    <Wpf:PieChart.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="0.017"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Wpf:PieChart.RenderTransform>
+                                    <Wpf:PieChart.Series >
+                                        <Wpf:PieSeries Title="Disposición de Aprovechables" Values="100">
+                                            <!-- Configuración adicional del PieSeries si es necesario -->
+                                        </Wpf:PieSeries>
+                                    </Wpf:PieChart.Series>
+                                    <Wpf:PieChart.ChartLegend>
+                                        <Wpf:DefaultLegend BulletSize="20">
+                                            <!-- Configuración de la leyenda si es necesario -->
+                                        </Wpf:DefaultLegend>
+                                    </Wpf:PieChart.ChartLegend>
+                                </Wpf:PieChart>
+                            </Viewbox>
 
-                        <Viewbox Grid.Column="2">
-                            <Wpf:CartesianChart RenderTransformOrigin="0.5,0.5" Height="255" Width="320">
-                                <Wpf:CartesianChart.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="0"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </Wpf:CartesianChart.RenderTransform>
-                            </Wpf:CartesianChart>
-                        </Viewbox>
-
+                        </Grid>
                     </Grid>
                 </Border>
-                <Border Background="{StaticResource Color9}" Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">
+                <Border  Grid.Row="2" CornerRadius="12" Margin="0,12,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="Red" CornerRadius="20" Grid.Column="0" Margin="0,0,5,0">
+                            <Viewbox  >
+                                <Wpf:CartesianChart RenderTransformOrigin="0.5,0.5" Height="255" Width="504">
+                                    <Wpf:CartesianChart.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="0"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Wpf:CartesianChart.RenderTransform>
+                                </Wpf:CartesianChart>
+                            </Viewbox>
+                        </Border>
+                        <Border Background="Red" CornerRadius="20" Grid.Column="1" Margin="5,0,0,0">
+                            <Viewbox  >
+                                <Wpf:CartesianChart RenderTransformOrigin="0.5,0.5" Height="255" Width="504" >
+                                    <Wpf:CartesianChart.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="0"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Wpf:CartesianChart.RenderTransform>
+                                </Wpf:CartesianChart>
+                            </Viewbox>
+                        </Border>
+                    </Grid>
+
                 </Border>
             </Grid>
         </Border>
-
     </Grid>
 </UserControl>

@@ -282,6 +282,7 @@
     <Resource Include="Img\lock.png" />
     <Resource Include="Img\eyeOpen.png" />
     <Resource Include="Img\eyeClose.png" />
+    <Resource Include="Img\company.png" />
     <Content Include="Img\logo.png" />
     <Resource Include="Img\user.png" />
     <Resource Include="Img\logo2.png" />
