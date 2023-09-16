@@ -14,6 +14,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Domain;
 
 namespace Presentation.View
 {
@@ -25,6 +26,7 @@ namespace Presentation.View
         public LoginUser()
         {
             InitializeComponent();
+            txtUser.Focus();
         }
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int wMswg, int wParam, int lParam);
@@ -66,8 +68,39 @@ namespace Presentation.View
                 txtUser.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A7"));
             }
         }
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            if (txtPass.Password == "***********")
+            {
+                txtPass.Password = "";
+                txtPass.Foreground = Brushes.White;
+            }
+        }
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            string passInput = txtPass.Password.Trim(); // Elimina espacios en blanco al principio y al final
+            if (string.IsNullOrEmpty(passInput))
+            {
+                txtPass.Password = "";
+                txtPass.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A7"));
+            }
+        }
+        private void sendLoginClick(object sender, EventArgs e) {
+            if (txtUser.Text != "UserName") {
+                if (txtPass.Password != "")
+                {
 
+                }
+                else { showErrorAlert("Por Favor Ingrese Contraseña"); }
+            } 
+            else { showErrorAlert("Por Favor Ingrese Nombre de Usuario"); }
 
+        
+        }
+        private void showErrorAlert(string msg) {
+            lblAlert.Visibility = Visibility;
+            lblAlertText.Text = msg;
+        }
 
 
 

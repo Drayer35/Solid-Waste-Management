@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Crud\CEstablecimiento.cs" />
     <Compile Include="Crud\CRegistro.cs" />
+    <Compile Include="Model\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

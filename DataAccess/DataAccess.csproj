@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection\ConnectDB.cs" />
+    <Compile Include="Connection\ConnectUserDB.cs" />
+    <Compile Include="Entities\UserDao.cs" />
     <Compile Include="Procedures\ProEstablecimiento.cs" />
     <Compile Include="Procedures\ProRegistro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

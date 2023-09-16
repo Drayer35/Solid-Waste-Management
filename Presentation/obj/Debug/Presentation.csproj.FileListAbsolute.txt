@@ -138,3 +138,6 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\LiveCharts.Wpf
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation_Content.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\TextBoxStyle.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\ScrollStyle.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\DataAccess.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\DataAccess.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\DataAccess.dll.config
