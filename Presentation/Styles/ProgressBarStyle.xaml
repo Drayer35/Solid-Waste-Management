@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Key="BarraLogin" TargetType="ProgressBar">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ProgressBar">
+                    <Border CornerRadius="3" Background="#5E607F">
+                        <Grid x:Name="PART_Track">
+                            <Rectangle x:Name="PART_Indicator" HorizontalAlignment="Left" Fill="#0275FE" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>        
+    </Style>
+    
+    
+</ResourceDictionary>

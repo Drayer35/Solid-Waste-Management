@@ -10,7 +10,7 @@
                 <ResourceDictionary Source="/Styles/ButtonStyle.xaml"/>
                 <ResourceDictionary Source="/Styles/TitleStyle.xaml"/>
                 <ResourceDictionary Source="/Styles/TextBoxStyle.xaml"/>
-                <!--<ResourceDictionary Source="/Styles/ScrollStyle.xaml"/>-->
+                <ResourceDictionary Source="/Styles/ProgressBarStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

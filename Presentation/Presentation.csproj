@@ -112,6 +112,10 @@
     <Compile Include="View\WindowWelcome.xaml.cs">
       <DependentUpon>WindowWelcome.xaml</DependentUpon>
     </Compile>
+    <Page Include="Styles\ProgressBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\ScrollStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

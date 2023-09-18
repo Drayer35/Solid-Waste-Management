@@ -41,7 +41,7 @@
                     </StackPanel>
                     <StackPanel>
                         <TextBlock  x:Name="porcentaje" Foreground="white" HorizontalAlignment="Right"></TextBlock>
-                        <ProgressBar Height="2" x:Name="barraCarga"/>
+                        <ProgressBar Height="3" x:Name="barraCarga" Style="{StaticResource BarraLogin}"/>
                     </StackPanel>
                 </StackPanel>
                
