@@ -17,6 +17,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using Presentation.View;
 using System.Linq.Expressions;
+using Common.Cache;
 
 namespace Presentation
 {
@@ -28,11 +29,10 @@ namespace Presentation
         public MainWindow()
         {
             InitializeComponent();
-           
+            LoadDataUser();
         }
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int wMswg, int wParam, int lParam);
-
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             WindowInteropHelper helper = new WindowInteropHelper(this);
@@ -53,8 +53,7 @@ namespace Presentation
             }
             else{  
                 this.WindowState = WindowState.Normal;
-            }
-                
+            }              
         }
         private void btn_CloseWindow(object sender, RoutedEventArgs e)
         {
@@ -64,25 +63,38 @@ namespace Presentation
         {
           DataContext = new Dashboard();
         }
-
         private void btn_Registro(object sender, RoutedEventArgs e)
         {
             DataContext = new Registros();
         }
-
         private void btn_Residuos(object sender, RoutedEventArgs e)
         {
             DataContext = new Residuos();
         }
-
         private void btn_Operaciones(object sender, RoutedEventArgs e)
         {
             DataContext = new Operaciones();
         }
-
         private void btn_Instructivo(object sender, RoutedEventArgs e)
         {
             DataContext = new Instructivo();
         }
+        private void btn_Logout(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "Logout", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+            else {
+                activeDashboard.IsChecked = true;
+            }
+        }
+
+        private void LoadDataUser() {
+            txtFullName.Text = UserLoginCache.Nombre + " "+  UserLoginCache.Apellido;
+            txtNameUser.Text = UserLoginCache.UserName;
+        }
+    
     }
 }

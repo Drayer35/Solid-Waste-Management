@@ -1,0 +1,6 @@
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\bin\Debug\Common.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\bin\Debug\Common.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\obj\Debug\Common.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\Common\obj\Debug\Common.pdb

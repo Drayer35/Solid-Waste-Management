@@ -65,8 +65,7 @@
                                TextAlignment="Center" 
                                FontWeight="Medium"
                                >
-                        <!--<TextBlock Text="♻️" Foreground="Green"/>
-                        <TextBlock Text="🌍" Foreground="Brown"/>-->
+
                     </TextBlock>
 
                     <TextBox 

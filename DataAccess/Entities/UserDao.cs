@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.Remoting.Messaging;
+using Common.Cache;
+
 
 namespace DataAccess.Entities
 {
@@ -17,13 +19,18 @@ namespace DataAccess.Entities
                 connection.Open();
                 using (var command = new SqlCommand()) { 
                     command.Connection = connection;
-                    command.CommandText = "Select * from USUARIO where USERNAME=@username and PASSWORD]=@password ";
-                    command.Parameters.AddWithValue("username", username);
-                    command.Parameters.AddWithValue("password", password);
+                    command.CommandText = "SELECT * FROM USUARIO WHERE USERNAME=@username AND PASSWORD=@password ";
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
                     command.CommandType = CommandType.Text;
-                    SqlDataReader reader = command.ExecuteReader();
-              
-                    if (reader.HasRows) { 
+                    SqlDataReader reader = command.ExecuteReader();  
+                    if (reader.HasRows) {
+                        while (reader.Read()) {
+                            UserLoginCache.Nombre = reader.GetString(1);
+                            UserLoginCache.Apellido = reader.GetString(2);
+                            UserLoginCache.Correo = reader.GetString(3);    
+                            UserLoginCache.UserName = reader.GetString(4);
+                        }
                         return true;
                     }
                     else { return false; }

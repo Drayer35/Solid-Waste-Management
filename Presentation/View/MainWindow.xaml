@@ -52,7 +52,9 @@
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource Color2}"
                                      IsChecked="True"
-                                     Checked="btn_Dashboard">
+                                     Checked="btn_Dashboard"
+                                     x:Name="activeDashboard"
+                                     >
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="Home" Style="{StaticResource menuButtonIcon}"/>
@@ -94,8 +96,18 @@
                             <StackPanel Orientation="Horizontal" 
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="Wrench" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Instructivo" Style="{StaticResource menuButtonText}"
-                                           />
+                                <TextBlock Text="Instructivo" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     Tag="{StaticResource Color2}" 
+                                     Checked="btn_Logout">     
+                            <StackPanel Orientation="Horizontal" 
+                                        HorizontalAlignment="Center">
+                                    <fa:ImageAwesome Icon="PowerOff" 
+                                                     Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Cerrrar Sesion" 
+                                           Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
                     </StackPanel>
@@ -143,8 +155,21 @@
                     </StackPanel>
                     <StackPanel x:Name="Header"
                                 Grid.Row="1"
+                                Orientation="Horizontal"
                                 Background="{StaticResource Color1}">
-                        
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"
+                                    Margin="10,0,10,0">
+                            
+                            <Image Source="/Img/lock2.png" Height="45" Margin="0,0,5,0"/>
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                                <TextBlock x:Name="txtFullName" Text="Full Name" Foreground="White" FontSize="25" Margin="0"/>
+                                <TextBlock x:Name="txtNameUser" Text="User Name" Foreground="White" FontSize="15" Margin="1,0,0,0"/>
+                            </StackPanel>
+                           
+                        </StackPanel>
+                       
                     </StackPanel>
                     <!--Window Content-->
                     <ContentControl x:Name="controlContent"

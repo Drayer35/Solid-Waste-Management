@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Domain;
+using Domain.Model;
 
 namespace Presentation.View
 {
@@ -89,7 +90,24 @@ namespace Presentation.View
             if (txtUser.Text != "UserName") {
                 if (txtPass.Password != "")
                 {
-
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(txtUser.Text,txtPass.Password);
+                    if (validLogin == true)
+                    {
+                        this.Hide();
+                        WindowWelcome windowWelcome = new WindowWelcome();
+                        windowWelcome.ShowDialog();
+                        MainWindow menu = new MainWindow();
+                        menu.Show();
+                        menu.Closed += LogoutUser;
+                        
+                    }
+                    else {
+                        showErrorAlert("Credenciales Invalidas. Intenta de Nuevo");
+                        txtUser.Clear();
+                        txtPass.Clear();
+                        txtUser.Focus();
+                    }
                 }
                 else { showErrorAlert("Por Favor Ingrese Contraseña"); }
             } 
@@ -101,7 +119,15 @@ namespace Presentation.View
             lblAlert.Visibility = Visibility;
             lblAlertText.Text = msg;
         }
-
+        private void LogoutUser(object sender, EventArgs e) {
+            txtPass.Clear();
+            txtUser.Clear();
+            lblAlert.Visibility = Visibility.Hidden;
+            this.Show();
+            txtUser.Text = "UserName";
+            txtUser.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#A6A6A7"));
+            txtPass.Password = "";
+        }
 
 
     }

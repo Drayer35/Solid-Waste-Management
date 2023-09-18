@@ -109,6 +109,9 @@
     <Compile Include="View\Residuos.xaml.cs">
       <DependentUpon>Residuos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WindowWelcome.xaml.cs">
+      <DependentUpon>WindowWelcome.xaml</DependentUpon>
+    </Compile>
     <Page Include="Styles\ScrollStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,6 +168,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\WindowWelcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -206,29 +213,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Img\arrow-down-solid.png" />
-    <Resource Include="Img\arrow-up-solid.png" />
-    <Resource Include="Img\biohazard-solid.png" />
-    <Resource Include="Img\carro-de-basura %281%29.png" />
-    <Resource Include="Img\carro-de-basura.png" />
     <Resource Include="Img\cerrar.png" />
-    <Resource Include="Img\circle-exclamation-solid.png" />
-    <Resource Include="Img\circle-info-solid.png" />
-    <Resource Include="Img\content.png" />
-    <Resource Include="Img\file-regular %281%29.png" />
-    <Resource Include="Img\flag-solid %281%29.png" />
-    <Resource Include="Img\folder-plus-solid.png" />
     <Resource Include="Img\maximizar.png" />
-    <Resource Include="Img\rectangle-list-solid.png" />
-    <Resource Include="Img\recycle-solid.png" />
-    <Resource Include="Img\sack-xmark-solid.png" />
-    <Resource Include="Img\Shovel-PNG-Free-Download.png" />
     <Resource Include="Img\signo-menos.png" />
-    <Resource Include="Img\tacho-de-reciclaje.png" />
-    <Resource Include="Img\trash-can-solid.png" />
-    <Resource Include="Img\truck-moving-solid.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c3fd4036-2293-4013-8526-6aff22c36823}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{9f34cc59-e49f-4839-83f6-2d362fe6de6d}</Project>
       <Name>Domain</Name>
@@ -247,18 +240,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Img\background.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Img\tech.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Img\user2.png" />
     <Resource Include="Img\lock2.png" />
     <Resource Include="Img\lock.png" />
     <Resource Include="Img\eyeOpen.png" />
     <Resource Include="Img\eyeClose.png" />
     <Resource Include="Img\company.png" />
+    <Resource Include="Img\welcome.jpg" />
+    <Resource Include="Img\usermain.png" />
     <Content Include="Img\wolf.png" />
     <Content Include="Img\logo.png" />
     <Resource Include="Img\user.png" />

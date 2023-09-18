@@ -14,3 +14,6 @@ C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\obj\Debug\DataAccess.cspro
 C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\bin\Debug\Common.dll
+C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\bin\Debug\Common.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
