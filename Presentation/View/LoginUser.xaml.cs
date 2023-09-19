@@ -90,8 +90,8 @@ namespace Presentation.View
             if (txtUser.Text != "UserName") {
                 if (txtPass.Password != "")
                 {
-                    UserModel user = new UserModel();
-                    var validLogin = user.LoginUser(txtUser.Text,txtPass.Password);
+                    UserModel User = new UserModel();
+                    var validLogin = User.LoginUser(txtUser.Text,txtPass.Password);
                     if (validLogin == true)
                     {
                         this.Hide();
@@ -112,8 +112,6 @@ namespace Presentation.View
                 else { showErrorAlert("Por Favor Ingrese Contraseña"); }
             } 
             else { showErrorAlert("Por Favor Ingrese Nombre de Usuario"); }
-
-        
         }
         private void showErrorAlert(string msg) {
             lblAlert.Visibility = Visibility;

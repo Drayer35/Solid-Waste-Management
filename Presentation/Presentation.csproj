@@ -109,6 +109,9 @@
     <Compile Include="View\Residuos.xaml.cs">
       <DependentUpon>Residuos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WindowEstablecimiento.xaml.cs">
+      <DependentUpon>WindowEstablecimiento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WindowWelcome.xaml.cs">
       <DependentUpon>WindowWelcome.xaml</DependentUpon>
     </Compile>
@@ -169,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Residuos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowEstablecimiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

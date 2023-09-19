@@ -8,8 +8,6 @@ namespace Common.Cache
 {
     public static class UserLoginCache
     {
-
-
         public static String IdUser    {get; set;}
         public static String Nombre    {get; set;}
         public static String Apellido  {get; set;}

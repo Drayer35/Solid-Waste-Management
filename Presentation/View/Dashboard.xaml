@@ -48,7 +48,7 @@
                                             HorizontalAlignment="Center">
                             <TextBlock Text="Establecimientos" Style="{StaticResource contentButtonText}"/>
 
-                            <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="28" Height="25">
+                            <Button Style="{StaticResource contentButton}" Tag="{StaticResource Color6}" Width="28" Height="25" Click="Establecimiento" Margin="5,0,0,0">
                                 <StackPanel Orientation="Horizontal"
                                                     HorizontalAlignment="Center">
                                     <fa:ImageAwesome Icon="Plus"  Style="{StaticResource contentButtonIcon}" Height="14" Width="15"/>

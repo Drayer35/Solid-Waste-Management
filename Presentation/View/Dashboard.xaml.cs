@@ -43,7 +43,6 @@ namespace Presentation.View
                 todosPedidos.ItemsSource = DataEstablecimientos.DefaultView;
             }
         }
-
         private void ListarFechas() {
             string consulta = "SELECT * FROM FECHA";
             SqlDataAdapter adapter = new SqlDataAdapter(consulta, miConexionSql);
@@ -58,6 +57,11 @@ namespace Presentation.View
         private void todosPedidos_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
 
+        }
+        private void Establecimiento(object sender, RoutedEventArgs e)
+        {
+            WindowEstablecimiento windowEstablecimiento = new WindowEstablecimiento();
+            windowEstablecimiento.ShowDialog();
         }
     }
 }

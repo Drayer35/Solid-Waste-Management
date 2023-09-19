@@ -146,3 +146,5 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\bin\Debug\Common.pdb
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowWelcome.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowWelcome.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\ProgressBarStyle.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowEstablecimiento.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowEstablecimiento.baml

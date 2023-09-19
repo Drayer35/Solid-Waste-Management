@@ -31,11 +31,11 @@ namespace Presentation.View
             timer2.Interval = new TimeSpan(0, 0, 0, 0, 30);
             timer1.Tick += timer1_Tick;
             timer2.Tick += timer2_Tick;
-                 
+            this.Opacity = 0;
+            timer1.Start();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             if (this.Opacity <1) this.Opacity += 0.05;
             barraCarga.Value += 1;
             porcentaje.Text = barraCarga.Value.ToString() + "%";
@@ -53,10 +53,8 @@ namespace Presentation.View
                 this.Close();       
             }
         }
-        private void insertData() {
-            this.Opacity = 0;
+        private void insertData() { 
             txtUserFullName.Text = UserLoginCache.Nombre + " " + UserLoginCache.Apellido;
-            timer1.Start();
         }
     }
 }
