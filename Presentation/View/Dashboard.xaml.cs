@@ -17,6 +17,7 @@ using System.Configuration;
 using LiveCharts;
 using LiveCharts.Wpf;
 using System.Data.SqlClient;
+using Domain.Model;
 
 namespace Presentation.View
 {
@@ -30,9 +31,10 @@ namespace Presentation.View
             miConexionSql = new SqlConnection(miconexion);
             ListarEstablecimientos();
             ListarFechas();
+            
         }
 
-        private void ListarEstablecimientos() {
+        public void ListarEstablecimientos() {
             string consulta = "SELECT * FROM ESTABLECIMIENTO";
             SqlDataAdapter adapter = new SqlDataAdapter(consulta,miConexionSql);
             using (adapter) { 
@@ -44,6 +46,7 @@ namespace Presentation.View
             }
         }
         private void ListarFechas() {
+
             string consulta = "SELECT * FROM FECHA";
             SqlDataAdapter adapter = new SqlDataAdapter(consulta, miConexionSql);
             using (adapter)

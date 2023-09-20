@@ -3,16 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Presentation.View" xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
         MouseDown="Window_MouseDown"
-         ResizeMode="NoResize"
-         WindowStartupLocation="CenterScreen"
-         WindowStyle="None"
-         Background="Transparent"
-         AllowsTransparency="True"   
-         Title="MainWindow" Height="400" Width="600">
-    <Border CornerRadius="20">
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"   
+        Title="MainWindow" Height="500" Width="700">
+    <Border CornerRadius="15" BorderThickness="1" BorderBrush="Gray">
+        <Border.Effect>
+            <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.5"/>
+        </Border.Effect>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"/>
@@ -41,10 +44,10 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                         <TextBlock Text="REGISTRO DE ESTABLECIMIENTOS" HorizontalAlignment="Center" Style="{StaticResource TitleText}" Margin="20"/>
                         <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
-                           <TextBox 
+                            <TextBox 
                                    x:Name="txtEstablecimiento"
                                    Text="Nombre Establecimiento"
                                     Width="300"
@@ -52,13 +55,13 @@
                                    GotFocus="txtEstablecimiento_Enter"
                                    LostFocus="txtEstablecimiento_Leave"
                                    Style="{StaticResource OnlyBox}" Margin="0,20,0,0">
-                        </TextBox>
+                            </TextBox>
                             <Button Style="{StaticResource contentButton}"
                                      Tag="{StaticResource Color10}" 
                                      Width="90" 
                                      Margin="20,20,0,0" 
                                      Name="AddEstablecimiento"
-                                     Height="40">
+                                     Height="40" Click="AddEstablecimiento_Click">
                                 <StackPanel Orientation="Horizontal"
                                             HorizontalAlignment="Center">
                                     <TextBlock Text="Agregar" Style="{StaticResource contentButtonText}"/>
@@ -66,12 +69,39 @@
                             </Button>
                         </StackPanel>
 
-                        
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-
-                        </StackPanel>
-                        
-
+                        <DataGrid ItemsSource="{Binding}" x:Name="TablaEstablecimientos" 
+                                  CanUserResizeColumns="False" 
+                                  CanUserAddRows="False" 
+                                  IsReadOnly="True" 
+                                  Height="220"  
+                                  CellStyle="{StaticResource miEstiloDeCelda}"
+                                  
+                                  Style="{StaticResource gridTable}">
+                            <DataGrid.Columns>
+                                
+                                <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                                    <DataGridCheckBoxColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <CheckBox/>
+                                        </DataTemplate>
+                                    </DataGridCheckBoxColumn.HeaderTemplate>
+                                </DataGridCheckBoxColumn>
+                                <DataGridTemplateColumn Header="Opciones">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Style="{StaticResource gridButtonEdit}" Click="EditarRegistro">
+                                                    <fa:FontAwesome Icon="Pencil" />
+                                                </Button>
+                                                <Button Style="{StaticResource gridButtonClose}" Click="EliminarRegistro">
+                                                    <fa:FontAwesome Icon="Close"/>
+                                                </Button>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </StackPanel>
                 </Grid>
             </Border>

@@ -85,7 +85,7 @@ namespace Presentation
             MessageBoxResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "Logout", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
-                this.Close();
+                Application.Current.Shutdown();
             }
             else {
                 activeDashboard.IsChecked = true;
@@ -96,6 +96,6 @@ namespace Presentation
             txtFullName.Text = UserLoginCache.Nombre + " "+  UserLoginCache.Apellido;
             txtNameUser.Text = UserLoginCache.UserName;
         }
-    
+      
     }
 }

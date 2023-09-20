@@ -100,7 +100,7 @@ namespace Presentation.View
                         MainWindow menu = new MainWindow();
                         menu.Show();
                         menu.Closed += LogoutUser;
-                        
+                        this.Close();
                     }
                     else {
                         showErrorAlert("Credenciales Invalidas. Intenta de Nuevo");
@@ -121,7 +121,7 @@ namespace Presentation.View
             txtPass.Clear();
             txtUser.Clear();
             lblAlert.Visibility = Visibility.Hidden;
-            this.Show();
+            //this.Show();
             txtUser.Text = "UserName";
             txtUser.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#A6A6A7"));
             txtPass.Password = "";

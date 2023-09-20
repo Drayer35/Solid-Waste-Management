@@ -14,7 +14,6 @@
                   
                         <ScrollContentPresenter Grid.Column="0" />
                         <ScrollBar Name="PART_VerticalScrollBar" Grid.Column="1" Grid.Row="0" Width="10" >
-
                         </ScrollBar>
 
                     </Grid>

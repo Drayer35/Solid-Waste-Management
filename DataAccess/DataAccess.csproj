@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection\ConnectGestionDB.cs" />
     <Compile Include="Connection\ConnectUserDB.cs" />
+    <Compile Include="Entities\EstablecimientoDao.cs" />
     <Compile Include="Entities\UserDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
