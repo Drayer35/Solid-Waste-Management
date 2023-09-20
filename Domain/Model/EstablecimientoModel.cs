@@ -13,11 +13,16 @@ namespace Domain.Model
     {
         EstablecimientoDao EstablecimientoDao = new EstablecimientoDao();
         public bool InsertarEstablecimiento(string nombre) {
-               return EstablecimientoDao.InsertarEstablecimiento(nombre);
+            return EstablecimientoDao.InsertarEstablecimiento(nombre);
         }
 
         public DataTable ListarEstablecientos() { 
             return EstablecimientoDao.ListarEstablecimiento();
+        }
+
+        public void BorrarEstablecimiento(int id) {
+            EstablecimientoDao.BorrarEstablecimiento(id);
+        
         }
     }
 }

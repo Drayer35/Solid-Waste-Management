@@ -49,7 +49,7 @@ namespace Presentation.View
                 PintarCasillaEstablecimiento();
             }
         }
-        private void AddEstablecimiento_Click(object sender, RoutedEventArgs e)
+        private void AddEstablecimiento(object sender, RoutedEventArgs e)
         {
             if (txtEstablecimiento.Text != "Nombre Establecimiento")
             {
@@ -76,10 +76,18 @@ namespace Presentation.View
             txtEstablecimiento.Text = "Nombre Establecimiento";
         }
         private void EditarRegistro(object sender, RoutedEventArgs e) {
-            MessageBox.Show("Quiere Editar el registro?");
+            EstablecimientoModel establecimientoModel = new EstablecimientoModel();
+            establecimientoModel.BorrarEstablecimiento(52);
+
         }
         private void EliminarRegistro(object sender, RoutedEventArgs e) {
-            MessageBox.Show("Quiere Eliminar el registro?");
+            EstablecimientoModel establecimientoModel = new EstablecimientoModel();
+            establecimientoModel.BorrarEstablecimiento(52);
+        }
+
+        private void TablaEstablecimientos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

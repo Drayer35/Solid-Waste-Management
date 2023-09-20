@@ -67,5 +67,31 @@ namespace DataAccess.Entities
                 }
             }
         }
+        public void BorrarEstablecimiento(int id) {
+            using (var connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = "BorrarEstablecimiento";
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ID",id);
+                        command.ExecuteNonQuery();
+                        command.Parameters.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
     }
 }

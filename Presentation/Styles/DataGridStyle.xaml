@@ -139,7 +139,7 @@
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Background" Value="green"/>
+        <Setter Property="Background" Value="#4BD108"/>
         <Setter Property="Foreground" Value="{StaticResource Color2}"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Template">
@@ -154,22 +154,30 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+
         <Style.Triggers>
-            <!-- MOUSE OVER COLOR-->
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="DarkGreen"/>
+                <Setter Property="Background" Value="#5FB669 "/>
                 <Setter Property="Foreground" Value="{StaticResource Color3}"/>
                 <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
             </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="#148D22"/>
+                <Setter Property="Foreground" Value="{StaticResource Color3}"/>
+                <Setter Property="BorderBrush" Value="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"/>
+            </Trigger>
+            
         </Style.Triggers>
     </Style>
     <!--DATAGRID BUTTON CLOSE-->
     <Style x:Key="gridButtonClose" TargetType="Button" BasedOn="{StaticResource gridButtonEdit}">
         <Setter Property="Background" Value="red"/>
         <Style.Triggers>
-            <!-- MOUSE OVER COLOR-->
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="DarkRed"/>
+                <Setter Property="Background" Value="#ED5353"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="#D00F0F"/>
             </Trigger>
         </Style.Triggers>
     </Style>

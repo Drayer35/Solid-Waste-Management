@@ -60,8 +60,9 @@
                                      Tag="{StaticResource Color10}" 
                                      Width="90" 
                                      Margin="20,20,0,0" 
-                                     Name="AddEstablecimiento"
-                                     Height="40" Click="AddEstablecimiento_Click">
+                                     Name="BtnAddEstablecimiento"
+                                     Height="40"
+                                    Click="AddEstablecimiento">
                                 <StackPanel Orientation="Horizontal"
                                             HorizontalAlignment="Center">
                                     <TextBlock Text="Agregar" Style="{StaticResource contentButtonText}"/>
@@ -74,11 +75,11 @@
                                   CanUserAddRows="False" 
                                   IsReadOnly="True" 
                                   Height="220"  
+                                  Margin="30,80"
                                   CellStyle="{StaticResource miEstiloDeCelda}"
                                   
-                                  Style="{StaticResource gridTable}">
+                                  Style="{StaticResource gridTable}" SelectionChanged="TablaEstablecimientos_SelectionChanged">
                             <DataGrid.Columns>
-                                
                                 <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
                                     <DataGridCheckBoxColumn.HeaderTemplate>
                                         <DataTemplate>
