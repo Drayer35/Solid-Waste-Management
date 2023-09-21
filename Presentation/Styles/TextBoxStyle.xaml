@@ -58,7 +58,7 @@
     <Style x:Key="OnlyBox" TargetType="TextBox">
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="FontWeight" Value="Medium"/>
-        <Setter Property="CaretBrush" Value="#00F1FF"/>
+        <Setter Property="CaretBrush" Value="Black"/>
         <Setter Property="Foreground" Value="#A6A6A7"/>
         <Setter Property="BorderThickness" Value="0,0,0,1"/>
         <Setter Property="Height" Value="30"/>
