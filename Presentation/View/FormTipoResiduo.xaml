@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Presentation.View"
+              mc:Ignorable="d"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -31,7 +32,7 @@
                             <StackPanel  Orientation="Horizontal" 
                                          HorizontalAlignment="Center">
                                 <TextBox 
-                                       x:Name="TxtIdEstadoMateria"
+                                       x:Name="TxtIdTipoResiduo"
                                        Text="ID"
                                        Width="30"
                                        IsEnabled="False"
@@ -39,7 +40,7 @@
                                        Margin="0,20,20,0">
                                 </TextBox>
                                 <TextBox 
-                                       x:Name="TxtNameEstadoMateria"
+                                       x:Name="TxtNameTipoResiduo"
                                        Text="Nombre de Estado"
                                        Width="300"
                                        MaxLength="40"
@@ -50,7 +51,7 @@
                                      Tag="{StaticResource Color10}" 
                                      Width="90" 
                                      Margin="20,20,0,0" 
-                                     Name="BtnAddEstadoMateria"
+                                     Name="BtnAddTipoResiduo"
                                      Height="40"
                                      >
                                     <StackPanel Orientation="Horizontal"
@@ -61,7 +62,7 @@
                             </StackPanel>
 
                             <DataGrid ItemsSource="{Binding}" 
-                              x:Name="TableEstadoMateria" 
+                              x:Name="TableTipoResiduo" 
                               CanUserResizeColumns="False" 
                               CanUserAddRows="False" 
                               IsReadOnly="True" 
