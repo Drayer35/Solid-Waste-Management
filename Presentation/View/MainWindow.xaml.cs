@@ -64,14 +64,6 @@ namespace Presentation
         {
           DataContext = new Dashboard();
         }
-        private void btn_Registro(object sender, RoutedEventArgs e)
-        {
-            DataContext = new Registros();
-        }
-        private void btn_Residuos(object sender, RoutedEventArgs e)
-        {
-            DataContext = new Residuos();
-        }
         private void btn_Operaciones(object sender, RoutedEventArgs e)
         {
             DataContext = new Operaciones();

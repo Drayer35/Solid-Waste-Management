@@ -12,16 +12,19 @@ namespace Domain.Model
     public class EstablecimientoModel
     {
         EstablecimientoDao EstablecimientoDao = new EstablecimientoDao();
-        public bool InsertarEstablecimiento(string nombre) {
-            return EstablecimientoDao.InsertarEstablecimiento(nombre);
+        public bool CreateEstablecimiento(string name) {
+            return EstablecimientoDao.InsertarEstablecimiento(name);
         }
 
-        public DataTable ListarEstablecientos() { 
+        public DataTable ToListEstablecimientos() { 
             return EstablecimientoDao.ListarEstablecimiento();
         }
-
-        public void BorrarEstablecimiento(int id) {
-            EstablecimientoDao.BorrarEstablecimiento(id);
+        public void UpdateEstablecimiento(int id, string name) {
+            EstablecimientoDao.UpdateEstablecimiento(id,name);
+        
+        } 
+        public void DeleteEstablecimiento(int id) {
+            EstablecimientoDao.DeleteEstablecimiento(id);
         
         }
     }

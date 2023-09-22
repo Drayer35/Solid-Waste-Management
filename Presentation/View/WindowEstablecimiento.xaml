@@ -11,11 +11,10 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"   
-        Title="MainWindow" Height="500" Width="700">
+        Title="MainWindow" 
+        Height="650"
+        Width="800">
     <Border CornerRadius="15" BorderThickness="1" BorderBrush="Gray">
-        <!--<Border.Effect>
-            <DropShadowEffect Color="Gray" Direction="270" ShadowDepth="5" Opacity="0.5"/>
-        </Border.Effect>-->
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"/>
@@ -48,12 +47,21 @@
                         <TextBlock Text="REGISTRO DE ESTABLECIMIENTOS" HorizontalAlignment="Center" Style="{StaticResource TitleText}" Margin="20"/>
                         <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
                             <TextBox 
-                                   x:Name="txtEstablecimiento"
+                               x:Name="TxtIdEstablecimiento"
+                               Text="ID"
+                               Width="30"
+                               IsEnabled="False"
+                               
+                               Style="{StaticResource OnlyBox}" 
+                               Margin="0,20,20,0">
+                            </TextBox>
+                            <TextBox 
+                                   x:Name="TxtNameEstablecimiento"
                                    Text="Nombre Establecimiento"
-                                    Width="300"
-                                   MaxLength="45"
-                                   GotFocus="txtEstablecimiento_Enter"
-                                   LostFocus="txtEstablecimiento_Leave"
+                                   Width="300"
+                                   MaxLength="40"
+                                   GotFocus="TextEstablecimientoEnter"
+                                   LostFocus="TextEstablecimientoLeave"
                                    Style="{StaticResource OnlyBox}" Margin="0,20,0,0">
                             </TextBox>
                             <Button Style="{StaticResource contentButton}"
@@ -65,20 +73,22 @@
                                     Click="AddEstablecimiento">
                                 <StackPanel Orientation="Horizontal"
                                             HorizontalAlignment="Center">
-                                    <TextBlock Text="Agregar" Style="{StaticResource contentButtonText}"/>
+                                    <TextBlock x:Name="TextAddEstablecimiento" Text="Agregar" Style="{StaticResource contentButtonText}"/>
                                 </StackPanel>
                             </Button>
                         </StackPanel>
 
-                        <DataGrid ItemsSource="{Binding}" x:Name="TablaEstablecimientos" 
+                        <DataGrid ItemsSource="{Binding}" 
+                                  x:Name="TableEstablecimientos" 
                                   CanUserResizeColumns="False" 
                                   CanUserAddRows="False" 
                                   IsReadOnly="True" 
-                                  Height="305"  
-                                  
+                                  Height="350"  
+                                  RowStyle="{StaticResource DataGridRowStyle1}"
+                                  AutoGenerateColumns="False"
                                   Margin="30,20"
                                   CellStyle="{StaticResource miEstiloDeCelda}"
-                                  Style="{StaticResource gridTable}" SelectionChanged="TablaEstablecimientos_SelectionChanged">
+                                  Style="{StaticResource gridTable}">
                             <!--RowStyle="{StaticResource DataGridRowStyle1}" este es el error de la tabla-->
                             <DataGrid.ColumnHeaderStyle>
                                 <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DataGridColumnHeaderStyle1}" />
@@ -86,6 +96,7 @@
                             <DataGrid.Resources>
                                 <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource CustomVerticalScrollBar}" />
                             </DataGrid.Resources>
+
                             <DataGrid.Columns>
                                 <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
                                     <DataGridCheckBoxColumn.HeaderTemplate>
@@ -94,22 +105,42 @@
                                         </DataTemplate>
                                     </DataGridCheckBoxColumn.HeaderTemplate>
                                 </DataGridCheckBoxColumn>
-                                <DataGridTemplateColumn Header="Opciones">
+
+                                <DataGridTextColumn Header="ID" Binding="{Binding ID}"  Width="80"/>
+                                <DataGridTextColumn Header="NOMBRE" Binding="{Binding NOMBRE}"/>
+                                <DataGridTemplateColumn Header="OPCIONES" Width="80">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
-                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                                <Button Style="{StaticResource gridButtonEdit}" Click="EditarRegistro">
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                <Button Style="{StaticResource gridButtonEdit}" Click="EditRecord" x:Name="ButtonDeleteRecord">
                                                     <fa:FontAwesome Icon="Pencil" />
                                                 </Button>
-                                                <Button Style="{StaticResource gridButtonClose}" Click="EliminarRegistro">
+                                                <Button Style="{StaticResource gridButtonClose}" Click="DeleteRecord">
                                                     <fa:FontAwesome Icon="Close"/>
                                                 </Button>
                                             </StackPanel>
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                 </DataGridTemplateColumn>
+
                             </DataGrid.Columns>
                         </DataGrid>
+                        <Button Style="{StaticResource contentButton}" HorizontalAlignment="Left"
+                                Background="#B22F22"
+                                 Width="90" 
+                                 Margin="20,20,0,0" 
+                                 Name="BtnDeleteSelectionTable"
+                                 Height="40"
+                                Click="AddEstablecimiento">     
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center">
+                                <TextBlock  Text="Borrar Selección" Style="{StaticResource contentButtonText}"/>
+                            </StackPanel>
+                        </Button>
+
+
+
+
                     </StackPanel>
                 </Grid>
             </Border>

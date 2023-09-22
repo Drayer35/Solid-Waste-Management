@@ -5,9 +5,8 @@
     <Style x:Key="gridTable" TargetType="{x:Type DataGrid}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="#000012"/>
-        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="TextElement.FontFamily" Value="/Fonts/#Varela Round"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="BorderBrush" Value="Red"/>
         <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected"/>
         <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
         <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
@@ -24,7 +23,7 @@
         <Setter Property="GridLinesVisibility" Value="None"/>
     </Style>
 
-    <Style x:Key="CustomVerticalScrollBar" TargetType="{x:Type ScrollBar}">
+    <Style    x:Key="CustomVerticalScrollBar" TargetType="{x:Type ScrollBar}">
         <!--<Setter Property="Width" Value="5"/>-->
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Thumb.Background" Value="#7D8B96"/>
@@ -60,30 +59,25 @@
             <ContentPresenter />
         </Grid>
     </ControlTemplate>
-    
+
     <Style x:Key="miEstiloDeCelda" TargetType="DataGridCell">
-        
-        <Style.Resources>
-            <!-- Color de fondo cuando está seleccionado -->
-            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
-            <!-- Color de texto cuando está seleccionado -->
-            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
-        </Style.Resources>
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Template" Value="{StaticResource CenteredCellTemplate}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridCell">
+                    <Border Background="Transparent"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5">
+                        <ContentPresenter VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
         <Setter Property="VerticalContentAlignment" Value="Center" />
-        <!-- Deshabilitar el enfoque visual -->
-        <Style.Triggers>
-            <!-- Restablecer el color de fondo cuando el control no está enfocado -->
-            <Trigger Property="IsSelected" Value="True">
-                <Setter Property="Background" Value="Transparent" />
-                <Setter Property="BorderBrush" Value="Transparent"/>
-            </Trigger>
-        </Style.Triggers>
     </Style>
-
 
     <Style x:Key="DataGridRowStyle1" TargetType="{x:Type DataGridRow}">
         <Setter Property="Background" Value="gray"/>
@@ -106,18 +100,41 @@
                                 </SelectiveScrollingGrid.RowDefinitions>
                             </SelectiveScrollingGrid>
                             <DataGridCellsPresenter Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                            <DataGridCellsPresenter Grid.Column="1" Grid.Row="1"/>
-                            <DataGridCellsPresenter Grid.RowSpan="2" SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"/>
                         </SelectiveScrollingGrid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type DataGridRow}">
+                            <Border x:Name="DGR_Border" Background="#E2E0E2" BorderThickness="0" CornerRadius="5">
+                                <SelectiveScrollingGrid>
+                                    <SelectiveScrollingGrid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </SelectiveScrollingGrid.ColumnDefinitions>
+                                    <SelectiveScrollingGrid>
+                                        <SelectiveScrollingGrid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </SelectiveScrollingGrid.RowDefinitions>
+                                    </SelectiveScrollingGrid>
+                                    <DataGridCellsPresenter Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </SelectiveScrollingGrid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
     
     <Style x:Key="DataGridColumnHeaderStyle1" TargetType="{x:Type DataGridColumnHeader}">
-        <!--<Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <!--<Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>-->
         <Setter Property="BorderThickness" Value="0"/>
     </Style>

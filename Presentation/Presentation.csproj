@@ -86,11 +86,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="GestionResiduosDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GestionResiduosDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
@@ -103,14 +98,11 @@
     <Compile Include="View\Operaciones.xaml.cs">
       <DependentUpon>Operaciones.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Registros.xaml.cs">
-      <DependentUpon>Registros.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Residuos.xaml.cs">
-      <DependentUpon>Residuos.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\WindowEstablecimiento.xaml.cs">
       <DependentUpon>WindowEstablecimiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WindowResiduos.xaml.cs">
+      <DependentUpon>WindowResiduos.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WindowWelcome.xaml.cs">
       <DependentUpon>WindowWelcome.xaml</DependentUpon>
@@ -171,15 +163,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Registros.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Residuos.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\WindowEstablecimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowResiduos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -207,17 +195,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\VarelaRound-Regular.ttf" />
-    <None Include="GestionResiduosDataSet.xsc">
-      <DependentUpon>GestionResiduosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="GestionResiduosDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GestionResiduosDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="GestionResiduosDataSet.xss">
-      <DependentUpon>GestionResiduosDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -67,7 +67,8 @@ namespace DataAccess.Entities
                 }
             }
         }
-        public void BorrarEstablecimiento(int id) {
+        public void UpdateEstablecimiento(int id, string nombre)
+        {
             using (var connection = GetConnection())
             {
                 try
@@ -76,7 +77,34 @@ namespace DataAccess.Entities
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "BorrarEstablecimiento";
+                        command.CommandText = "UpdateEstablecimiento";
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ID", id);
+                        command.Parameters.AddWithValue("@NOMBRE", nombre);
+                        command.ExecuteNonQuery();
+                        command.Parameters.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
+        public void DeleteEstablecimiento(int id) {
+            using (var connection = GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = "DeleteEstablecimiento";
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@ID",id);
                         command.ExecuteNonQuery();

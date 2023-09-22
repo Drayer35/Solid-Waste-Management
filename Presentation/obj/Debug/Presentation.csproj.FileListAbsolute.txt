@@ -29,8 +29,6 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Dashboard
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Instructivo.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\LoginUser.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Operaciones.g.cs
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Registros.g.cs
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Residuos.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowEstablecimiento.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowWelcome.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\App.g.cs
@@ -44,8 +42,6 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Dashboard
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Instructivo.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\LoginUser.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Operaciones.baml
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Registros.baml
-C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\Residuos.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowWelcome.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.g.resources
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.Properties.Resources.resources
@@ -55,3 +51,5 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.c
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.exe
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.pdb
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\DataGridStyle.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowResiduos.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowResiduos.baml

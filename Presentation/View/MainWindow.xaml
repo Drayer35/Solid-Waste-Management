@@ -16,18 +16,14 @@
         <DataTemplate x:Name="Dashboard" DataType="{x:Type viewmodels:Dashboard}">
             <viewmodels:Dashboard DataContext="{Binding}"/>
         </DataTemplate>
-        <DataTemplate x:Name="Registros" DataType="{x:Type viewmodels:Registros}">
-            <viewmodels:Registros DataContext="{Binding}"/>
-        </DataTemplate>
+
         <DataTemplate x:Name="Instructivo" DataType="{x:Type viewmodels:Instructivo}">
             <viewmodels:Instructivo DataContext="{Binding}"/>
         </DataTemplate>
         <DataTemplate x:Name="Operaciones" DataType="{x:Type viewmodels:Operaciones}">
             <viewmodels:Operaciones DataContext="{Binding}"/>
         </DataTemplate>
-        <DataTemplate x:Name="Residuos" DataType="{x:Type viewmodels:Residuos}">
-            <viewmodels:Residuos DataContext="{Binding}"/>
-        </DataTemplate>
+
     </Window.Resources>
     <Border CornerRadius="5"
             Opacity="1"
@@ -63,7 +59,7 @@
                         </RadioButton>
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource Color2}" 
-                                     Checked="btn_Registro">
+                                     >
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="Database" Style="{StaticResource menuButtonIcon}"/>
@@ -73,7 +69,7 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource Color2}" 
-                                     Checked="btn_Residuos"
+                    
                                      >
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
@@ -83,7 +79,7 @@
                         </RadioButton>
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="{StaticResource Color2}"
-                                     Checked="btn_Operaciones">
+                                   >
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
                                 <fa:ImageAwesome Icon="Gears"  Style="{StaticResource menuButtonIcon}"/>

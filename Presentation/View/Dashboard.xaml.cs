@@ -66,5 +66,10 @@ namespace Presentation.View
             WindowEstablecimiento windowEstablecimiento = new WindowEstablecimiento();
             windowEstablecimiento.ShowDialog();
         }
+        private void OpenWindowResiduos(object sender, RoutedEventArgs e)
+        {
+            WindowResiduos windowResiduos = new WindowResiduos();
+            windowResiduos.ShowDialog();
+        }
     }
 }
