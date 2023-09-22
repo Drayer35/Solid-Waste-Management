@@ -24,5 +24,20 @@ namespace Presentation.View
         {
             InitializeComponent();
         }
+        private void PaintBoxResiduo()
+        {
+            TxtNameTipoResiduo.Text = "Tipo de Residuo";
+            TxtNameTipoResiduo.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A7"));
+        }
+        private void TextTipoResiduoEnter(object sender, EventArgs e)
+        {
+            if (TxtNameTipoResiduo.Text == "Tipo de Residuo") TxtNameTipoResiduo.Text = "";
+            TxtNameTipoResiduo.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#000012"));
+        }
+        private void TextTipoResiduoLeave(object sender, EventArgs e)
+        {
+            string estado = TxtNameTipoResiduo.Text.Trim(); // Elimina espacios en blanco al principio y al final
+            if (string.IsNullOrEmpty(estado)) PaintBoxResiduo();
+        }
     }
 }

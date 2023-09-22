@@ -41,8 +41,10 @@
                                 </TextBox>
                                 <TextBox 
                                        x:Name="TxtNameTipoResiduo"
-                                       Text="Nombre de Estado"
+                                       Text="Tipo de Residuo"
                                        Width="300"
+                                       GotFocus="TextTipoResiduoEnter"
+                                       LostFocus="TextTipoResiduoLeave"
                                        MaxLength="40"
                                        Style="{StaticResource OnlyBox}" Margin="0,20,0,0"
                                        >
