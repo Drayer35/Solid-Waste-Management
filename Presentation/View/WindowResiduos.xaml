@@ -15,6 +15,10 @@
              Title="Residuos" 
              Height="500"
              Width="950">
+    <Window.Resources>
+
+
+    </Window.Resources>
     <Border CornerRadius="15" BorderThickness="1" BorderBrush="Gray">
         <Grid>
             <Grid.RowDefinitions>
@@ -84,7 +88,8 @@
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
                                         Margin="5,0,5,0" 
-                                         Name="BtnTypeResiduoWindow"
+                                        Click="OpenFormTipoResiduo"
+                                        Name="BtnTypeResiduoWindow"
                                         Height="20">
                                     <StackPanel Orientation="Horizontal"
                                              HorizontalAlignment="Center">
@@ -116,6 +121,7 @@
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
                                         Margin="5,0,5,0" 
+                                        Click="OpenFormMateria"
                                         Name="BtnOpenEstadoWindow"
                                         Height="20">
                                     <StackPanel Orientation="Horizontal"
@@ -138,56 +144,15 @@
                             </Button>
                         </StackPanel>
                     </StackPanel>
-                    <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <DataGrid ItemsSource="{Binding}"  
-                                   x:Name="TableEstablecimientos" 
-                                   CanUserResizeColumns="False" 
-                                   CanUserAddRows="False" 
-                                   IsReadOnly="True" 
-                                   Height="380"  
-                                   RowStyle="{StaticResource DataGridRowStyle1}"
-                                   AutoGenerateColumns="False"
-                                   CellStyle="{StaticResource miEstiloDeCelda}"
-                                   Style="{StaticResource gridTable}">
-                            <!--RowStyle="{StaticResource DataGridRowStyle1}" este es el error de la tabla-->
-                            <DataGrid.ColumnHeaderStyle>
-                                <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DataGridColumnHeaderStyle1}" />
-                            </DataGrid.ColumnHeaderStyle>
-                            <DataGrid.Resources>
-                                <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource CustomVerticalScrollBar}" />
-                            </DataGrid.Resources>
 
-                            <DataGrid.Columns>
-                                <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
-                                    <DataGridCheckBoxColumn.HeaderTemplate>
-                                        <DataTemplate>
-                                            <CheckBox/>
-                                        </DataTemplate>
-                                    </DataGridCheckBoxColumn.HeaderTemplate>
-                                </DataGridCheckBoxColumn>
-
-                                <DataGridTextColumn Header="ID" Binding="{Binding ID}"  Width="80" Visibility="Hidden"/>
-                                <DataGridTextColumn Header="RESIDUO" Width="120"/>
-                                <DataGridTextColumn Header="DESCRIPCION" Width="120" Visibility="Hidden"/>
-                                <DataGridTextColumn Header="TIPO DE RESIDUO"   Width="120"/>
-                                <DataGridTextColumn Header="ESTADO"   Width="100"/>
-                                <DataGridTemplateColumn Header="OPCIONES" Width="80">
-                                    <DataGridTemplateColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                                <Button Style="{StaticResource gridButtonEdit}" x:Name="ButtonDeleteRecord">
-                                                    <fa:FontAwesome Icon="Pencil" />
-                                                </Button>
-                                                <Button Style="{StaticResource gridButtonClose}">
-                                                    <fa:FontAwesome Icon="Close"/>
-                                                </Button>
-                                            </StackPanel>
-                                        </DataTemplate>
-                                    </DataGridTemplateColumn.CellTemplate>
-                                </DataGridTemplateColumn>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </StackPanel>
+                    <!--Window Content-->
+                    <ContentControl Grid.Column="1" 
+                                    HorizontalAlignment="Center" 
+                                    x:Name="ContentControlResiduos"
+                                    Content="{Binding}"
+                                    >
+     
+                    </ContentControl>
                    
                 </Grid>
             </Border>

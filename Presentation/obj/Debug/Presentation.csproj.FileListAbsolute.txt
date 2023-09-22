@@ -53,3 +53,9 @@ C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Presentation.p
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\Styles\DataGridStyle.baml
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowResiduos.g.cs
 C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\WindowResiduos.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\ResiduosTable.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\ResiduosTable.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\FormEstadoMateria.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\FormEstadoMateria.baml
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\FormTipoResiduo.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\FormTipoResiduo.baml

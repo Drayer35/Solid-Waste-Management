@@ -25,7 +25,9 @@ namespace Presentation.View
     {
         public WindowResiduos()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            DataContext = new ResiduosTable();
+
         }
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int wMswg, int wParam, int lParam);
@@ -63,5 +65,15 @@ namespace Presentation.View
             string residuo = TxtDescriptionResiduo.Text.Trim(); // Elimina espacios en blanco al principio y al final
             if (string.IsNullOrEmpty(residuo)) PaintBoxDescripcion();
         }
+        private void OpenFormMateria(object sender, EventArgs e) {
+            DataContext = new FormEstadoMateria();
+        }
+        private void OpenFormTipoResiduo(object sender, EventArgs e)
+        {
+            DataContext = new FormTipoResiduo();
+        }
+        
+
+
     }
 }

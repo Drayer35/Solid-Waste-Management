@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Presentation.View"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="Presentation.View.Dashboard"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="690" d:DesignWidth="1110">
     <Grid>
         <Grid.ColumnDefinitions>

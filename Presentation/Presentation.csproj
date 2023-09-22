@@ -89,6 +89,12 @@
     <Compile Include="View\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\FormEstadoMateria.xaml.cs">
+      <DependentUpon>FormEstadoMateria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTipoResiduo.xaml.cs">
+      <DependentUpon>FormTipoResiduo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Instructivo.xaml.cs">
       <DependentUpon>Instructivo.xaml</DependentUpon>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
     <Compile Include="View\Operaciones.xaml.cs">
       <DependentUpon>Operaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResiduosTable.xaml.cs">
+      <DependentUpon>ResiduosTable.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WindowEstablecimiento.xaml.cs">
       <DependentUpon>WindowEstablecimiento.xaml</DependentUpon>
@@ -120,6 +129,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormEstadoMateria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormTipoResiduo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -160,6 +177,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Operaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ResiduosTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
