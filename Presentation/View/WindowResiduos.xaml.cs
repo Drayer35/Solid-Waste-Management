@@ -25,7 +25,7 @@ namespace Presentation.View
     {
         public WindowResiduos()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             DataContext = new ResiduosTable();
 
         }
@@ -55,7 +55,7 @@ namespace Presentation.View
         private void TextResiduoLeave(object sender, EventArgs e) {
             string residuo = TxtNameResiduo.Text.Trim(); // Elimina espacios en blanco al principio y al final
             if (string.IsNullOrEmpty(residuo)) PaintBoxResiduo();
-        }    
+        }
         private void TextDescriptionEnter(object sender, EventArgs e) {
             if (TxtDescriptionResiduo.Text == "Descripcion") TxtDescriptionResiduo.Text = "";
             TxtDescriptionResiduo.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#000012"));
@@ -66,14 +66,35 @@ namespace Presentation.View
             if (string.IsNullOrEmpty(residuo)) PaintBoxDescripcion();
         }
         private void OpenFormMateria(object sender, EventArgs e) {
-            DataContext = new FormEstadoMateria();
+            if (!(DataContext is FormEstadoMateria))
+            {
+                DataContext = new FormEstadoMateria();
+                LinkActive.Visibility = Visibility.Visible;
+            }
         }
         private void OpenFormTipoResiduo(object sender, EventArgs e)
         {
-            DataContext = new FormTipoResiduo();
+            if (!(DataContext is FormTipoResiduo))
+            {
+                DataContext = new FormTipoResiduo();
+                LinkActive.Visibility = Visibility.Visible;
+            }
         }
-        
+        private void OpenFormGrado(object sender, EventArgs e) {
 
+            LinkActive.Visibility = Visibility.Visible;
+        }
+        private void BtnAddResiduo_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
+        private void OpenTableResiduos(object sender, RoutedEventArgs e) {
+            if (!(DataContext is ResiduosTable))
+            {
+                DataContext = new ResiduosTable();
+                LinkActive.Visibility = Visibility.Hidden;
+            }
+            
+        }
     }
 }

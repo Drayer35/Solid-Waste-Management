@@ -102,7 +102,7 @@
                                         HorizontalAlignment="Center">
                                     <fa:ImageAwesome Icon="PowerOff" 
                                                      Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Cerrrar Sesion" 
+                                <TextBlock Text="Cerrar Sesion" 
                                            Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>

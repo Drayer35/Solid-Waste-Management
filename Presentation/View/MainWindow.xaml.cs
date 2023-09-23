@@ -76,8 +76,11 @@ namespace Presentation
         {
             MessageBoxResult result = MessageBox.Show("¿Estás seguro de cerrar la sesión?", "Logout", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
-            {
-                Application.Current.Shutdown();
+            {  
+                LoginUser loginUser = new LoginUser();
+                loginUser.Show();
+                this.Close();
+                //Application.Current.Shutdown();
             }
             else {
                 activeDashboard.IsChecked = true;

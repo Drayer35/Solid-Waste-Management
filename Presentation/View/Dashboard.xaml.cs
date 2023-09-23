@@ -30,7 +30,7 @@ namespace Presentation.View
             string miconexion = ConfigurationManager.ConnectionStrings["Presentation.Properties.Settings.GestionResiduosConnectionString"].ConnectionString;
             miConexionSql = new SqlConnection(miconexion);
             ListarEstablecimientos();
-            ListarFechas();
+            //ListarFechas();
             
         }
 
@@ -57,10 +57,7 @@ namespace Presentation.View
                 FechaData.ItemsSource = DataFecha.DefaultView;
             }
         }
-        private void todosPedidos_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
-        {
 
-        }
         private void Establecimiento(object sender, RoutedEventArgs e)
         {
             WindowEstablecimiento windowEstablecimiento = new WindowEstablecimiento();

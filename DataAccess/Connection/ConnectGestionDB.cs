@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Configuration;
 
 namespace DataAccess.Connection
 {
@@ -17,6 +17,10 @@ namespace DataAccess.Connection
         }
         protected SqlConnection GetConnection() { 
             return new SqlConnection(connectionString);
+        }
+        protected DataClasses1DataContext GetDataContext()
+        {
+            return new DataClasses1DataContext(connectionString);
         }
     }
 }

@@ -13,7 +13,7 @@
              Background="Transparent"
              AllowsTransparency="True"   
              Title="Residuos" 
-             Height="500"
+             Height="530"
              Width="950">
     <Window.Resources>
 
@@ -24,6 +24,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
             <Border Grid.Row="0" Background="White" CornerRadius="15,15,0,0">
                 <StackPanel x:Name="controlBar"
@@ -43,7 +44,7 @@
             </Border>
 
 
-            <Border Grid.Row="1" CornerRadius="0,0,15,15" Background="White">
+            <Border Grid.Row="1" CornerRadius="0,0,0,0" Background="White">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="410"/>
@@ -84,7 +85,7 @@
                             <TextBlock Text="Tipo de Residuo" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
                                 <ComboBox Width="320"/>
-                                <Button Style="{StaticResource contentButton}"
+                                <RadioButton Style="{StaticResource contentRadioButton}"
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
                                         Margin="5,0,5,0" 
@@ -93,42 +94,43 @@
                                         Height="20">
                                     <StackPanel Orientation="Horizontal"
                                              HorizontalAlignment="Center">
-                                        <TextBlock x:Name="TextAdd" Text="+" Style="{StaticResource contentButtonText}"/>
+                                        <TextBlock x:Name="TextAdd" Text="+" Style="{StaticResource contentButtonText}" Foreground="White"/>
                                     </StackPanel>
-                                </Button>
+                                </RadioButton>
                             </StackPanel>
 
                             <TextBlock Text="Grado de Peligrosidad" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
                                 <ComboBox Width="320"/>
-                                <Button Style="{StaticResource contentButton}"
+                                <RadioButton Style="{StaticResource contentRadioButton}"
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
                                         Margin="5,0,5,0" 
+                                        Click="OpenFormGrado"
                                         Name="BtnOpenGradoWindow"
                                         Height="20">
                                     <StackPanel Orientation="Horizontal"
                                                 HorizontalAlignment="Center">
-                                        <TextBlock x:Name="Text" Text="+" Style="{StaticResource contentButtonText}"/>
+                                        <TextBlock x:Name="Text" Text="+" Style="{StaticResource contentButtonText}" Foreground="White"/>
                                     </StackPanel>
-                                </Button>
+                                </RadioButton>
                             </StackPanel>
 
                             <TextBlock Text="Estado de Materia" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
                                 <ComboBox Width="320"/>
-                                <Button Style="{StaticResource contentButton}"
+                                <RadioButton  Style="{StaticResource contentRadioButton}"
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
-                                        Margin="5,0,5,0" 
+                                        Margin="5,0,5,0"
                                         Click="OpenFormMateria"
                                         Name="BtnOpenEstadoWindow"
                                         Height="20">
                                     <StackPanel Orientation="Horizontal"
                                                 HorizontalAlignment="Center">
-                                        <TextBlock x:Name="Texts" Text="+" Style="{StaticResource contentButtonText}"/>
+                                        <TextBlock x:Name="Texts" Text="+" Style="{StaticResource contentButtonText}" Foreground="White"/>
                                     </StackPanel>
-                                </Button>
+                                </RadioButton>
                             </StackPanel>
 
                             <Button Style="{StaticResource contentButton}"
@@ -136,12 +138,27 @@
                                   Width="90" 
                                   Margin="0,40,0,0" 
                                   Name="BtnAddResiduo"
-                                  Height="40">
+                                  Height="40" Click="BtnAddResiduo_Click">
                                 <StackPanel Orientation="Horizontal"
                                          HorizontalAlignment="Center">
                                     <TextBlock x:Name="TextAddResiduo" Text="Agregar" Style="{StaticResource contentButtonText}"/>
                                 </StackPanel>
                             </Button>
+                            <TextBlock Foreground="White" 
+                                       HorizontalAlignment="Center"
+                                       FontSize="10"
+                                       Visibility="Hidden"
+                                       x:Name="LinkActive"
+                                       Margin="0,30,0,0">
+                                <Hyperlink 
+                                           FontWeight="Bold" 
+                                           TextDecorations="None" 
+                                           Foreground="#0275FE"
+                                           Click="OpenTableResiduos">
+                                Visualizar Tabla Residuos
+                                </Hyperlink>
+                            </TextBlock>
+
                         </StackPanel>
                     </StackPanel>
 
@@ -156,7 +173,13 @@
                    
                 </Grid>
             </Border>
+            <Border Grid.Row="2" Background="White" CornerRadius="0,0,15,15">
+                <StackPanel
+                     Background="Transparent">
+                </StackPanel>
+            </Border>
         </Grid>
+        
 
     </Border>
 </Window>

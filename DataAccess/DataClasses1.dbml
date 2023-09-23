@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestionResiduos" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-MFTECGS;Initial Catalog=GestionResiduos;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="GestionResiduosConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CERTIFICADO" Member="CERTIFICADO">
+    <Type Name="CERTIFICADO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Association Name="CERTIFICADO_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="CERTIFICADO_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPO_RESIDUO_X_GRADO" Member="TIPO_RESIDUO_X_GRADO">
+    <Type Name="TIPO_RESIDUO_X_GRADO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TIPO_RESIDUO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GRADO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TIPO_RESIDUO_TIPO_RESIDUO_X_GRADO" Member="TIPO_RESIDUO" ThisKey="TIPO_RESIDUO_ID" OtherKey="ID" Type="TIPO_RESIDUO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="GRADO_PELIGROSIDAD_TIPO_RESIDUO_X_GRADO" Member="GRADO_PELIGROSIDAD" ThisKey="GRADO_ID" OtherKey="ID" Type="GRADO_PELIGROSIDAD" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPO_RESIDUO" Member="TIPO_RESIDUO">
+    <Type Name="TIPO_RESIDUO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(180) NOT NULL" CanBeNull="false" />
+      <Association Name="TIPO_RESIDUO_TIPO_RESIDUO_X_GRADO" Member="TIPO_RESIDUO_X_GRADO" ThisKey="ID" OtherKey="TIPO_RESIDUO_ID" Type="TIPO_RESIDUO_X_GRADO" />
+      <Association Name="TIPO_RESIDUO_RESIDUO" Member="RESIDUO" ThisKey="ID" OtherKey="TIPO_RESIDUO_ID" Type="RESIDUO" />
+      <Association Name="TIPO_RESIDUO_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="TIPO_RESIDUO_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPO_GESTION" Member="TIPO_GESTION">
+    <Type Name="TIPO_GESTION">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Association Name="TIPO_GESTION_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="TIPO_GESTION_ID" Type="REGISTRO" />
+      <Association Name="TIPO_GESTION_GESTION_x_TIPO" Member="GESTION_x_TIPO" ThisKey="ID" OtherKey="TIPO_ID" Type="GESTION_x_TIPO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RESIDUO" Member="RESIDUO">
+    <Type Name="RESIDUO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_RESIDUO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GRADO_PELIGROSIDAD_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ESTADO_MATERIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="RESIDUO_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="RESIDUO_ID" Type="REGISTRO" />
+      <Association Name="TIPO_RESIDUO_RESIDUO" Member="TIPO_RESIDUO" ThisKey="TIPO_RESIDUO_ID" OtherKey="ID" Type="TIPO_RESIDUO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="GRADO_PELIGROSIDAD_RESIDUO" Member="GRADO_PELIGROSIDAD" ThisKey="GRADO_PELIGROSIDAD_ID" OtherKey="ID" Type="GRADO_PELIGROSIDAD" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REGISTRO" Member="REGISTRO">
+    <Type Name="REGISTRO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RESIDUO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_RESIDUO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ESTABLECIMIENTO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PROCESO_GENERADOR_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GRADO_PELIGROSIDAD_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ESTADO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CANTIDAD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GESTION_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_GESTION_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MECANISMO_ENTREGA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRESENTACION_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GESTOR_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CERTIFICADO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CERTIFICADO_REGISTRO" Member="CERTIFICADO" ThisKey="CERTIFICADO_ID" OtherKey="ID" Type="CERTIFICADO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="RESIDUO_REGISTRO" Member="RESIDUO" ThisKey="RESIDUO_ID" OtherKey="ID" Type="RESIDUO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="TIPO_GESTION_REGISTRO" Member="TIPO_GESTION" ThisKey="TIPO_GESTION_ID" OtherKey="ID" Type="TIPO_GESTION" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="TIPO_RESIDUO_REGISTRO" Member="TIPO_RESIDUO" ThisKey="TIPO_RESIDUO_ID" OtherKey="ID" Type="TIPO_RESIDUO" IsForeignKey="true" />
+      <Association Name="MECANISMO_ENTREGA_REGISTRO" Member="MECANISMO_ENTREGA" ThisKey="MECANISMO_ENTREGA_ID" OtherKey="ID" Type="MECANISMO_ENTREGA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PRESENTACION_REGISTRO" Member="PRESENTACION" ThisKey="PRESENTACION_ID" OtherKey="ID" Type="PRESENTACION" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PROCESO_GENERADOR_REGISTRO" Member="PROCESO_GENERADOR" ThisKey="PROCESO_GENERADOR_ID" OtherKey="ID" Type="PROCESO_GENERADOR" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="GRADO_PELIGROSIDAD_REGISTRO" Member="GRADO_PELIGROSIDAD" ThisKey="GRADO_PELIGROSIDAD_ID" OtherKey="ID" Type="GRADO_PELIGROSIDAD" IsForeignKey="true" />
+      <Association Name="GESTOR_REGISTRO" Member="GESTOR" ThisKey="GESTOR_ID" OtherKey="ID" Type="GESTOR" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="GESTION_REGISTRO" Member="GESTION" ThisKey="GESTION_ID" OtherKey="ID" Type="GESTION" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="ESTADO_MATERIA_REGISTRO" Member="ESTADO_MATERIA" ThisKey="ESTADO_ID" OtherKey="ID" Type="ESTADO_MATERIA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="ESTABLECIMIENTO_REGISTRO" Member="ESTABLECIMIENTO" ThisKey="ESTABLECIMIENTO_ID" OtherKey="ID" Type="ESTABLECIMIENTO" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MECANISMO_ENTREGA" Member="MECANISMO_ENTREGA">
+    <Type Name="MECANISMO_ENTREGA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Association Name="MECANISMO_ENTREGA_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="MECANISMO_ENTREGA_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRESENTACION" Member="PRESENTACION">
+    <Type Name="PRESENTACION">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Association Name="PRESENTACION_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="PRESENTACION_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROCESO_GENERADOR" Member="PROCESO_GENERADOR">
+    <Type Name="PROCESO_GENERADOR">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(180) NOT NULL" CanBeNull="false" />
+      <Association Name="PROCESO_GENERADOR_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="PROCESO_GENERADOR_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GRADO_PELIGROSIDAD" Member="GRADO_PELIGROSIDAD">
+    <Type Name="GRADO_PELIGROSIDAD">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="GRADO_PELIGROSIDAD_TIPO_RESIDUO_X_GRADO" Member="TIPO_RESIDUO_X_GRADO" ThisKey="ID" OtherKey="GRADO_ID" Type="TIPO_RESIDUO_X_GRADO" />
+      <Association Name="GRADO_PELIGROSIDAD_RESIDUO" Member="RESIDUO" ThisKey="ID" OtherKey="GRADO_PELIGROSIDAD_ID" Type="RESIDUO" />
+      <Association Name="GRADO_PELIGROSIDAD_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="GRADO_PELIGROSIDAD_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GESTOR" Member="GESTOR">
+    <Type Name="GESTOR">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Association Name="GESTOR_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="GESTOR_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GESTION_x_TIPO" Member="GESTION_x_TIPO">
+    <Type Name="GESTION_x_TIPO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GESTION_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TIPO_GESTION_GESTION_x_TIPO" Member="TIPO_GESTION" ThisKey="TIPO_ID" OtherKey="ID" Type="TIPO_GESTION" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="GESTION_GESTION_x_TIPO" Member="GESTION" ThisKey="GESTION_ID" OtherKey="ID" Type="GESTION" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GESTION" Member="GESTION">
+    <Type Name="GESTION">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Association Name="GESTION_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="GESTION_ID" Type="REGISTRO" />
+      <Association Name="GESTION_GESTION_x_TIPO" Member="GESTION_x_TIPO" ThisKey="ID" OtherKey="GESTION_ID" Type="GESTION_x_TIPO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTADO_MATERIA" Member="ESTADO_MATERIA">
+    <Type Name="ESTADO_MATERIA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Association Name="ESTADO_MATERIA_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="ESTADO_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTABLECIMIENTO" Member="ESTABLECIMIENTO">
+    <Type Name="ESTABLECIMIENTO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Association Name="ESTABLECIMIENTO_REGISTRO" Member="REGISTRO" ThisKey="ID" OtherKey="ESTABLECIMIENTO_ID" Type="REGISTRO" />
+    </Type>
+  </Table>
+</Database>
