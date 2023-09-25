@@ -129,7 +129,7 @@ namespace Presentation.View
             int id = Convert.ToInt32(cmbTipoResiduo.SelectedValue);
             TipoGradoModel tipoGradoModel = new TipoGradoModel();
             var tipoGrado = tipoGradoModel.ToListTipoGrado(id).DefaultView;
-            cmbGradoPeligrosidad.DisplayMemberPath = "GRADO_ID";
+            cmbGradoPeligrosidad.DisplayMemberPath = "DESCRIPCION";
             cmbGradoPeligrosidad.SelectedValuePath = "GRADO_ID";
             cmbGradoPeligrosidad.ItemsSource = tipoGrado;
         }
