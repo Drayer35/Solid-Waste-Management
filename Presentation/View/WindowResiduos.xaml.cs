@@ -26,8 +26,8 @@ namespace Presentation.View
         public WindowResiduos()
         {
             InitializeComponent();
+            LoadDataComboBox(); 
             DataContext = new ResiduosTable();
-
         }
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int wMswg, int wParam, int lParam);
@@ -68,7 +68,10 @@ namespace Presentation.View
         private void OpenFormMateria(object sender, EventArgs e) {
             if (!(DataContext is FormEstadoMateria))
             {
-                DataContext = new FormEstadoMateria();
+                FormEstadoMateria formEstadoMateria=new FormEstadoMateria();
+                DataContext = formEstadoMateria;
+                formEstadoMateria.RefreshComboBoxEstado += UpdateDataComboBox;
+
                 LinkActive.Visibility = Visibility.Visible;
             }
         }
@@ -76,10 +79,13 @@ namespace Presentation.View
         {
             if (!(DataContext is FormTipoResiduo))
             {
-                DataContext = new FormTipoResiduo();
+                FormTipoResiduo formTipo = new FormTipoResiduo();
+                DataContext = formTipo;
+                formTipo.RefreshComboBoxTipo += UpdateDataComboBox;
                 LinkActive.Visibility = Visibility.Visible;
             }
         }
+
         private void OpenFormGrado(object sender, EventArgs e) {
 
             LinkActive.Visibility = Visibility.Visible;
@@ -94,7 +100,38 @@ namespace Presentation.View
                 DataContext = new ResiduosTable();
                 LinkActive.Visibility = Visibility.Hidden;
             }
+
+        }
+        private void UpdateDataComboBox(object sender, EventArgs e)
+        {
+            LoadDataComboBox();
+        }
+        private void LoadDataComboBox()
+        {
+            EstadoMateriaModel estadoMateriaModel = new EstadoMateriaModel();
+            var estadosMateria = estadoMateriaModel.GetCantidadEstadosMateria().DefaultView;
+            cmbEstadoMateria.DisplayMemberPath = "DESCRIPCION"; // Establece la columna a mostrar
+            cmbEstadoMateria.SelectedValuePath = "ID";
+            cmbEstadoMateria.ItemsSource = estadosMateria;
+
+            TipoResiduoModel tipoResiduoModel = new TipoResiduoModel();
+            var tipoResiduo = tipoResiduoModel.ToListTipoResiduo().DefaultView;
+            cmbTipoResiduo.DisplayMemberPath = "DESCRIPCION";
+            cmbTipoResiduo.SelectedValuePath = "ID";
+            cmbTipoResiduo.ItemsSource = tipoResiduo;
+
             
+        }
+
+
+        private void cmbTipoResiduo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int id = Convert.ToInt32(cmbTipoResiduo.SelectedValue);
+            TipoGradoModel tipoGradoModel = new TipoGradoModel();
+            var tipoGrado = tipoGradoModel.ToListTipoGrado(id).DefaultView;
+            cmbGradoPeligrosidad.DisplayMemberPath = "GRADO_ID";
+            cmbGradoPeligrosidad.SelectedValuePath = "GRADO_ID";
+            cmbGradoPeligrosidad.ItemsSource = tipoGrado;
         }
     }
 }

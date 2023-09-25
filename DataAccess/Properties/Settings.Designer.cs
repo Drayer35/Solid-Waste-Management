@@ -36,8 +36,7 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-N7AE4C24;Initial Catalog=GestionResiduos;Integrated Security=T" +
-            "rue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=GestionResiduos;Integrated Security=True")]
         public string GestionResiduosConnectionString1 {
             get {
                 return ((string)(this["GestionResiduosConnectionString1"]));

@@ -21,31 +21,36 @@ namespace Presentation.View
     /// </summary>
     public partial class FormEstadoMateria : UserControl
     {
+        int ColumnId = 1;
+        int ColumnDescription = 2;
+        public event EventHandler RefreshComboBoxEstado;
+
         public FormEstadoMateria()
         {
             InitializeComponent();
             ToListTableEstado();
         }
-        int ColumnId = 1;
-        int ColumnDescription = 2;
         private void PaintBoxEstadoMateria()
         {
+            TextAddEstadoMateria.Text = "Agregar";
             TxtNameEstadoMateria.Text = "Nombre de Estado";
+            TxtIdEstadoMateria.Text = "ID";
             TxtNameEstadoMateria.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A7"));
         }
         private void TextEstadoMateriaEnter(object sender, EventArgs e)
         {
             if (TxtNameEstadoMateria.Text == "Nombre de Estado") TxtNameEstadoMateria.Text = "";
+         
             TxtNameEstadoMateria.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#000012"));
         }
         private void TextEstadoMateriaLeave(object sender, EventArgs e)
-        {
+        { RefreshComboBoxEstado?.Invoke(this, EventArgs.Empty);
             string estado = TxtNameEstadoMateria.Text.Trim(); // Elimina espacios en blanco al principio y al final
             if (string.IsNullOrEmpty(estado)) PaintBoxEstadoMateria();
         }
 
 
-        private void BtnAddEstadoMateria_Click(object sender, RoutedEventArgs e)
+        private void AddEstadoMateria(object sender, RoutedEventArgs e)
         {
             if (TxtNameEstadoMateria.Text != "Nombre de Estado")
             {
@@ -57,7 +62,7 @@ namespace Presentation.View
                         PaintBoxEstadoMateria();
                         ToListTableEstado();
                         MessageBox.Show("Se añadió " + TxtNameEstadoMateria.Text + " a la base de datos", "Inserción Exitosa");
-                        
+                        RefreshComboBoxEstado?.Invoke(this, EventArgs.Empty);
                     }
                     else
                     {
@@ -70,14 +75,16 @@ namespace Presentation.View
                     int id = Convert.ToInt32(TxtIdEstadoMateria.Text);
                     string descripcion = ((string)TxtNameEstadoMateria.Text);
                     estadoMateriaModel.UpdateEstadoMateria(id, descripcion);
-                    MessageBox.Show("Se actualizó el ID: " + id);
                     ToListTableEstado();
                     PaintBoxEstadoMateria();
+                    MessageBox.Show("Se actualizó el ID: " + id);
+                    RefreshComboBoxEstado?.Invoke(this, EventArgs.Empty);
                 };
 
             }
             else { MessageBox.Show("Ingresa el nombre del Estado", "Casilla Vacía"); }
         }
+
         private void ToListTableEstado()
         {
             EstadoMateriaModel estadoMateriaModel = new EstadoMateriaModel();
@@ -113,10 +120,13 @@ namespace Presentation.View
             {
                 EstadoMateriaModel estadoMateriaModel = new EstadoMateriaModel();
                 estadoMateriaModel.DeleteEstadoMateria(id);
+                RefreshComboBoxEstado?.Invoke(this, EventArgs.Empty);
+                PaintBoxEstadoMateria();
                 ToListTableEstado();
+            
             }
         }
-
-    }
+     
+}
 
 }

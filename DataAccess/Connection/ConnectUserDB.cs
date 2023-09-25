@@ -12,7 +12,7 @@ namespace DataAccess.Connection
     {
         private  string connectionString;
         public ConnectUserDB() { 
-            connectionString= "Server=LAPTOP-N7AE4C24;DataBase=LoginDB; integrated security= true";
+            connectionString= "Server=(local);DataBase=LoginDB; integrated security= true";
         }
 
         protected SqlConnection GetConnection() {

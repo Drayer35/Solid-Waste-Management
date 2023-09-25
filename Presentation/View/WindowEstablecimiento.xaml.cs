@@ -80,6 +80,7 @@ namespace Presentation.View
             {
                 EstablecimientoModel establecimientoModel = new EstablecimientoModel();
                 establecimientoModel.DeleteEstablecimiento(id);
+                PaintBoxEstablecimiento();
                 ToListTableEstablecimiento();
             }
         }

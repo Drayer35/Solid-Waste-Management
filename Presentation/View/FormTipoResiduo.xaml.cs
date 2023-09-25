@@ -23,6 +23,7 @@ namespace Presentation.View
     {
         int ColumnId = 1;
         int ColumnDescription=2;
+        public event EventHandler RefreshComboBoxTipo;
         public FormTipoResiduo()
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace Presentation.View
         }
 
 
+
         private void AddTipoResiduo(object sender, RoutedEventArgs e)
         {
             if (TxtNameTipoResiduo.Text != "Tipo de Residuo")
@@ -59,7 +61,7 @@ namespace Presentation.View
                         PaintBoxTipoResiduo();
                         ToListTableTipoResiduo();
                         MessageBox.Show("Se añadió " + TxtNameTipoResiduo.Text + " a la base de datos", "Inserción Exitosa");
-
+                        RefreshComboBoxTipo?.Invoke(this, EventArgs.Empty);
                     }
                     else
                     {
@@ -72,12 +74,11 @@ namespace Presentation.View
                     int id = Convert.ToInt32(TxtIdTipoResiduo.Text);
                     string descripcion = ((string)TxtNameTipoResiduo.Text);
                     tipoResiduoModel.UpdateTipoResiduo(id, descripcion);
+                    RefreshComboBoxTipo?.Invoke(this, EventArgs.Empty);
                     ToListTableTipoResiduo();
                     PaintBoxTipoResiduo();
                     MessageBox.Show("Se actualizó el ID: " + id);
-                 
                 };
-
             }
             else { MessageBox.Show("Ingresa el nombre del Estado", "Casilla Vacía"); }
         }
@@ -116,6 +117,8 @@ namespace Presentation.View
             {
                 TipoResiduoModel tipoResiduoModel = new TipoResiduoModel();
                 tipoResiduoModel.DeleteTipoResiduo(id);
+                RefreshComboBoxTipo?.Invoke(this, EventArgs.Empty);
+                PaintBoxTipoResiduo();
                 ToListTableTipoResiduo();
             }
         }

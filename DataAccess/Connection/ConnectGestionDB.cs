@@ -15,7 +15,7 @@ namespace DataAccess.Connection
     {
         private string connectionString;
         public ConnectGestionDB() {
-            connectionString = "Server=LAPTOP-N7AE4C24;DataBase=GestionResiduos; integrated security= true";
+            connectionString = "Server=(local);DataBase=GestionResiduos; integrated security= true";
         }
         protected SqlConnection GetConnection() { 
             return new SqlConnection(connectionString);

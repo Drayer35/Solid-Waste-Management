@@ -84,7 +84,17 @@
 
                             <TextBlock Text="Tipo de Residuo" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
-                                <ComboBox Width="320"/>
+                                <ComboBox Width="320" 
+                                          SelectionChanged="cmbTipoResiduo_SelectionChanged"
+                                          x:Name="cmbTipoResiduo">
+                                    <ComboBox.Resources>
+                                        <Style TargetType="ComboBox">
+
+                                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                        </Style>
+                                    </ComboBox.Resources>
+                                </ComboBox>
                                 <RadioButton Style="{StaticResource contentRadioButton}"
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
@@ -101,7 +111,15 @@
 
                             <TextBlock Text="Grado de Peligrosidad" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
-                                <ComboBox Width="320"/>
+                                <ComboBox Width="320" x:Name="cmbGradoPeligrosidad" >
+                                    <ComboBox.Resources>
+                                        <Style TargetType="ComboBox">
+                                            <Setter Property="Text" Value="Selecciona un Tipo de Residuo"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </Style>
+                                    </ComboBox.Resources>
+
+                                </ComboBox>
                                 <RadioButton Style="{StaticResource contentRadioButton}"
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
@@ -118,7 +136,7 @@
 
                             <TextBlock Text="Estado de Materia" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
-                                <ComboBox Width="320"/>
+                                <ComboBox Width="320" x:Name="cmbEstadoMateria"/>
                                 <RadioButton  Style="{StaticResource contentRadioButton}"
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
