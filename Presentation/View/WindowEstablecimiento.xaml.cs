@@ -94,8 +94,9 @@ namespace Presentation.View
                     {
 
                         ToListTableEstablecimiento();
-                        MessageBox.Show("Se añadió " + TxtNameEstablecimiento.Text + " a la base de datos", "Inserción Exitosa");
                         PaintBoxEstablecimiento();
+                        MessageBox.Show("Se añadió " + TxtNameEstablecimiento.Text + " a la base de datos", "Inserción Exitosa");
+                       
                     }
                     else
                     {

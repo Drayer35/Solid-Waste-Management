@@ -1,33 +1,31 @@
 ﻿using DataAccess.Connection;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-using Common.Cache;
-using System.Data.Linq;
 
 namespace DataAccess.Entities
 {
-    public class EstadoMateriaDao : ConnectGestionDB
+    public class TipoResiduoDao : ConnectGestionDB
     {
+
         private int id;
         private string descripcion;
 
         public int Id { get => id; set => id = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
 
-        public bool InsertEstadoMateria()
+        public bool InsertTipoResiduo()
         {
             using (var bd = GetDataContext())
             {
                 try
                 {
-                    ESTADO_MATERIA estado = new ESTADO_MATERIA();
-                    estado.DESCRIPCION = descripcion;
-                    bd.ESTADO_MATERIA.InsertOnSubmit(estado);
+                    TIPO_RESIDUO tipoResiduo = new TIPO_RESIDUO();
+                    tipoResiduo.DESCRIPCION = Descripcion;
+                    bd.TIPO_RESIDUO.InsertOnSubmit(tipoResiduo);
                     bd.SubmitChanges();
                     return true;
                 }
@@ -41,20 +39,18 @@ namespace DataAccess.Entities
                 }
             }
         }
-
-
-
-        public DataTable ToListEstadosMateria()
+        public DataTable ToListTipoResiduo()
         {
             using (var bd = GetDataContext())
             {
                 try
                 {
-                    var query = from estado in bd.ESTADO_MATERIA orderby estado.ID ascending
+                    var query = from tipoResiduo in bd.TIPO_RESIDUO
+                                orderby tipoResiduo.ID ascending
                                 select new
                                 {
-                                    estado.ID,
-                                    estado.DESCRIPCION, 
+                                    tipoResiduo.ID,
+                                    tipoResiduo.DESCRIPCION,
                                 };
                     DataTable dataTable = new DataTable();
                     dataTable.Columns.Add("ID", typeof(int));
@@ -68,7 +64,7 @@ namespace DataAccess.Entities
                 }
                 catch (Exception ex)
                 {
-                    return null; 
+                    return null;
                 }
                 finally
                 {
@@ -76,26 +72,24 @@ namespace DataAccess.Entities
                 }
             }
         }
-
-        public bool UpdateEstadoMateria()
+        public bool UpdateTipoResiduo()
         {
             using (var bd = GetDataContext())
             {
                 try
                 {
-                    var estado = bd.ESTADO_MATERIA.SingleOrDefault(e => e.ID == id);
-                    if (estado != null)
+                    var tipoResiduo = bd.TIPO_RESIDUO.SingleOrDefault(e => e.ID == id);
+                    if (tipoResiduo != null)
                     {
-                        estado.DESCRIPCION = descripcion;
+                        tipoResiduo.DESCRIPCION = Descripcion;
                         bd.SubmitChanges();
-                        return true; 
+                        return true;
                     }
-
-                    return false; 
+                    return false;
                 }
                 catch (Exception ex)
                 {
-                    return false; 
+                    return false;
                 }
                 finally
                 {
@@ -103,31 +97,31 @@ namespace DataAccess.Entities
                 }
             }
         }
-        public void DeleteEstadoMateria(){
+        public void DeleteEstadoMateria()
+        {
             using (var bd = GetDataContext())
             {
-                try {
-                    var estadoAEliminar = bd.ESTADO_MATERIA.SingleOrDefault(estado => estado.ID == id);
-                    if (estadoAEliminar != null)
-                    {
-  
-                        bd.ESTADO_MATERIA.DeleteOnSubmit(estadoAEliminar);
-   
+                try
+                {
+                    var tipoResiduo = bd.TIPO_RESIDUO.SingleOrDefault(tipo =>tipo.ID == id);
+                    if (tipoResiduo != null)
+                    {                
+                        bd.TIPO_RESIDUO.DeleteOnSubmit(tipoResiduo);
                         bd.SubmitChanges();
                     }
                     else
                     {
-                        Console.WriteLine("No se encontró el estado con ID: " + id);
+                        Console.WriteLine("No se encontró el registro - ID: " + id);
                     }
                 }
-                catch (Exception ex) { 
+                catch (Exception ex)
+                {
                     Console.WriteLine(ex.Message);
 
-                }finally { bd.Connection.Close(); }
+                }
+                finally { bd.Connection.Close(); }
             }
-            
+
         }
     }
 }
-
-

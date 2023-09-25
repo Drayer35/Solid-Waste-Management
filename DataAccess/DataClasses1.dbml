@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestionResiduos" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-MFTECGS;Initial Catalog=GestionResiduos;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="GestionResiduosConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-N7AE4C24;Initial Catalog=GestionResiduos;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="GestionResiduosConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CERTIFICADO" Member="CERTIFICADO">
     <Type Name="CERTIFICADO">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

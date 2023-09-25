@@ -44,12 +44,13 @@ namespace Presentation.View
             if (string.IsNullOrEmpty(estado)) PaintBoxEstadoMateria();
         }
 
+
         private void BtnAddEstadoMateria_Click(object sender, RoutedEventArgs e)
         {
             if (TxtNameEstadoMateria.Text != "Nombre de Estado")
             {
                 EstadoMateriaModel estadoMateriaModel = new EstadoMateriaModel();
-                if (TextAddEstablecimiento.Text == "Agregar")
+                if (TextAddEstadoMateria.Text == "Agregar")
                 {
                     if (estadoMateriaModel.InserEstado(TxtNameEstadoMateria.Text))
                     {
@@ -91,7 +92,7 @@ namespace Presentation.View
                 DataGridCellInfo selectedDescription = TableEstadoMateria.SelectedCells[ColumnDescription];
                 TxtIdEstadoMateria.Text = ((TextBlock)selectedId.Column.GetCellContent(selectedId.Item)).Text;
                 TxtNameEstadoMateria.Text = ((TextBlock)selectedDescription.Column.GetCellContent(selectedDescription.Item)).Text;
-                TextAddEstablecimiento.Text = "Guardar";
+                TextAddEstadoMateria.Text = "Guardar";
                 TxtNameEstadoMateria.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#000012"));
             }
             else

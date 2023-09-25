@@ -1,4 +1,4 @@
-﻿using DataAccess.Entities;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,25 +7,39 @@ using System.Threading.Tasks;
 using Common.Cache;
 using System.Data;
 
+
+using DataAccess.Entities;
+
 namespace Domain.Model
 {
+
     public class EstablecimientoModel
     {
-        EstablecimientoDao EstablecimientoDao = new EstablecimientoDao();
+        EstablecimientoDao establecimientoDao = new EstablecimientoDao();
         public bool CreateEstablecimiento(string name) {
-            return EstablecimientoDao.InsertarEstablecimiento(name);
+            establecimientoDao.Nombre = name;
+            return establecimientoDao.InsertarEstablecimiento();
         }
 
-        public DataTable ToListEstablecimientos() { 
-            return EstablecimientoDao.ListarEstablecimiento();
+
+
+
+
+        public DataTable ToListEstablecimientos() {
+           return establecimientoDao.ListarEstablecimiento();
         }
         public void UpdateEstablecimiento(int id, string name) {
-            EstablecimientoDao.UpdateEstablecimiento(id,name);
-        
+            establecimientoDao.Id = id;
+            establecimientoDao.Nombre=name;
+            establecimientoDao.UpdateEstablecimiento();
         } 
         public void DeleteEstablecimiento(int id) {
-            EstablecimientoDao.DeleteEstablecimiento(id);
-        
+            establecimientoDao.Id=id;
+            establecimientoDao.DeleteEstablecimiento();
         }
+
+
+
+
     }
 }

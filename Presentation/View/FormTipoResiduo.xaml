@@ -54,11 +54,12 @@
                                      Width="90" 
                                      Margin="20,20,0,0" 
                                      Name="BtnAddTipoResiduo"
+                                     Click="AddTipoResiduo"
                                      Height="40"
                                      >
                                     <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
-                                        <TextBlock x:Name="TextAddEstablecimiento" Text="Agregar" Style="{StaticResource contentButtonText}"/>
+                                        <TextBlock x:Name="TextAddTipoResiduo" Text="Agregar" Style="{StaticResource contentButtonText}"/>
                                     </StackPanel>
                                 </Button>
                             </StackPanel>
@@ -92,15 +93,19 @@
                                     </DataGridCheckBoxColumn>
 
                                     <DataGridTextColumn Header="ID" Binding="{Binding ID}"  Width="80"/>
-                                    <DataGridTextColumn Header="NOMBRE" Binding="{Binding NOMBRE}"/>
+                                    <DataGridTextColumn Header="NOMBRE" Binding="{Binding DESCRIPCION}"/>
                                     <DataGridTemplateColumn Header="OPCIONES" Width="80">
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
                                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                                    <Button Style="{StaticResource gridButtonEdit}"  x:Name="ButtonDeleteRecord">
+                                                    <Button Style="{StaticResource gridButtonEdit}"  
+                                                            Click="EditRecord"
+                                                            x:Name="UpdateRecord">
                                                         <fa:FontAwesome Icon="Pencil" />
                                                     </Button>
-                                                    <Button Style="{StaticResource gridButtonClose}">
+                                                    <Button Style="{StaticResource gridButtonClose}"
+                                                            Click="DeleteRecord"
+                                                            x:Name="ButtonDeleteRecord">
                                                         <fa:FontAwesome Icon="Close"/>
                                                     </Button>
                                                 </StackPanel>

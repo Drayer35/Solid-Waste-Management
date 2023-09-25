@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Model\EstablecimientoModel.cs" />
     <Compile Include="Model\EstadoMateriaModel.cs" />
+    <Compile Include="Model\TipoResiduoModel.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

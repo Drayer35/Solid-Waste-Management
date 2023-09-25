@@ -53,11 +53,11 @@
                                      Width="90" 
                                      Margin="20,20,0,0" 
                                      Name="BtnAddEstadoMateria"
-                                     Height="40" Click="BtnAddEstadoMateria_Click"
+                                     Height="40" Click="BtnAddEstadoMateria"
                                      >
                                     <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
-                                        <TextBlock x:Name="TextAddEstablecimiento" Text="Agregar" Style="{StaticResource contentButtonText}"/>
+                                        <TextBlock x:Name="TextAddEstadoMateria" Text="Agregar" Style="{StaticResource contentButtonText}"/>
                                     </StackPanel>
                                 </Button>
                             </StackPanel>

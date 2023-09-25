@@ -13,8 +13,17 @@ namespace DataAccess.Entities
 {
     public class EstablecimientoDao:ConnectGestionDB
     {
+        private int id;
+        private string nombre;
+
+        public int Id { get => id; set => id = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+
         private SqlDataReader readFill;
-        public bool InsertarEstablecimiento(string nombre) {
+
+
+
+        public bool InsertarEstablecimiento() {
             using (var connection = GetConnection())
             {
                 try
@@ -39,6 +48,10 @@ namespace DataAccess.Entities
                 }
             } 
         }
+
+
+
+
         public DataTable  ListarEstablecimiento() {
             DataTable table = new DataTable();
             using (var connection = GetConnection()) {
@@ -67,7 +80,11 @@ namespace DataAccess.Entities
                 }
             }
         }
-        public void UpdateEstablecimiento(int id, string nombre)
+
+
+
+
+        public void UpdateEstablecimiento()
         {
             using (var connection = GetConnection())
             {
@@ -95,7 +112,10 @@ namespace DataAccess.Entities
                 }
             }
         }
-        public void DeleteEstablecimiento(int id) {
+
+
+
+        public void DeleteEstablecimiento() {
             using (var connection = GetConnection())
             {
                 try

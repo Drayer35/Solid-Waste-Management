@@ -17,3 +17,4 @@ C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\bin\Debug\Common.dll
 C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\bin\Debug\Common.pdb
 C:\Users\Franco\Documents\GitHub\GestionRS\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\DataAccess\bin\Debug\DataAccess.dll.config
