@@ -17,10 +17,6 @@ namespace Domain.Model
             materiaDao.Descripcion = descripcion;
             return materiaDao.InsertEstadoMateria();
         }
-
-
-
-
         public DataTable GetCantidadEstadosMateria() {
             return materiaDao.ToListEstadosMateria();
         }

@@ -23,6 +23,5 @@ namespace Domain.Model
             return dao.ToListTipoGrado();
 
         }
-
     }
 }

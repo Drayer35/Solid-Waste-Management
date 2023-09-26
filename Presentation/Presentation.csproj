@@ -93,6 +93,9 @@
     <Compile Include="View\FormEstadoMateria.xaml.cs">
       <DependentUpon>FormEstadoMateria.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\FormGradoPeligrosidad.xaml.cs">
+      <DependentUpon>FormGradoPeligrosidad.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FormTipoResiduo.xaml.cs">
       <DependentUpon>FormTipoResiduo.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FormEstadoMateria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormGradoPeligrosidad.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

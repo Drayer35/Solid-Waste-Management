@@ -88,6 +88,9 @@ namespace Presentation.View
             TableTipoResiduo.DataContext = tipoResiduoModel.ToListTipoResiduo();
 
         }
+        
+        
+        
         private void EditRecord(object sender, RoutedEventArgs e)
         {
             if (TableTipoResiduo.SelectedItems.Count > 0)

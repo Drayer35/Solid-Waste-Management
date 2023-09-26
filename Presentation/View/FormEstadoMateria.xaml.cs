@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,7 +25,6 @@ namespace Presentation.View
         int ColumnId = 1;
         int ColumnDescription = 2;
         public event EventHandler RefreshComboBoxEstado;
-
         public FormEstadoMateria()
         {
             InitializeComponent();

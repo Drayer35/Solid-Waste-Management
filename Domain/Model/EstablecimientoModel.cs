@@ -20,11 +20,6 @@ namespace Domain.Model
             establecimientoDao.Nombre = name;
             return establecimientoDao.InsertarEstablecimiento();
         }
-
-
-
-
-
         public DataTable ToListEstablecimientos() {
            return establecimientoDao.ListarEstablecimiento();
         }

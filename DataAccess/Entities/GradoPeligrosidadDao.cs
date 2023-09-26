@@ -5,23 +5,21 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Common.Cache;
 using DataAccess.Connection;
-using System.Runtime.Remoting.Messaging;
+
 
 namespace DataAccess.Entities
 {
-    public class EstablecimientoDao:ConnectGestionDB
+    public class GradoPeligrosidadDao: ConnectGestionDB
     {
         private int id;
-        private string nombre;
+        private string descripcion;
         private SqlDataReader readFill;
-
         public int Id { get => id; set => id = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
 
-      
-        public bool InsertarEstablecimiento() {
+        public bool InsertGrado()
+        {
             using (var connection = GetConnection())
             {
                 try
@@ -30,9 +28,9 @@ namespace DataAccess.Entities
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "InsertarEstablecimiento";
+                        command.CommandText = "InsertGradoPeligrosidad";
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@NOMBRE", nombre);
+                        command.Parameters.AddWithValue("@DESCRIPCION", descripcion);
                         command.ExecuteNonQuery();
                         command.Parameters.Clear();
                     }
@@ -40,23 +38,25 @@ namespace DataAccess.Entities
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());   
+                    Console.WriteLine(ex.ToString());
                     connection.Close();
                     return false;
                 }
-            } 
+            }
         }
-        public DataTable  ListarEstablecimiento() {
+        public DataTable SelectGrado()
+        {
             DataTable table = new DataTable();
-            using (var connection = GetConnection()) {
+            using (var connection = GetConnection())
+            {
                 try
                 {
                     connection.Open();
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "ListarEstablecimientos";
-                        command.CommandType= CommandType.StoredProcedure;
+                        command.CommandText = "SelectGradoPeligrosidad";
+                        command.CommandType = CommandType.StoredProcedure;
                         readFill = command.ExecuteReader();
                         table.Load(readFill);
                         readFill.Close();
@@ -69,12 +69,13 @@ namespace DataAccess.Entities
                     Console.WriteLine(ex.Message);
                     return table;
                 }
-                finally { 
+                finally
+                {
                     connection.Close();
                 }
             }
         }
-        public void UpdateEstablecimiento()
+        public void UpdateGrado()
         {
             using (var connection = GetConnection())
             {
@@ -84,10 +85,10 @@ namespace DataAccess.Entities
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "UpdateEstablecimiento";
+                        command.CommandText = "UpdateGradoPeligrosidad";
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@ID", id);
-                        command.Parameters.AddWithValue("@NOMBRE", nombre);
+                        command.Parameters.AddWithValue("@DESCRIPCION", descripcion);
                         command.ExecuteNonQuery();
                         command.Parameters.Clear();
                     }
@@ -102,7 +103,8 @@ namespace DataAccess.Entities
                 }
             }
         }
-        public void DeleteEstablecimiento() {
+        public void DeleteGrado()
+        {
             using (var connection = GetConnection())
             {
                 try
@@ -111,9 +113,9 @@ namespace DataAccess.Entities
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "DeleteEstablecimiento";
+                        command.CommandText = "DeleteGradoPeligrosidad";
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@ID",id);
+                        command.Parameters.AddWithValue("@ID", id);
                         command.ExecuteNonQuery();
                         command.Parameters.Clear();
                     }
@@ -128,5 +130,12 @@ namespace DataAccess.Entities
                 }
             }
         }
+
     }
+
+
+
+
+
+
 }

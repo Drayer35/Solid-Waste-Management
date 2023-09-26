@@ -5,23 +5,29 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Common.Cache;
 using DataAccess.Connection;
-using System.Runtime.Remoting.Messaging;
 
 namespace DataAccess.Entities
 {
-    public class EstablecimientoDao:ConnectGestionDB
+    public class ResiduoDao: ConnectGestionDB
     {
         private int id;
         private string nombre;
+        private string descripcion;
+        private int tipoResiduoId;
+        private int gradoPeligrosidadId;
+        private int estadoMateriaId;
         private SqlDataReader readFill;
 
         public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; set => nombre = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public int TipoResiduoId { get => tipoResiduoId; set => tipoResiduoId = value; }
+        public int GradoPeligrosidadId { get => gradoPeligrosidadId; set => gradoPeligrosidadId = value; }
+        public int EstadoMateriaId { get => estadoMateriaId; set => estadoMateriaId = value; }
 
-      
-        public bool InsertarEstablecimiento() {
+        public bool InsertResiduo()
+        {
             using (var connection = GetConnection())
             {
                 try
@@ -30,9 +36,13 @@ namespace DataAccess.Entities
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "InsertarEstablecimiento";
+                        command.CommandText = "InsertResiduo";
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@NOMBRE", nombre);
+                        command.Parameters.AddWithValue("@DESCRIPCION",descripcion);
+                        command.Parameters.AddWithValue("@TIPO_RESIDUO_ID",tipoResiduoId );
+                        command.Parameters.AddWithValue("@GRADO_PELIGROSIDAD_ID", gradoPeligrosidadId);
+                        command.Parameters.AddWithValue("@ESTADO_MATERIA_ID",estadoMateriaId);
                         command.ExecuteNonQuery();
                         command.Parameters.Clear();
                     }
@@ -40,23 +50,25 @@ namespace DataAccess.Entities
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());   
+                    Console.WriteLine(ex.ToString());
                     connection.Close();
                     return false;
                 }
-            } 
+            }
         }
-        public DataTable  ListarEstablecimiento() {
+        public DataTable SelectResiduo()
+        {
             DataTable table = new DataTable();
-            using (var connection = GetConnection()) {
+            using (var connection = GetConnection())
+            {
                 try
                 {
                     connection.Open();
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "ListarEstablecimientos";
-                        command.CommandType= CommandType.StoredProcedure;
+                        command.CommandText = "SelectResiduo";
+                        command.CommandType = CommandType.StoredProcedure;
                         readFill = command.ExecuteReader();
                         table.Load(readFill);
                         readFill.Close();
@@ -69,7 +81,8 @@ namespace DataAccess.Entities
                     Console.WriteLine(ex.Message);
                     return table;
                 }
-                finally { 
+                finally
+                {
                     connection.Close();
                 }
             }
@@ -86,8 +99,11 @@ namespace DataAccess.Entities
                         command.Connection = connection;
                         command.CommandText = "UpdateEstablecimiento";
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@ID", id);
                         command.Parameters.AddWithValue("@NOMBRE", nombre);
+                        command.Parameters.AddWithValue("@DESCRIPCION", descripcion);
+                        command.Parameters.AddWithValue("@TIPO_RESIDUO_ID", tipoResiduoId);
+                        command.Parameters.AddWithValue("@GRADO_PELIGROSIDAD_ID", gradoPeligrosidadId);
+                        command.Parameters.AddWithValue("@ESTADO_MATERIA_ID", estadoMateriaId);
                         command.ExecuteNonQuery();
                         command.Parameters.Clear();
                     }
@@ -102,7 +118,8 @@ namespace DataAccess.Entities
                 }
             }
         }
-        public void DeleteEstablecimiento() {
+        public void DeleteEstablecimiento()
+        {
             using (var connection = GetConnection())
             {
                 try
@@ -111,9 +128,9 @@ namespace DataAccess.Entities
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "DeleteEstablecimiento";
+                        command.CommandText = "DeleteResiduo";
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@ID",id);
+                        command.Parameters.AddWithValue("@ID", id);
                         command.ExecuteNonQuery();
                         command.Parameters.Clear();
                     }
@@ -128,5 +145,12 @@ namespace DataAccess.Entities
                 }
             }
         }
+
+
+
     }
+
+
+
+   
 }

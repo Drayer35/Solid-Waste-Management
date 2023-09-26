@@ -41,9 +41,6 @@ namespace DataAccess.Entities
                 }
             }
         }
-
-
-
         public DataTable ToListEstadosMateria()
         {
             using (var bd = GetDataContext())
@@ -76,7 +73,6 @@ namespace DataAccess.Entities
                 }
             }
         }
-
         public bool UpdateEstadoMateria()
         {
             using (var bd = GetDataContext())

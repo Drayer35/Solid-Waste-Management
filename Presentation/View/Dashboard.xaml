@@ -58,7 +58,11 @@
                         </StackPanel>
                     </GroupBox.Header>
                     <Grid>
-                        <ListBox Name="todosPedidos"  Background="Transparent" FontSize="14" BorderBrush="Transparent" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                        <ListBox Name="ListaEstablecimientos"  
+                                 Background="Transparent"
+                                 FontSize="14"
+                                 BorderBrush="Transparent" 
+                                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
 
                         </ListBox>
                     </Grid>

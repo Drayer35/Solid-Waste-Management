@@ -15,7 +15,6 @@ namespace Domain.Model
             tipoResiduoDao.Descripcion = descripcion;
             return tipoResiduoDao.InsertTipoResiduo();
         }
-
         public void UpdateTipoResiduo(int id, string descripcion)
         {
             tipoResiduoDao.Id = id;

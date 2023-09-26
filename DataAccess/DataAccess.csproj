@@ -52,7 +52,8 @@
     </Compile>
     <Compile Include="Entities\EstablecimientoDao.cs" />
     <Compile Include="Entities\EstadoMateriaDao.cs" />
-    <Compile Include="Entities\GradoPeligrosidad.cs" />
+    <Compile Include="Entities\GradoPeligrosidadDao.cs" />
+    <Compile Include="Entities\ResiduoDao.cs" />
     <Compile Include="Entities\TipoGradoDao.cs" />
     <Compile Include="Entities\TipoResiduoDao.cs" />
     <Compile Include="Entities\UserDao.cs" />
@@ -62,7 +63,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Services\SendEmail.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

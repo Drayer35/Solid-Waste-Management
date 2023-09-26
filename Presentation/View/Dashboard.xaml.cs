@@ -31,6 +31,7 @@ namespace Presentation.View
             miConexionSql = new SqlConnection(miconexion);
             ListarEstablecimientos();
             //ListarFechas();
+
             
         }
 
@@ -40,10 +41,13 @@ namespace Presentation.View
             using (adapter) { 
                 DataTable DataEstablecimientos = new DataTable();
                 adapter.Fill(DataEstablecimientos);
-                todosPedidos.DisplayMemberPath= "NOMBRE";
-                todosPedidos.SelectedValuePath = "ID";
-                todosPedidos.ItemsSource = DataEstablecimientos.DefaultView;
+                ListaEstablecimientos.DisplayMemberPath= "NOMBRE";
+                ListaEstablecimientos.SelectedValuePath = "ID";
+                ListaEstablecimientos.ItemsSource = DataEstablecimientos.DefaultView;
             }
+        }
+        public void RefreshEstablecimientos(object sender, EventArgs e) {
+            ListarEstablecimientos();
         }
         private void ListarFechas() {
 
@@ -61,6 +65,7 @@ namespace Presentation.View
         private void Establecimiento(object sender, RoutedEventArgs e)
         {
             WindowEstablecimiento windowEstablecimiento = new WindowEstablecimiento();
+            windowEstablecimiento.RefreshListEstablecimientos += RefreshEstablecimientos;
             windowEstablecimiento.ShowDialog();
         }
         private void OpenWindowResiduos(object sender, RoutedEventArgs e)
@@ -68,5 +73,7 @@ namespace Presentation.View
             WindowResiduos windowResiduos = new WindowResiduos();
             windowResiduos.ShowDialog();
         }
+
+
     }
 }

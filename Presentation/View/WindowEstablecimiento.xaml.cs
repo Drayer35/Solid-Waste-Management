@@ -24,6 +24,8 @@ namespace Presentation.View
     {
         int ColumnId = 1;
         int ColumnName = 2;
+        public event EventHandler RefreshListEstablecimientos;
+ 
         public WindowEstablecimiento()
         {
             InitializeComponent();
@@ -108,16 +110,17 @@ namespace Presentation.View
                 else {
                     int id = Convert.ToInt32(TxtIdEstablecimiento.Text);
                     string name = ((string)TxtNameEstablecimiento.Text);
-                    MessageBox.Show("Se actualizó el ID: "+id);
                     establecimientoModel.UpdateEstablecimiento(id, name);
                     ToListTableEstablecimiento();
                     PaintBoxEstablecimiento();
+                    MessageBox.Show("Se actualizó el ID: " + id);
                 };
                  
             }
             else { MessageBox.Show("Ingresa el nombre del Establecimiento", "Casilla Vacía"); }
         }
         private void ToListTableEstablecimiento() {
+            RefreshListEstablecimientos?.Invoke(this, EventArgs.Empty);
             EstablecimientoModel establecimiento = new EstablecimientoModel();
             TableEstablecimientos.DataContext = establecimiento.ToListEstablecimientos();
         }

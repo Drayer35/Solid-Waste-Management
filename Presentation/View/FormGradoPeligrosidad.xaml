@@ -1,80 +1,80 @@
-﻿<UserControl x:Class="Presentation.View.FormTipoResiduo"
+﻿<UserControl x:Class="Presentation.View.FormGradoPeligrosidad"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Presentation.View"
-             mc:Ignorable="d"
+             mc:Ignorable="d" 
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Border CornerRadius="0" 
-                BorderThickness="1,0,0,0" 
-                BorderBrush="Gray">
+            BorderThickness="1,0,0,0" 
+            BorderBrush="Gray">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <Border Grid.Row="1" 
-                        CornerRadius="0,0,15,15" 
-                        Background="White">
+                    CornerRadius="0,0,15,15" 
+                    Background="White">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Orientation="Vertical" 
-                                    HorizontalAlignment="Center">
-                            <TextBlock Text="LISTAR TIPO DE RESIDUO"
-                                       HorizontalAlignment="Center" 
-                                       Style="{StaticResource TitleText}" 
-                                       Margin="20"/>
+                                HorizontalAlignment="Center">
+                            <TextBlock Text="LISTAR GRADO DE PELIGROSIDAD"
+                                   HorizontalAlignment="Center" 
+                                   Style="{StaticResource TitleText}" 
+                                   Margin="20"/>
                             <StackPanel  Orientation="Horizontal" 
-                                         HorizontalAlignment="Center">
+                                     HorizontalAlignment="Center">
                                 <TextBox 
-                                       x:Name="TxtIdTipoResiduo"
-                                       Text="ID"
-                                       Width="30"
-                                       IsEnabled="False"
-                                       Style="{StaticResource OnlyBox}" 
-                                       Margin="0,20,20,0">
+                                   x:Name="TxtIdGrado"
+                                   Text="ID"
+                                   Width="30"
+                                   IsEnabled="False"
+                                   Style="{StaticResource OnlyBox}" 
+                                   Margin="0,20,20,0">
                                 </TextBox>
                                 <TextBox 
-                                       x:Name="TxtNameTipoResiduo"
-                                       Text="Tipo de Residuo"
-                                       Width="300"
-                                       GotFocus="TextTipoResiduoEnter"
-                                       LostFocus="TextTipoResiduoLeave"
-                                       MaxLength="40"
-                                       Style="{StaticResource OnlyBox}" Margin="0,20,0,0"
-                                       >
+                                   x:Name="TxtNameGrado"
+                                   Text="Grado Peligrosidad"
+                                   Width="300"
+                                   GotFocus="TextGradoEnter"
+                                   LostFocus="TextGradoLeave"
+                                   MaxLength="40"
+                                   Style="{StaticResource OnlyBox}" Margin="0,20,0,0"
+                                   >
                                 </TextBox>
                                 <Button Style="{StaticResource contentButton}"
-                                     Tag="{StaticResource Color10}" 
-                                     Width="90" 
-                                     Margin="20,20,0,0" 
-                                     Name="BtnAddTipoResiduo"
-                                     Click="AddTipoResiduo"
-                                     Height="40"
-                                     >
+                                 Tag="{StaticResource Color10}" 
+                                 Width="90" 
+                                 Margin="20,20,0,0" 
+                                 Name="BtnAddGrado"
+                                 Click="AddGrado"
+                                 Height="40"
+                                 >
                                     <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Center">
-                                        <TextBlock x:Name="TextAddTipoResiduo" Text="Agregar" Style="{StaticResource contentButtonText}"/>
+                                    HorizontalAlignment="Center">
+                                        <TextBlock x:Name="TextAddGrado" Text="Agregar" Style="{StaticResource contentButtonText}"/>
                                     </StackPanel>
                                 </Button>
                             </StackPanel>
 
                             <DataGrid ItemsSource="{Binding}" 
-                              x:Name="TableTipoResiduo" 
-                              CanUserResizeColumns="False" 
-                              CanUserAddRows="False" 
-                              IsReadOnly="True" 
-                              Height="283"  
-                              RowStyle="{StaticResource DataGridRowStyle1}"
-                              AutoGenerateColumns="False"
-                              Margin="30,20"
-                              CellStyle="{StaticResource miEstiloDeCelda}"
-                              Style="{StaticResource gridTable}">
+                                      x:Name="TableGrado" 
+                                      CanUserResizeColumns="False" 
+                                      CanUserAddRows="False" 
+                                      IsReadOnly="True" 
+                                      Height="283"  
+                                      RowStyle="{StaticResource DataGridRowStyle1}"
+                                      AutoGenerateColumns="False"
+                                      Margin="30,20"
+                                      CellStyle="{StaticResource miEstiloDeCelda}"
+                                      Style="{StaticResource gridTable}">   
                                 <!--RowStyle="{StaticResource DataGridRowStyle1}" este es el error de la tabla-->
                                 <DataGrid.ColumnHeaderStyle>
                                     <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DataGridColumnHeaderStyle1}" />
@@ -99,13 +99,13 @@
                                             <DataTemplate>
                                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                                     <Button Style="{StaticResource gridButtonEdit}"  
-                                                            Click="EditRecord"
-                                                            x:Name="UpdateRecord">
+                                                        Click="EditRecord"
+                                                        x:Name="UpdateRecord">
                                                         <fa:FontAwesome Icon="Pencil" />
                                                     </Button>
                                                     <Button Style="{StaticResource gridButtonClose}"
-                                                            Click="DeleteRecord"
-                                                            x:Name="ButtonDeleteRecord">
+                                                        Click="DeleteRecord"
+                                                        x:Name="ButtonDeleteRecord">
                                                         <fa:FontAwesome Icon="Close"/>
                                                     </Button>
                                                 </StackPanel>

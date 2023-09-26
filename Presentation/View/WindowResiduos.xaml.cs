@@ -85,10 +85,13 @@ namespace Presentation.View
                 LinkActive.Visibility = Visibility.Visible;
             }
         }
-
         private void OpenFormGrado(object sender, EventArgs e) {
-
-            LinkActive.Visibility = Visibility.Visible;
+            if (!(DataContext is FormGradoPeligrosidad)) {
+                FormGradoPeligrosidad formGrado = new FormGradoPeligrosidad();
+                DataContext = formGrado;
+                formGrado.RefreshComboBoxGrado += UpdateDataComboBox;
+                LinkActive.Visibility = Visibility.Visible;
+            }
         }
         private void BtnAddResiduo_Click(object sender, RoutedEventArgs e)
         {
@@ -122,8 +125,6 @@ namespace Presentation.View
 
             
         }
-
-
         private void cmbTipoResiduo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int id = Convert.ToInt32(cmbTipoResiduo.SelectedValue);
@@ -133,5 +134,8 @@ namespace Presentation.View
             cmbGradoPeligrosidad.SelectedValuePath = "GRADO_ID";
             cmbGradoPeligrosidad.ItemsSource = tipoGrado;
         }
+
+       
+
     }
 }

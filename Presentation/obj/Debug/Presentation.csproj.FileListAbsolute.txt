@@ -120,3 +120,5 @@ C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Presentation\obj\Debug\Pre
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Presentation\obj\Debug\Presentation.exe
 C:\Users\Drayer\Imágenes\Documentos\GitHub\GestionRS\Presentation\obj\Debug\Presentation.pdb
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\FormGradoPeligrosidad.g.cs
+C:\Users\Franco\Documents\GitHub\GestionRS\Presentation\obj\Debug\View\FormGradoPeligrosidad.baml
