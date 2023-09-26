@@ -48,8 +48,6 @@ namespace Presentation.View
             string estado = TxtNameEstadoMateria.Text.Trim(); // Elimina espacios en blanco al principio y al final
             if (string.IsNullOrEmpty(estado)) PaintBoxEstadoMateria();
         }
-
-
         private void AddEstadoMateria(object sender, RoutedEventArgs e)
         {
             if (TxtNameEstadoMateria.Text != "Nombre de Estado")

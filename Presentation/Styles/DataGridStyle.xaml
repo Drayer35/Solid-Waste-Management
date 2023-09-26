@@ -17,7 +17,7 @@
         <Setter Property="SelectionUnit" Value="FullRow"/>
         <Setter Property="CanUserAddRows" Value="False"/>
         <Setter Property="CanUserDeleteRows" Value="False"/>
-        <Setter Property="CanUserResizeColumns" Value="False"/>
+        <Setter Property="CanUserResizeColumns" Value="True"/>
         <Setter Property="CanUserReorderColumns" Value="False"/>
         <Setter Property="ColumnWidth" Value="*" />
         <Setter Property="GridLinesVisibility" Value="None"/>

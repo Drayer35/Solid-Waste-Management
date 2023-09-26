@@ -6,56 +6,60 @@
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:local="clr-namespace:Presentation.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" Width="auto">
+             
+             Height="auto" Width="auto">
     <Grid>
         <DataGrid ItemsSource="{Binding}"  
-            x:Name="TableEstablecimientos" 
-            CanUserResizeColumns="False" 
-            CanUserAddRows="False" 
-            IsReadOnly="True" 
-            Height="380"  
-            RowStyle="{StaticResource DataGridRowStyle1}"
-            AutoGenerateColumns="False"
-            CellStyle="{StaticResource miEstiloDeCelda}"
-            Style="{StaticResource gridTable}">
-            <!--RowStyle="{StaticResource DataGridRowStyle1}" este es el error de la tabla-->
-            <DataGrid.ColumnHeaderStyle>
-                <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DataGridColumnHeaderStyle1}" />
-            </DataGrid.ColumnHeaderStyle>
+                      x:Name="TableResiduos" 
+                      CanUserAddRows="False" 
+                      Margin="30,20"
+                      IsReadOnly="True"
+                      Height="380"  
+                      RowStyle="{StaticResource DataGridRowStyle1}"
+                      AutoGenerateColumns="False"
+                      CellStyle="{StaticResource miEstiloDeCelda}"
+                      Style="{StaticResource gridTable}">
+                <!--RowStyle="{StaticResource DataGridRowStyle1}" este es el error de la tabla-->
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader" BasedOn="{StaticResource DataGridColumnHeaderStyle1}" />
+                </DataGrid.ColumnHeaderStyle>
             <DataGrid.Resources>
                 <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource CustomVerticalScrollBar}" />
             </DataGrid.Resources>
-
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
-                    <DataGridCheckBoxColumn.HeaderTemplate>
-                        <DataTemplate>
-                            <CheckBox/>
-                        </DataTemplate>
-                    </DataGridCheckBoxColumn.HeaderTemplate>
-                </DataGridCheckBoxColumn>
+                    <DataGridCheckBoxColumn Width="auto">
+                        <DataGridCheckBoxColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <CheckBox/>
+                            </DataTemplate>
+                        </DataGridCheckBoxColumn.HeaderTemplate>
+                    </DataGridCheckBoxColumn>
 
-                <DataGridTextColumn Header="ID" Binding="{Binding ID}"  Width="80" Visibility="Hidden"/>
-                <DataGridTextColumn Header="RESIDUO" Width="120"/>
-                <DataGridTextColumn Header="DESCRIPCION" Width="120" Visibility="Hidden"/>
-                <DataGridTextColumn Header="TIPO DE RESIDUO"   Width="120"/>
-                <DataGridTextColumn Header="ESTADO"   Width="100"/>
-                <DataGridTemplateColumn Header="OPCIONES" Width="80">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <Button Style="{StaticResource gridButtonEdit}" x:Name="ButtonDeleteRecord">
-                                    <fa:FontAwesome Icon="Pencil" />
-                                </Button>
-                                <Button Style="{StaticResource gridButtonClose}">
-                                    <fa:FontAwesome Icon="Close"/>
-                                </Button>
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"  Width="80"/>
+                    <DataGridTextColumn Header="NOMBRE" Width="120" Binding="{Binding NOMBRE}"/>
+                    <DataGridTextColumn Header="DESCRIPCION" Binding="{Binding DESCRIPCION}" Width="180" />
+                    <DataGridTextColumn Header="TIPO DE RESIDUO"  Binding="{Binding TIPO_RESIDUO}" Width="150"/>
+                    <DataGridTextColumn Header="GRADO DE PELIGRO"   Binding="{Binding GRADO_PELIGROSIDAD}" Width="150"/>
+                    <DataGridTextColumn Header="ESTADO DE MATERIA"  Binding="{Binding ESTADO_MATERIA}" Width="150"/>
+                    <DataGridTemplateColumn Header="OPCIONES" Width="80">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Button Style="{StaticResource gridButtonEdit}" 
+                                            Click="EditRecord"
+                                            x:Name="ButtonDeleteRecord">
+                                        <fa:FontAwesome Icon="Pencil" />
+                                    </Button>
+                                <Button Style="{StaticResource gridButtonClose}"
+                                        Click="DeleteRecord">
+                                        <fa:FontAwesome Icon="Close"/>
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
     </Grid>
 </UserControl>

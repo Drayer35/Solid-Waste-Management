@@ -23,11 +23,12 @@ namespace Presentation.View
     /// </summary>
     public partial class WindowResiduos : Window
     {
+        public event EventHandler RefreshTablaResiduo;
         public WindowResiduos()
         {
             InitializeComponent();
-            LoadDataComboBox(); 
-            DataContext = new ResiduosTable();
+            LoadDataComboBox();
+            OpenTable();
         }
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int wMswg, int wParam, int lParam);
@@ -71,7 +72,6 @@ namespace Presentation.View
                 FormEstadoMateria formEstadoMateria=new FormEstadoMateria();
                 DataContext = formEstadoMateria;
                 formEstadoMateria.RefreshComboBoxEstado += UpdateDataComboBox;
-
                 LinkActive.Visibility = Visibility.Visible;
             }
         }
@@ -79,6 +79,7 @@ namespace Presentation.View
         {
             if (!(DataContext is FormTipoResiduo))
             {
+                this.Width = 1000;
                 FormTipoResiduo formTipo = new FormTipoResiduo();
                 DataContext = formTipo;
                 formTipo.RefreshComboBoxTipo += UpdateDataComboBox;
@@ -93,18 +94,17 @@ namespace Presentation.View
                 LinkActive.Visibility = Visibility.Visible;
             }
         }
-        private void BtnAddResiduo_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-        private void OpenTableResiduos(object sender, RoutedEventArgs e) {
+        private void OpenTable() {
             if (!(DataContext is ResiduosTable))
             {
-                DataContext = new ResiduosTable();
+                ResiduosTable formResiduosTable = new ResiduosTable();
+                RefreshTablaResiduo += formResiduosTable.ListTableResiduo;
+                DataContext = formResiduosTable;
                 LinkActive.Visibility = Visibility.Hidden;
             }
-
         }
+
         private void UpdateDataComboBox(object sender, EventArgs e)
         {
             LoadDataComboBox();
@@ -131,11 +131,56 @@ namespace Presentation.View
             TipoGradoModel tipoGradoModel = new TipoGradoModel();
             var tipoGrado = tipoGradoModel.ToListTipoGrado(id).DefaultView;
             cmbGradoPeligrosidad.DisplayMemberPath = "DESCRIPCION";
-            cmbGradoPeligrosidad.SelectedValuePath = "GRADO_ID";
+            cmbGradoPeligrosidad.SelectedValuePath = "ID";
             cmbGradoPeligrosidad.ItemsSource = tipoGrado;
         }
+        private void LinkOpenTable(object sender, RoutedEventArgs e) { 
+            OpenTable();
+        }
+        private void AddResiduo(object sender, RoutedEventArgs e)
+        {
+            
+            string nombre = Convert.ToString(TxtNameResiduo.Text);
+            string descripcion = Convert.ToString(TxtDescriptionResiduo.Text);
+            int tipoResiduo = Convert.ToInt32(cmbTipoResiduo.SelectedValue);
+            int gradoPeligro = Convert.ToInt32(cmbGradoPeligrosidad.SelectedValue);
+            int estadoMateria = Convert.ToInt32(cmbEstadoMateria.SelectedValue);
+            if (TxtNameResiduo.Text != "Nombre de Residuo" && TxtDescriptionResiduo.Text !="Descripcion" && cmbTipoResiduo.SelectedIndex != -1  && cmbGradoPeligrosidad.SelectedIndex !=-1 && cmbEstadoMateria.SelectedIndex !=-1)
+            {
+                ResiduoModel residuoModel = new ResiduoModel();
+                if (TextAddResiduo.Text == "Agregar")
+                {
+                    if (residuoModel.InsertResiduo(nombre,descripcion,tipoResiduo,gradoPeligro,estadoMateria))
+                    {
+                        RefreshTablaResiduo?.Invoke(this, EventArgs.Empty);
+                        PaintBoxResiduo();
+                        PaintBoxDescripcion();
+                        LoadDataComboBox();
+                        MessageBox.Show("Se añadió " + nombre + " a la base de datos", "Inserción Exitosa");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error ", "Fracaso de Inserción");
+                        PaintBoxResiduo();
+                        PaintBoxDescripcion();
+                        LoadDataComboBox();
+                    }
+                }
+                else
+                {
+                    int id = Convert.ToInt32(TxtIdResiduo.Text);
+                    residuoModel.UpdateResiduo(id,nombre, descripcion,tipoResiduo,gradoPeligro,estadoMateria);
+                    RefreshTablaResiduo?.Invoke(this, EventArgs.Empty);
+                    PaintBoxResiduo();
+                    PaintBoxDescripcion();
+                    LoadDataComboBox();
+                    MessageBox.Show("Se actualizó el ID: " + id);
+                };
 
-       
+            }
+            else { MessageBox.Show("Complete todo los campos", "Casilla Vacía"); }
+        }
+
 
     }
 }

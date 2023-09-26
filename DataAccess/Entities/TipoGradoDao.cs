@@ -19,8 +19,6 @@ namespace DataAccess.Entities
         public int Id { get => id; set => id = value; }
         public int IdTipoResiduo { get => idTipoResiduo; set => idTipoResiduo = value; }
         public int IdGradoPeligrosidad { get => idGradoPeligrosidad; set => idGradoPeligrosidad = value; }
-
-
         public DataTable ToListTipoGrado()
         {
             DataTable table = new DataTable();

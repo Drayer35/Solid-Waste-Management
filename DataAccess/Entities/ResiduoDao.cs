@@ -39,10 +39,10 @@ namespace DataAccess.Entities
                         command.CommandText = "InsertResiduo";
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@NOMBRE", nombre);
-                        command.Parameters.AddWithValue("@DESCRIPCION",descripcion);
-                        command.Parameters.AddWithValue("@TIPO_RESIDUO_ID",tipoResiduoId );
+                        command.Parameters.AddWithValue("@DESCRIPCION", descripcion);
+                        command.Parameters.AddWithValue("@TIPO_RESIDUO_ID", tipoResiduoId );
                         command.Parameters.AddWithValue("@GRADO_PELIGROSIDAD_ID", gradoPeligrosidadId);
-                        command.Parameters.AddWithValue("@ESTADO_MATERIA_ID",estadoMateriaId);
+                        command.Parameters.AddWithValue("@ESTADO_MATERIA_ID", estadoMateriaId);
                         command.ExecuteNonQuery();
                         command.Parameters.Clear();
                     }
@@ -99,6 +99,7 @@ namespace DataAccess.Entities
                         command.Connection = connection;
                         command.CommandText = "UpdateEstablecimiento";
                         command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ID", id);
                         command.Parameters.AddWithValue("@NOMBRE", nombre);
                         command.Parameters.AddWithValue("@DESCRIPCION", descripcion);
                         command.Parameters.AddWithValue("@TIPO_RESIDUO_ID", tipoResiduoId);

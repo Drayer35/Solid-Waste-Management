@@ -14,7 +14,7 @@
              AllowsTransparency="True"   
              Title="Residuos" 
              Height="530"
-             Width="950">
+             Width="1000">
     <Window.Resources>
 
 
@@ -55,6 +55,8 @@
                         <StackPanel  Orientation="Vertical" HorizontalAlignment="Center">
                             <StackPanel Orientation="Horizontal">
                                 <TextBox 
+                                        
+                                        x:FieldModifier="public"
                                         x:Name="TxtIdResiduo"
                                         Text="ID"
                                         Width="40"
@@ -63,6 +65,7 @@
                                         Margin="0,20,20,0">
                                 </TextBox>
                                 <TextBox 
+                                        x:FieldModifier="public"
                                         x:Name="TxtNameResiduo"
                                         Text="Nombre de Residuo"
                                         Width="290"
@@ -76,6 +79,7 @@
                                 x:Name="TxtDescriptionResiduo"
                                 Text="Descripcion"
                                 Width="350"
+                                x:FieldModifier="public"
                                 MaxLength="40"
                                 GotFocus="TextDescriptionEnter"
                                 LostFocus="TexDescriptionLeave"
@@ -85,6 +89,7 @@
                             <TextBlock Text="Tipo de Residuo" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
                                 <ComboBox Width="320" 
+                                          x:FieldModifier="public"
                                           SelectionChanged="cmbTipoResiduo_SelectionChanged"
                                           x:Name="cmbTipoResiduo">
                                     <ComboBox.Resources>
@@ -111,7 +116,9 @@
 
                             <TextBlock Text="Grado de Peligrosidad" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
-                                <ComboBox Width="320" x:Name="cmbGradoPeligrosidad" >
+                                <ComboBox Width="320"
+                                          x:FieldModifier="public"
+                                          x:Name="cmbGradoPeligrosidad" >
                                     <ComboBox.Resources>
                                         <Style TargetType="ComboBox">
                                             <Setter Property="Text" Value="Selecciona un Tipo de Residuo"/>
@@ -136,7 +143,9 @@
 
                             <TextBlock Text="Estado de Materia" Style="{StaticResource TitleComboBox}"  Margin="0,20,0,0"/>
                             <StackPanel Orientation="Horizontal">
-                                <ComboBox Width="320" x:Name="cmbEstadoMateria"/>
+                                <ComboBox Width="320" 
+                                          x:FieldModifier="public"
+                                          x:Name="cmbEstadoMateria"/>
                                 <RadioButton  Style="{StaticResource contentRadioButton}"
                                         Tag="{StaticResource Color10}" 
                                         Width="20" 
@@ -156,7 +165,7 @@
                                   Width="90" 
                                   Margin="0,40,0,0" 
                                   Name="BtnAddResiduo"
-                                  Height="40" Click="BtnAddResiduo_Click">
+                                  Height="40" Click="AddResiduo">
                                 <StackPanel Orientation="Horizontal"
                                          HorizontalAlignment="Center">
                                     <TextBlock x:Name="TextAddResiduo" Text="Agregar" Style="{StaticResource contentButtonText}"/>
@@ -172,7 +181,7 @@
                                            FontWeight="Bold" 
                                            TextDecorations="None" 
                                            Foreground="#0275FE"
-                                           Click="OpenTableResiduos">
+                                           Click="LinkOpenTable">
                                 Visualizar Tabla Residuos
                                 </Hyperlink>
                             </TextBlock>
@@ -186,7 +195,6 @@
                                     x:Name="ContentControlResiduos"
                                     Content="{Binding}"
                                     >
-     
                     </ContentControl>
                    
                 </Grid>
