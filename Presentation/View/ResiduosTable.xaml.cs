@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -28,23 +29,32 @@ namespace Presentation.View
         int ColumnGrado = 5;
         int ColumnEstado= 6;
 
+        public string RowId;
+        public string RowName;
+        public string RowDescription;
+        public string RowTipoResiduo;
+        public string RowGrado;
+        public string RowEstado;
+
+        public event Action <object> RowUpdated;
+
         public ResiduosTable()
         {
             InitializeComponent();
             listar();
-        }
+        } 
         public void ListTableResiduo(object sender, EventArgs e)
         {
             listar();
         }
         public void listar() {
-
             ResiduoModel residuoModel = new ResiduoModel();
             TableResiduos.DataContext = residuoModel.SelectResiduo();
         }
 
         private void EditRecord(object sender, RoutedEventArgs e)
         {
+            RowUpdated?.Invoke(TableResiduos.SelectedItem);
             if (TableResiduos.SelectedItems.Count > 0)
             {
                 WindowResiduos windowResiduos = new WindowResiduos();
@@ -56,13 +66,14 @@ namespace Presentation.View
                 DataGridCellInfo selectedEstado = TableResiduos.SelectedCells[ColumnEstado];
 
 
-                windowResiduos.TxtIdResiduo.Text = ((TextBlock)selectedId.Column.GetCellContent(selectedId.Item)).Text;
-                windowResiduos.TxtNameResiduo.Text = ((TextBlock)selectedName.Column.GetCellContent(selectedName.Item)).Text;
-                windowResiduos.TxtNameResiduo.Text = ((TextBlock)selectedDescription.Column.GetCellContent(selectedDescription.Item)).Text;
-                windowResiduos.TxtNameResiduo.Text = ((TextBlock)selectedTipoResiduo.Column.GetCellContent(selectedTipoResiduo.Item)).Text;
-                windowResiduos.TxtNameResiduo.Text = ((TextBlock)selectedGrado.Column.GetCellContent(selectedGrado.Item)).Text;
-                windowResiduos.TxtNameResiduo.Text = ((TextBlock)selectedEstado.Column.GetCellContent(selectedEstado.Item)).Text;
+                RowId= ((TextBlock)selectedId.Column.GetCellContent(selectedId.Item)).Text;
+                RowName= ((TextBlock)selectedName.Column.GetCellContent(selectedName.Item)).Text;
+                RowDescription= ((TextBlock)selectedDescription.Column.GetCellContent(selectedDescription.Item)).Text;
+                RowTipoResiduo = ((TextBlock)selectedTipoResiduo.Column.GetCellContent(selectedTipoResiduo.Item)).Text;
+                RowGrado = ((TextBlock)selectedGrado.Column.GetCellContent(selectedGrado.Item)).Text;
+                RowEstado = ((TextBlock)selectedEstado.Column.GetCellContent(selectedEstado.Item)).Text;
 
+                
                 windowResiduos.TextAddResiduo.Text = "Guardar";
                 windowResiduos.TxtNameResiduo.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#000012"));
             }
@@ -71,13 +82,6 @@ namespace Presentation.View
                 MessageBox.Show("Seleccione un registro", "");
             }
         }
-
-
-
-
-
-
-
         private void DeleteRecord(object sender, RoutedEventArgs e)
         {
             DataGridCellInfo selectedId = TableResiduos.SelectedCells[ColumnId];

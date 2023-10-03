@@ -24,7 +24,7 @@ namespace Domain.Model
             ResiduoDao residuoDao = new ResiduoDao();
             return residuoDao.SelectResiduo();
         }
-        public void UpdateResiduo(int id,string nombre,string descripcion, int tipoResiduo, int gradoPeligro, int estadoMateria) { 
+        public bool UpdateResiduo(int id,string nombre,string descripcion, int tipoResiduo, int gradoPeligro, int estadoMateria) { 
             ResiduoDao residuoDao = new ResiduoDao();
             residuoDao.Id = id;
             residuoDao.Nombre = nombre;
@@ -32,13 +32,13 @@ namespace Domain.Model
             residuoDao.TipoResiduoId = tipoResiduo;
             residuoDao.GradoPeligrosidadId = gradoPeligro;
             residuoDao.EstadoMateriaId = estadoMateria;
-            residuoDao.UpdateEstablecimiento();
+            return residuoDao.UpdateResiduo();
         }
         public void DeleteResiduo(int id)
         {
             ResiduoDao residuoDao=new ResiduoDao();
             residuoDao.Id = id;
-            residuoDao.DeleteEstablecimiento();
+            residuoDao.DeleteResiduo();
         }
     
     }

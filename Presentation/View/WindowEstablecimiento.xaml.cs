@@ -30,6 +30,7 @@ namespace Presentation.View
         {
             InitializeComponent();
             ToListTableEstablecimiento();
+            TxtNameEstablecimiento.Focus();
         }
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int wMswg, int wParam, int lParam);

@@ -33,6 +33,7 @@ namespace DataAccess.Entities
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine(ex.ToString());
                     return false;
                 }
                 finally
@@ -65,6 +66,7 @@ namespace DataAccess.Entities
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine(ex.ToString());
                     return null; 
                 }
                 finally
@@ -91,6 +93,7 @@ namespace DataAccess.Entities
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine(ex.ToString());
                     return false; 
                 }
                 finally

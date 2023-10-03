@@ -36,6 +36,7 @@ namespace Presentation.View
             TxtNameGrado.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#A6A6A7"));
             TextAddGrado.Text = "Agregar";
             TxtIdGrado.Text = "ID";
+            
         }
         private void TextGradoEnter(object sender, EventArgs e)
         {
@@ -103,7 +104,7 @@ namespace Presentation.View
             {
                 MessageBox.Show("Seleccione un registro", "");
             }
-        }
+        } 
 
         private void DeleteRecord(object sender, RoutedEventArgs e)
         {

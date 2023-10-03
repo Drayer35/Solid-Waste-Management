@@ -55,7 +55,6 @@
                         <StackPanel  Orientation="Vertical" HorizontalAlignment="Center">
                             <StackPanel Orientation="Horizontal">
                                 <TextBox 
-                                        
                                         x:FieldModifier="public"
                                         x:Name="TxtIdResiduo"
                                         Text="ID"
@@ -64,8 +63,8 @@
                                         Style="{StaticResource OnlyBox}" 
                                         Margin="0,20,20,0">
                                 </TextBox>
-                                <TextBox 
-                                        x:FieldModifier="public"
+                                <TextBox
+                                    x:FieldModifier="public"
                                         x:Name="TxtNameResiduo"
                                         Text="Nombre de Residuo"
                                         Width="290"

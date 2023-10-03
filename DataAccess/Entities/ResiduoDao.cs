@@ -87,7 +87,7 @@ namespace DataAccess.Entities
                 }
             }
         }
-        public void UpdateEstablecimiento()
+        public bool UpdateResiduo()
         {
             using (var connection = GetConnection())
             {
@@ -97,7 +97,7 @@ namespace DataAccess.Entities
                     using (var command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "UpdateEstablecimiento";
+                        command.CommandText = "UpdateResiduo";
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@ID", id);
                         command.Parameters.AddWithValue("@NOMBRE", nombre);
@@ -108,10 +108,12 @@ namespace DataAccess.Entities
                         command.ExecuteNonQuery();
                         command.Parameters.Clear();
                     }
+                    return true;
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
+                    return false;
                 }
                 finally
                 {
@@ -119,7 +121,7 @@ namespace DataAccess.Entities
                 }
             }
         }
-        public void DeleteEstablecimiento()
+        public void DeleteResiduo()
         {
             using (var connection = GetConnection())
             {

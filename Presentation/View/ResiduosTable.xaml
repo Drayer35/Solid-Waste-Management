@@ -27,21 +27,20 @@
                 <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource CustomVerticalScrollBar}" />
             </DataGrid.Resources>
             <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Width="auto">
-                        <DataGridCheckBoxColumn.HeaderTemplate>
-                            <DataTemplate>
-                                <CheckBox/>
-                            </DataTemplate>
-                        </DataGridCheckBoxColumn.HeaderTemplate>
-                    </DataGridCheckBoxColumn>
-
-                <DataGridTextColumn Header="ID" Binding="{Binding ID}"  Width="80"/>
-                    <DataGridTextColumn Header="NOMBRE" Width="120" Binding="{Binding NOMBRE}"/>
-                    <DataGridTextColumn Header="DESCRIPCION" Binding="{Binding DESCRIPCION}" Width="180" />
-                    <DataGridTextColumn Header="TIPO DE RESIDUO"  Binding="{Binding TIPO_RESIDUO}" Width="150"/>
-                    <DataGridTextColumn Header="GRADO DE PELIGRO"   Binding="{Binding GRADO_PELIGROSIDAD}" Width="150"/>
-                    <DataGridTextColumn Header="ESTADO DE MATERIA"  Binding="{Binding ESTADO_MATERIA}" Width="150"/>
-                    <DataGridTemplateColumn Header="OPCIONES" Width="80">
+                <DataGridCheckBoxColumn Width="auto">
+                    <DataGridCheckBoxColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <CheckBox/>
+                        </DataTemplate>
+                    </DataGridCheckBoxColumn.HeaderTemplate>
+                </DataGridCheckBoxColumn>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"  Width="80" CanUserResize="true"/>
+                    <DataGridTextColumn Header="NOMBRE" Width="auto" Binding="{Binding NOMBRE}"/>
+                    <DataGridTextColumn Header="DESCRIPCION" Binding="{Binding DESCRIPCION}" Width="auto"/>
+                    <DataGridTextColumn Header="TIPO DE RESIDUO"  Binding="{Binding TIPO_RESIDUO}" Width="auto"/>
+                    <DataGridTextColumn Header="GRADO DE PELIGRO"   Binding="{Binding GRADO_PELIGROSIDAD}" Width="150" CanUserResize="False"/>
+                    <DataGridTextColumn Header="ESTADO DE MATERIA"  Binding="{Binding ESTADO_MATERIA}" Width="150" CanUserResize="False"/>
+                    <DataGridTemplateColumn Header="OPCIONES" Width="80" CanUserResize="False">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal"

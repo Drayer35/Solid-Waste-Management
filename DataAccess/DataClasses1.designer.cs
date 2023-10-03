@@ -78,7 +78,7 @@ namespace DataAccess
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::DataAccess.Properties.Settings.Default.GestionResiduosConnectionString1, mappingSource)
+				base(global::DataAccess.Properties.Settings.Default.GestionResiduosConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
