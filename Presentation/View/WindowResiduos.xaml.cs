@@ -33,7 +33,6 @@ namespace Presentation.View
         public WindowResiduos()
         {
             InitializeComponent();
-            TxtNameResiduo.Focus();
             PaintAllBox();
             OpenTable();
         }
@@ -114,6 +113,11 @@ namespace Presentation.View
             PaintBox(TxtDescriptionResiduo, "Descripcion");
             LoadDataComboBox();
         }
+        private void Color(object sender, EventArgs e)
+        {
+            FocusTextBox(TxtNameResiduo, "Nombre de Residuo");
+            FocusTextBox(TxtDescriptionResiduo, "Descripcion");
+        }
 
         private bool VerficarEstadoBoton() {
             if (TextAddResiduo.Text == "Agregar") return true;
@@ -125,6 +129,7 @@ namespace Presentation.View
             {
                 RefreshTablaResiduo += formResiduosTable.ListTableResiduo;
                 formResiduosTable.RowUpdated += ResiduosTable_RowSelected;
+                formResiduosTable.PaintText += Color;
                 DataContext = formResiduosTable;
                 LinkActive.Visibility = Visibility.Hidden;
             }

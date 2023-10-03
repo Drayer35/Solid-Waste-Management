@@ -36,6 +36,7 @@ namespace Presentation.View
         public string RowGrado;
         public string RowEstado;
 
+        public event EventHandler PaintText;
         public event Action <object> RowUpdated;
 
         public ResiduosTable()
@@ -54,6 +55,7 @@ namespace Presentation.View
 
         private void EditRecord(object sender, RoutedEventArgs e)
         {
+            PaintText?.Invoke(this, e); 
             RowUpdated?.Invoke(TableResiduos.SelectedItem);
             if (TableResiduos.SelectedItems.Count > 0)
             {
@@ -72,10 +74,6 @@ namespace Presentation.View
                 RowTipoResiduo = ((TextBlock)selectedTipoResiduo.Column.GetCellContent(selectedTipoResiduo.Item)).Text;
                 RowGrado = ((TextBlock)selectedGrado.Column.GetCellContent(selectedGrado.Item)).Text;
                 RowEstado = ((TextBlock)selectedEstado.Column.GetCellContent(selectedEstado.Item)).Text;
-
-                
-                windowResiduos.TextAddResiduo.Text = "Guardar";
-                windowResiduos.TxtNameResiduo.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#000012"));
             }
             else
             {
